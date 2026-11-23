@@ -1,0 +1,24 @@
+{
+  "query": "select agent, kind, decisions, verdict from courtroom.decision_summary order by agent, kind",
+  "query_start_timestamp": "2026-11-23T14:34:25.415069286-08:00",
+  "connection": "duckdb-default",
+  "timeout": 1000,
+  "columns": ["agent","kind","decisions","verdict"],
+  "rows": [
+    ["defense","closing",1,"SETTLEMENT ORDERED"],
+    ["defense","concession",1,"SETTLEMENT ORDERED"],
+    ["defense","evidence",2,"SETTLEMENT ORDERED"],
+    ["defense","opening",1,"SETTLEMENT ORDERED"],
+    ["defense","rebuttal",2,"SETTLEMENT ORDERED"],
+    ["judge","procedure",1,"SETTLEMENT ORDERED"],
+    ["judge","ruling",3,"SETTLEMENT ORDERED"],
+    ["judge","verdict",1,"SETTLEMENT ORDERED"],
+    ["prosecutor","argument",3,"SETTLEMENT ORDERED"],
+    ["prosecutor","closing",1,"SETTLEMENT ORDERED"],
+    ["prosecutor","evidence",2,"SETTLEMENT ORDERED"],
+    ["prosecutor","opening",1,"SETTLEMENT ORDERED"],
+    ["witness","testimony",1,"SETTLEMENT ORDERED"]
+  ],
+  "timestamp": "2026-11-23T14:34:25.656208742-08:00",
+  "success": true
+}

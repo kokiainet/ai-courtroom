@@ -1,0 +1,48 @@
+
+Pipeline: courtroom-ledger (.)
+  No issues found
+
+✓ Successfully validated 2 assets across 1 pipeline, all good.
+
+Interval: 2026-11-22T00:00:00Z - 2026-11-22T23:59:59Z
+
+Starting the pipeline execution...
+
+[14:33:51] Running:  courtroom.decisions
+[14:33:51] [courtroom.decisions] >> Installed 1 package in 86ms
+[14:33:51] [courtroom.decisions] >> Traceback (most recent call last):
+[14:33:51] [courtroom.decisions] >>   File "/tmp/bruin-arrow-1769840863.py", line 152, in <module>
+[14:33:51] [courtroom.decisions] >>     module = import_module_from_path("/home/hatch/workspace/ai-courtroom", "bruin-pipeline.decisions-pipeline.assets.ingest_decisions")
+[14:33:51] [courtroom.decisions] >>              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[14:33:51] [courtroom.decisions] >>   File "/tmp/bruin-arrow-1769840863.py", line 16, in import_module_from_path
+[14:33:51] [courtroom.decisions] >>     return importlib.import_module(module_name)
+[14:33:51] [courtroom.decisions] >>            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[14:33:51] [courtroom.decisions] >>   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+[14:33:51] [courtroom.decisions] >>     return _bootstrap._gcd_import(name[level:], package, level)
+[14:33:51] [courtroom.decisions] >>            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[14:33:51] [courtroom.decisions] >>   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+[14:33:51] [courtroom.decisions] >>   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+[14:33:51] [courtroom.decisions] >>   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+[14:33:51] [courtroom.decisions] >>   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+[14:33:51] [courtroom.decisions] >>   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+[14:33:51] [courtroom.decisions] >>   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+[14:33:51] [courtroom.decisions] >>   File "/home/hatch/workspace/ai-courtroom/bruin-pipeline/decisions-pipeline/assets/ingest_decisions.py", line 14, in <module>
+[14:33:51] [courtroom.decisions] >>     import pandas as pd
+[14:33:51] [courtroom.decisions] >> ModuleNotFoundError: No module named 'pandas'
+[14:33:51] Failed: courtroom.decisions (414ms)
+
+==================================================
+
+FAIL courtroom.decisions 
+UPSTREAM FAILED courtroom.decision_summary 
+
+
+bruin run completed with failures in 414ms
+
+ ✗ Assets executed      1 failed / 1 skipped
+
+
+1 assets failed
+└── courtroom.decisions
+    └── failed to execute Python script: failed to run asset code: exit status 1
+

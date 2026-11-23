@@ -4,4 +4,4 @@ environments:
     connections:
       duckdb:
         - name: "duckdb-default"
-          path: "./decisions.db"
+          path: "./bruin-pipeline/decisions.db"

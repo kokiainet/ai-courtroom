@@ -1,0 +1,5 @@
+
+Pipeline: courtroom-ledger (.)
+    └── Invalid cron schedule 'manual' (valid-pipeline-schedule)
+
+✘ Checked 1 pipeline and found 1 issue, please check above.

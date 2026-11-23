@@ -1,0 +1,24 @@
+
+Pipeline: courtroom-ledger (.)
+  No issues found
+
+✓ Successfully validated 2 assets across 1 pipeline, all good.
+
+Interval: 2026-11-22T00:00:00Z - 2026-11-22T23:59:59Z
+
+Starting the pipeline execution...
+
+[14:34:11] Running:  courtroom.decisions
+[14:34:12] Finished: courtroom.decisions (167ms)
+[14:34:12] Running:  courtroom.decision_summary
+[14:34:12] Finished: courtroom.decision_summary (22ms)
+
+==================================================
+
+PASS courtroom.decisions 
+PASS courtroom.decision_summary 
+
+
+bruin run completed successfully in 190ms
+
+ ✓ Assets executed      2 succeeded
