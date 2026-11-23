@@ -1,0 +1,188 @@
+{
+  "case": "The Community v. SkillVault, Inc.",
+  "seed": 2026,
+  "verdict": "SETTLEMENT ORDERED",
+  "margin": -2,
+  "decisions": [
+    {
+      "step": 1,
+      "agent": "judge",
+      "kind": "procedure",
+      "decision": "Open the trial",
+      "why": "Standing order: verdict from evidence presented in the room, nothing else.",
+      "pros_score": 0,
+      "def_score": 0
+    },
+    {
+      "step": 2,
+      "agent": "prosecutor",
+      "kind": "opening",
+      "decision": "Frame the case as taking, not learning",
+      "why": "The jury must hear the scale first; scale is what separates study from extraction.",
+      "pros_score": 0,
+      "def_score": 0
+    },
+    {
+      "step": 3,
+      "agent": "defense",
+      "kind": "opening",
+      "decision": "Frame the case as learning, not taking",
+      "why": "If the frame is learning, the prosecution must prove a copied thing exists. It does not.",
+      "pros_score": 0,
+      "def_score": 0
+    },
+    {
+      "step": 4,
+      "agent": "prosecutor",
+      "kind": "evidence",
+      "decision": "Present evidence: Sales collapse",
+      "why": "Strength 2. Hard records move the judge more than rhetoric.",
+      "pros_score": 2,
+      "def_score": 0
+    },
+    {
+      "step": 5,
+      "agent": "witness",
+      "kind": "testimony",
+      "decision": "Testify to the work itself",
+      "why": "The court needs to understand the Skill is four years of craft, not a data file.",
+      "pros_score": 2,
+      "def_score": 0
+    },
+    {
+      "step": 6,
+      "agent": "defense",
+      "kind": "rebuttal",
+      "decision": "Rebut with: market",
+      "why": "This answer matches the prosecution's last claim head-on and is at least as strong.",
+      "pros_score": 2,
+      "def_score": 2
+    },
+    {
+      "step": 7,
+      "agent": "judge",
+      "kind": "ruling",
+      "decision": "Log the balance and any concessions",
+      "why": "A visible running balance keeps both sides honest about what still needs proving.",
+      "pros_score": 2,
+      "def_score": 2
+    },
+    {
+      "step": 8,
+      "agent": "prosecutor",
+      "kind": "evidence",
+      "decision": "Present evidence: Similarity audit",
+      "why": "Strength 3. Hard records move the judge more than rhetoric.",
+      "pros_score": 5,
+      "def_score": 2
+    },
+    {
+      "step": 9,
+      "agent": "defense",
+      "kind": "concession",
+      "decision": "Concede the ev-similarity point, narrow the case",
+      "why": "Contesting a strength-3 record would cost credibility with the judge. Conceding it buys trust for the legal argument that matters.",
+      "pros_score": 4,
+      "def_score": 3
+    },
+    {
+      "step": 10,
+      "agent": "defense",
+      "kind": "evidence",
+      "decision": "Present evidence: Prior art",
+      "why": "A document beats an assertion; put the terms and the forensics in front of the judge.",
+      "pros_score": 4,
+      "def_score": 5
+    },
+    {
+      "step": 11,
+      "agent": "prosecutor",
+      "kind": "argument",
+      "decision": "Answer the defense exhibit immediately",
+      "why": "If the exhibit stands unanswered into the closing, the judge will treat it as settled.",
+      "pros_score": 5,
+      "def_score": 5
+    },
+    {
+      "step": 12,
+      "agent": "judge",
+      "kind": "ruling",
+      "decision": "Log the balance and any concessions",
+      "why": "A visible running balance keeps both sides honest about what still needs proving.",
+      "pros_score": 5,
+      "def_score": 5
+    },
+    {
+      "step": 13,
+      "agent": "prosecutor",
+      "kind": "argument",
+      "decision": "Argue: scale",
+      "why": "Evidence is on the table; now press the interpretation before the defense reframes it.",
+      "pros_score": 7,
+      "def_score": 5
+    },
+    {
+      "step": 14,
+      "agent": "defense",
+      "kind": "rebuttal",
+      "decision": "Rebut with: learn",
+      "why": "This answer matches the prosecution's last claim head-on and is at least as strong.",
+      "pros_score": 7,
+      "def_score": 8
+    },
+    {
+      "step": 15,
+      "agent": "defense",
+      "kind": "evidence",
+      "decision": "Present evidence: No weights, no code",
+      "why": "A document beats an assertion; put the terms and the forensics in front of the judge.",
+      "pros_score": 7,
+      "def_score": 9
+    },
+    {
+      "step": 16,
+      "agent": "prosecutor",
+      "kind": "argument",
+      "decision": "Answer the defense exhibit immediately",
+      "why": "If the exhibit stands unanswered into the closing, the judge will treat it as settled.",
+      "pros_score": 8,
+      "def_score": 9
+    },
+    {
+      "step": 17,
+      "agent": "judge",
+      "kind": "ruling",
+      "decision": "Log the balance and any concessions",
+      "why": "A visible running balance keeps both sides honest about what still needs proving.",
+      "pros_score": 8,
+      "def_score": 9
+    },
+    {
+      "step": 18,
+      "agent": "prosecutor",
+      "kind": "closing",
+      "decision": "Close on the consequence for all experts",
+      "why": "The verdict sets the rule for every expert watching, not only for Maya.",
+      "pros_score": 8,
+      "def_score": 9
+    },
+    {
+      "step": 19,
+      "agent": "defense",
+      "kind": "closing",
+      "decision": "Close on the missing element: a copied thing",
+      "why": "The charge needs a protected object that was taken. Four hours in, there still is not one.",
+      "pros_score": 8,
+      "def_score": 9
+    },
+    {
+      "step": 20,
+      "agent": "judge",
+      "kind": "verdict",
+      "decision": "Reach verdict: SETTLEMENT ORDERED",
+      "why": "Final balance: prosecution 8, defense 9, deliberation margin -2. Concessions recorded: 1. Rebuttals that landed: 2. The verdict follows the room, not a script.",
+      "pros_score": 8,
+      "def_score": 9
+    }
+  ]
+}

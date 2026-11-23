@@ -1,0 +1,4 @@
+name: courtroom-ledger
+schedule: manual
+default_connections:
+  duckdb: duckdb-default
