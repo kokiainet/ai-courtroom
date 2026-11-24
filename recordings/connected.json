@@ -1,0 +1,1838 @@
+{
+  "id": "3535013d442b",
+  "status": "complete",
+  "mode": "live",
+  "variant": "baseline",
+  "case_title": "The Community v. SkillVault, Inc.",
+  "created_at": "2026-11-24T00:09:56.812514+00:00",
+  "steps": [
+    {
+      "n": 1,
+      "agent": "judge",
+      "kind": "procedure",
+      "text": "This hearing is open. Did SkillVault exceed Maya Chen’s permission when it distilled CodeReview Pro into its base model? We’ll decide from what the exhibits establish about the scope of permission and SkillVault’s use. If we find a breach, we’ll consider what remedy the evidence supports. Outside references may provide background only.",
+      "decision": "Open the hearing and state the evidentiary standard.",
+      "why": "The exhibits govern findings about permission, use, and any remedy. Outside references can provide background only.",
+      "evidence_ids": [],
+      "round": 1,
+      "band_task_id": null,
+      "created_at": "2026-11-24T00:10:04.454953+00:00",
+      "model_receipt": {
+        "service": "codex_cli",
+        "provider": "codex",
+        "model": "CLI default",
+        "thread_id": "01a20ae3-4995-7dc1-ba9d-7758b79f2633",
+        "exit_code": 0,
+        "latency_ms": 7203,
+        "response_sha256": "a1e2f10133e9913595d2d74058272d87ff42ac4b3a9126c62ec4d81130e00759",
+        "usage": {
+          "input_tokens": 26041,
+          "cached_input_tokens": 23936,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 157,
+          "reasoning_output_tokens": 0
+        },
+        "verified": true,
+        "sandbox": "read-only",
+        "ephemeral": true
+      },
+      "duration_ms": 21847,
+      "audio_duration_ms": 21047,
+      "tts_voice": "Rishi",
+      "tts_rate_wpm": 175
+    },
+    {
+      "n": 2,
+      "agent": "prosecutor",
+      "kind": "present_evidence",
+      "text": "Your Honor, SkillVault sent 2.1 million prompts in eleven days, systematically varying code-review edge cases. Maya’s licence allowed customers to request reviews for their own projects and required a separate signed amendment for systematic extraction. That pattern supports an inference that SkillVault was extracting the skill’s capabilities. The record contains no signed amendment authorizing that use.",
+      "decision": "Present the access pattern as evidence of systematic extraction beyond the original licence.",
+      "why": "The volume and deliberate variation support an inference of systematic extraction. The exhibits leave actual training use and damages unresolved.",
+      "evidence_ids": [
+        "EX-ACCESS",
+        "EX-LICENSE"
+      ],
+      "round": 1,
+      "band_task_id": "d19e1170-2205-4df7-96d2-0303c04b74d3",
+      "created_at": "2026-11-24T00:10:12.452132+00:00",
+      "model_receipt": {
+        "service": "codex_cli",
+        "provider": "codex",
+        "model": "CLI default",
+        "thread_id": "01a20ae3-6a67-7261-9bd6-a8b38fd07151",
+        "exit_code": 0,
+        "latency_ms": 6732,
+        "response_sha256": "25a9b4b6a7db27a413f6ce4289f254cf0023509d5d1b71fc6f0ae18cc9577b19",
+        "usage": {
+          "input_tokens": 26170,
+          "cached_input_tokens": 23936,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 180,
+          "reasoning_output_tokens": 0
+        },
+        "verified": true,
+        "sandbox": "read-only",
+        "ephemeral": true
+      },
+      "handoff_receipt": {
+        "id": "d19e1170-2205-4df7-96d2-0303c04b74d3",
+        "service": "band",
+        "verified": true,
+        "connected": true,
+        "handoff_id": "2d9542cd-557e-4b07-a5d3-8f2da70b1463",
+        "message_id": "d19e1170-2205-4df7-96d2-0303c04b74d3",
+        "room_id": "60b6c57c-c407-4994-8e09-ef6233e445d8",
+        "sender_role": "judge",
+        "recipient_role": "prosecutor",
+        "sender_agent_id": "9f3f32ae-ea2c-42c2-be35-135e906ac165",
+        "recipient_agent_id": "e85ccfc3-e5b6-4766-b09c-9e8a9382e688",
+        "payload": {
+          "case": {
+            "mode": "fictional",
+            "notice": "All people, companies, usage figures and exhibits in this case are fictional. External web references provide background only and cannot establish facts about this fictional dispute.",
+            "question": "Did SkillVault exceed Maya Chen's permission when it distilled CodeReview Pro into its base model, and what remedy follows from the evidence?",
+            "title": "The Community v. SkillVault, Inc.",
+            "variant": "baseline"
+          },
+          "court_record": [
+            {
+              "agent": "judge",
+              "decision": "Open the hearing and state the evidentiary standard.",
+              "evidence_ids": [],
+              "kind": "procedure",
+              "text": "This hearing is open. Did SkillVault exceed Maya Chen’s permission when it distilled CodeReview Pro into its base model? We’ll decide from what the exhibits establish about the scope of permission and SkillVault’s use. If we find a breach, we’ll consider what remedy the evidence supports. Outside references may provide background only.",
+              "why": "The exhibits govern findings about permission, use, and any remedy. Outside references can provide background only."
+            }
+          ],
+          "evidence_packet": {
+            "claims": [],
+            "evidence": [
+              {
+                "id": "EX-ACCESS",
+                "quote": "a SkillVault-controlled service account sent 2.1 million prompts to Maya Chen's paid CodeReview Pro Skill",
+                "scope": "case_fact",
+                "source_text": "FICTIONAL STIPULATED EXHIBIT. During an eleven-day period, a SkillVault-controlled service account sent 2.1 million prompts to Maya Chen's paid CodeReview Pro Skill. The requests systematically varied code-review edge cases. These logs establish the requests and their origin; by themselves they do not establish whether Maya authorized model training.",
+                "source_type": "case_exhibit",
+                "source_url": "case://skillvault/access-log",
+                "title": "Stipulated platform access log"
+              },
+              {
+                "id": "EX-LICENSE",
+                "quote": "It prohibited systematic extraction or training a competing general-purpose model without a separate signed amendment.",
+                "scope": "case_fact",
+                "source_text": "FICTIONAL STIPULATED EXHIBIT. Maya's original licence permitted customers to request code reviews for their own projects. It prohibited systematic extraction or training a competing general-purpose model without a separate signed amendment. Both parties agree that this was the original agreement. Whether a later amendment exists must be determined from the exhibits actually submitted.",
+                "source_type": "case_exhibit",
+                "source_url": "case://skillvault/original-licence",
+                "title": "Original limited-use licence"
+              },
+              {
+                "id": "EX-AUDIT",
+                "quote": "The audit did not find copied source code or copied model weights.",
+                "scope": "case_fact",
+                "source_text": "FICTIONAL STIPULATED EXHIBIT. An independent audit reported that 87 percent of a selected test set matched CodeReview Pro's signature review heuristics. The audit did not find copied source code or copied model weights. It did not independently determine consent, causation of lost sales, or the legal status of learning from outputs.",
+                "source_type": "case_exhibit",
+                "source_url": "case://skillvault/similarity-audit",
+                "title": "Similarity audit and its limitations"
+              },
+              {
+                "id": "EX-HARM",
+                "quote": "The parties accept the sales figures but dispute how much of the decline was caused by the distillation.",
+                "scope": "case_fact",
+                "source_text": "FICTIONAL STIPULATED EXHIBIT. Maya reports a 48,000 dollar reduction in CodeReview Pro sales after SkillVault released its updated base model. The parties accept the sales figures but dispute how much of the decline was caused by the distillation. No exhibit establishes a precise damages award.",
+                "source_type": "case_exhibit",
+                "source_url": "case://skillvault/revenue-statement",
+                "title": "Creator's revenue statement"
+              }
+            ],
+            "issues": [],
+            "judge_allowed": true,
+            "run_id": "3535013d442b",
+            "snapshot_id": "snap-75599a7b15854c3d",
+            "status": "passed"
+          },
+          "instruction": "Present your strongest supported opening claim. Cite no more than two exhibits."
+        },
+        "receipts": [
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/me",
+            "method": "GET",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:04.717859+00:00",
+            "latency_ms": 259,
+            "response_sha256": "1bc486341caed874ce326880a775a6a13839de84c6c47badc166329695eb585f",
+            "request_id": "aa43d070beba50304e9c542db3afd4de",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/me",
+            "method": "GET",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:04.942607+00:00",
+            "latency_ms": 225,
+            "response_sha256": "7b9ebdeee7872b24aa92b9aa29c6dca3a4f7db9b2806f32646a31b58816e765b",
+            "request_id": "da672c31e3708607c90f15e0462579e2",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/chats/60b6c57c-c407-4994-8e09-ef6233e445d8/participants",
+            "method": "GET",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:05.134018+00:00",
+            "latency_ms": 191,
+            "response_sha256": "370b7c8ac04dda8314adf3aff9988fdac120451822e4feaf668ed4c092c9c6d3",
+            "request_id": "c6f5bedfc9ea43297e4119e611a21b90",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/chats/60b6c57c-c407-4994-8e09-ef6233e445d8/messages",
+            "method": "POST",
+            "http_status": 201,
+            "timestamp": "2026-11-24T00:10:05.345907+00:00",
+            "latency_ms": 212,
+            "response_sha256": "aee2099c73e81460b4a69dfadecc75f5904fc2a34518167fef774b9e8cf1e450",
+            "request_id": "9c82b12d16271b14029883f686218acc",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/chats/60b6c57c-c407-4994-8e09-ef6233e445d8/messages?status=all&sort_order=desc&limit=100",
+            "method": "GET",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:05.534199+00:00",
+            "latency_ms": 188,
+            "response_sha256": "0d6b33075d7bdea5c8ff47d65e7c11388285db8661e62b3c2563451873c1fe7f",
+            "request_id": "a41240162c3c18a2494e9da771988228",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/chats/60b6c57c-c407-4994-8e09-ef6233e445d8/messages/d19e1170-2205-4df7-96d2-0303c04b74d3/processing",
+            "method": "POST",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:05.716121+00:00",
+            "latency_ms": 182,
+            "response_sha256": "fd579a3f0c81eece777aef406834903e95c7eeafc5a65f3fbfe25b8487f010cf",
+            "request_id": "c9ded05750a1493dd9f97e89cfc33628",
+            "verified": true
+          }
+        ],
+        "timestamp": "2026-11-24T00:10:05.716198+00:00",
+        "status": "processing"
+      },
+      "duration_ms": 23282,
+      "audio_duration_ms": 22482,
+      "tts_voice": "Samantha",
+      "tts_rate_wpm": 185
+    },
+    {
+      "n": 3,
+      "agent": "defense",
+      "kind": "challenge",
+      "text": "Your Honor, we concede that SkillVault’s account sent 2.1 million prompts and systematically varied the review cases. That pattern supports an extraction inference. But the logs and the audit’s 87 percent match on selected tests leave a crucial question open: did those outputs actually feed base-model training? The original licence required a signed amendment for systematic extraction.",
+      "decision": "Challenge the inference that SkillVault used the collected outputs to train its base model.",
+      "why": "The access log establishes who made the requests, the audit establishes similarity on selected tests, and the original licence defines the permission required. The link between the collected outputs and base-model training remains unproven.",
+      "evidence_ids": [
+        "EX-ACCESS",
+        "EX-AUDIT",
+        "EX-LICENSE"
+      ],
+      "round": 1,
+      "band_task_id": "65ff6659-a850-49b2-84fe-1f80648735e6",
+      "created_at": "2026-11-24T00:10:21.087137+00:00",
+      "model_receipt": {
+        "service": "codex_cli",
+        "provider": "codex",
+        "model": "CLI default",
+        "thread_id": "01a20ae3-8a00-77b3-bc6b-4980898ec90f",
+        "exit_code": 0,
+        "latency_ms": 7268,
+        "response_sha256": "9b306cec20e5af9e220fc29e9790d2b6071e83c9c22f78701af786b0683beb67",
+        "usage": {
+          "input_tokens": 26334,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 204,
+          "reasoning_output_tokens": 0
+        },
+        "verified": true,
+        "sandbox": "read-only",
+        "ephemeral": true
+      },
+      "handoff_receipt": {
+        "id": "65ff6659-a850-49b2-84fe-1f80648735e6",
+        "service": "band",
+        "verified": true,
+        "connected": true,
+        "handoff_id": "ce2b8279-1436-4e66-8a14-a72c66d439e4",
+        "message_id": "65ff6659-a850-49b2-84fe-1f80648735e6",
+        "room_id": "60b6c57c-c407-4994-8e09-ef6233e445d8",
+        "sender_role": "prosecutor",
+        "recipient_role": "defense",
+        "sender_agent_id": "e85ccfc3-e5b6-4766-b09c-9e8a9382e688",
+        "recipient_agent_id": "df3ef428-7029-45bf-8037-f1f5a59571fa",
+        "payload": {
+          "case": {
+            "mode": "fictional",
+            "notice": "All people, companies, usage figures and exhibits in this case are fictional. External web references provide background only and cannot establish facts about this fictional dispute.",
+            "question": "Did SkillVault exceed Maya Chen's permission when it distilled CodeReview Pro into its base model, and what remedy follows from the evidence?",
+            "title": "The Community v. SkillVault, Inc.",
+            "variant": "baseline"
+          },
+          "court_record": [
+            {
+              "agent": "judge",
+              "decision": "Open the hearing and state the evidentiary standard.",
+              "evidence_ids": [],
+              "kind": "procedure",
+              "text": "This hearing is open. Did SkillVault exceed Maya Chen’s permission when it distilled CodeReview Pro into its base model? We’ll decide from what the exhibits establish about the scope of permission and SkillVault’s use. If we find a breach, we’ll consider what remedy the evidence supports. Outside references may provide background only.",
+              "why": "The exhibits govern findings about permission, use, and any remedy. Outside references can provide background only."
+            },
+            {
+              "agent": "prosecutor",
+              "decision": "Present the access pattern as evidence of systematic extraction beyond the original licence.",
+              "evidence_ids": [
+                "EX-ACCESS",
+                "EX-LICENSE"
+              ],
+              "kind": "present_evidence",
+              "text": "Your Honor, SkillVault sent 2.1 million prompts in eleven days, systematically varying code-review edge cases. Maya’s licence allowed customers to request reviews for their own projects and required a separate signed amendment for systematic extraction. That pattern supports an inference that SkillVault was extracting the skill’s capabilities. The record contains no signed amendment authorizing that use.",
+              "why": "The volume and deliberate variation support an inference of systematic extraction. The exhibits leave actual training use and damages unresolved."
+            }
+          ],
+          "evidence_packet": {
+            "claims": [],
+            "evidence": [
+              {
+                "id": "EX-ACCESS",
+                "quote": "a SkillVault-controlled service account sent 2.1 million prompts to Maya Chen's paid CodeReview Pro Skill",
+                "scope": "case_fact",
+                "source_text": "FICTIONAL STIPULATED EXHIBIT. During an eleven-day period, a SkillVault-controlled service account sent 2.1 million prompts to Maya Chen's paid CodeReview Pro Skill. The requests systematically varied code-review edge cases. These logs establish the requests and their origin; by themselves they do not establish whether Maya authorized model training.",
+                "source_type": "case_exhibit",
+                "source_url": "case://skillvault/access-log",
+                "title": "Stipulated platform access log"
+              },
+              {
+                "id": "EX-LICENSE",
+                "quote": "It prohibited systematic extraction or training a competing general-purpose model without a separate signed amendment.",
+                "scope": "case_fact",
+                "source_text": "FICTIONAL STIPULATED EXHIBIT. Maya's original licence permitted customers to request code reviews for their own projects. It prohibited systematic extraction or training a competing general-purpose model without a separate signed amendment. Both parties agree that this was the original agreement. Whether a later amendment exists must be determined from the exhibits actually submitted.",
+                "source_type": "case_exhibit",
+                "source_url": "case://skillvault/original-licence",
+                "title": "Original limited-use licence"
+              },
+              {
+                "id": "EX-AUDIT",
+                "quote": "The audit did not find copied source code or copied model weights.",
+                "scope": "case_fact",
+                "source_text": "FICTIONAL STIPULATED EXHIBIT. An independent audit reported that 87 percent of a selected test set matched CodeReview Pro's signature review heuristics. The audit did not find copied source code or copied model weights. It did not independently determine consent, causation of lost sales, or the legal status of learning from outputs.",
+                "source_type": "case_exhibit",
+                "source_url": "case://skillvault/similarity-audit",
+                "title": "Similarity audit and its limitations"
+              },
+              {
+                "id": "EX-HARM",
+                "quote": "The parties accept the sales figures but dispute how much of the decline was caused by the distillation.",
+                "scope": "case_fact",
+                "source_text": "FICTIONAL STIPULATED EXHIBIT. Maya reports a 48,000 dollar reduction in CodeReview Pro sales after SkillVault released its updated base model. The parties accept the sales figures but dispute how much of the decline was caused by the distillation. No exhibit establishes a precise damages award.",
+                "source_type": "case_exhibit",
+                "source_url": "case://skillvault/revenue-statement",
+                "title": "Creator's revenue statement"
+              }
+            ],
+            "issues": [],
+            "judge_allowed": true,
+            "run_id": "3535013d442b",
+            "snapshot_id": "snap-75599a7b15854c3d",
+            "status": "passed"
+          },
+          "instruction": "Identify the weakest inference or authorization gap. You may ask the expert witness to investigate a specific question."
+        },
+        "receipts": [
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/me",
+            "method": "GET",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:12.866178+00:00",
+            "latency_ms": 203,
+            "response_sha256": "7b9ebdeee7872b24aa92b9aa29c6dca3a4f7db9b2806f32646a31b58816e765b",
+            "request_id": "f894ca06b466760afb7f5047abf543ad",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/me",
+            "method": "GET",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:13.040650+00:00",
+            "latency_ms": 174,
+            "response_sha256": "c8449ef72cba27e36bdb9960cbea5378d57e16b05005ef5be49324aa37ab4dba",
+            "request_id": "9a2b943f0bdc1e033700b84032cbe71d",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/chats/60b6c57c-c407-4994-8e09-ef6233e445d8/participants",
+            "method": "GET",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:13.238350+00:00",
+            "latency_ms": 198,
+            "response_sha256": "370b7c8ac04dda8314adf3aff9988fdac120451822e4feaf668ed4c092c9c6d3",
+            "request_id": "6c11b7f75dbb4d8236e89031b43bdfcb",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/chats/60b6c57c-c407-4994-8e09-ef6233e445d8/messages",
+            "method": "POST",
+            "http_status": 201,
+            "timestamp": "2026-11-24T00:10:13.433360+00:00",
+            "latency_ms": 195,
+            "response_sha256": "364c07d955a51d97fa0ae160ce21b659d7c6acc9f0acccd011b4b19a1e833855",
+            "request_id": "83bec54f3b7c9449e733c75dc09245b1",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/chats/60b6c57c-c407-4994-8e09-ef6233e445d8/messages?status=all&sort_order=desc&limit=100",
+            "method": "GET",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:13.608641+00:00",
+            "latency_ms": 175,
+            "response_sha256": "b2b00287f0fb5991317dab7e984eb0c86e4a6f1b7b72f1604207fd9aa09e6870",
+            "request_id": "5ca4f531597331c8207a4208f3748966",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/chats/60b6c57c-c407-4994-8e09-ef6233e445d8/messages/65ff6659-a850-49b2-84fe-1f80648735e6/processing",
+            "method": "POST",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:13.812475+00:00",
+            "latency_ms": 204,
+            "response_sha256": "eb5026455aa0907f0fbe29ab5a699dd50893bf3ca56734cdaece3203dd4e4e06",
+            "request_id": "4b084ac6d138aab74e665196f5f94c7e",
+            "verified": true
+          }
+        ],
+        "timestamp": "2026-11-24T00:10:13.812524+00:00",
+        "status": "processing"
+      },
+      "duration_ms": 23524,
+      "audio_duration_ms": 22724,
+      "tts_voice": "Daniel",
+      "tts_rate_wpm": 185
+    },
+    {
+      "n": 4,
+      "agent": "witness",
+      "kind": "concede",
+      "text": "I agree that the prompt pattern supports an inference of systematic extraction. My original licence required a signed amendment for that use, and none has been submitted. The audit shows similarity on selected tests. Whether SkillVault fed my outputs into base-model training, and how much of the sales decline that training caused, remain open. Public references supply background only.",
+      "decision": "Concede that the exhibits leave base-model training and damages causation unresolved.",
+      "why": "The access log records requests, the audit measures similarity, and the sales exhibit records a decline. The original licence required separate written permission, and the submitted exhibits leave the existence of a later amendment unverified.",
+      "evidence_ids": [
+        "EX-ACCESS",
+        "EX-LICENSE",
+        "EX-AUDIT",
+        "EX-HARM"
+      ],
+      "round": 1,
+      "band_task_id": "176698c5-77ff-46bf-a2fe-cfa07576bea1",
+      "created_at": "2026-11-24T00:10:33.724652+00:00",
+      "model_receipt": {
+        "service": "codex_cli",
+        "provider": "codex",
+        "model": "CLI default",
+        "thread_id": "01a20ae3-bbda-7b02-ac3e-3dd0574030a7",
+        "exit_code": 0,
+        "latency_ms": 7224,
+        "response_sha256": "88c523bb173fc44fcd3402f95dcb6537f4c444b57a3e34198e9c5b8357f21135",
+        "usage": {
+          "input_tokens": 27925,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 207,
+          "reasoning_output_tokens": 0
+        },
+        "verified": true,
+        "sandbox": "read-only",
+        "ephemeral": true
+      },
+      "handoff_receipt": {
+        "id": "176698c5-77ff-46bf-a2fe-cfa07576bea1",
+        "service": "band",
+        "verified": true,
+        "connected": true,
+        "handoff_id": "c3bea622-ae36-41aa-a0d0-d783fd17e9fa",
+        "message_id": "176698c5-77ff-46bf-a2fe-cfa07576bea1",
+        "room_id": "60b6c57c-c407-4994-8e09-ef6233e445d8",
+        "sender_role": "defense",
+        "recipient_role": "witness",
+        "sender_agent_id": "df3ef428-7029-45bf-8037-f1f5a59571fa",
+        "recipient_agent_id": "997753a1-d15c-477d-b70f-9571fc9b5a48",
+        "payload": {
+          "case": {
+            "mode": "fictional",
+            "notice": "All people, companies, usage figures and exhibits in this case are fictional. External web references provide background only and cannot establish facts about this fictional dispute.",
+            "question": "Did SkillVault exceed Maya Chen's permission when it distilled CodeReview Pro into its base model, and what remedy follows from the evidence?",
+            "title": "The Community v. SkillVault, Inc.",
+            "variant": "baseline"
+          },
+          "court_record": [
+            {
+              "agent": "judge",
+              "decision": "Open the hearing and state the evidentiary standard.",
+              "evidence_ids": [],
+              "kind": "procedure",
+              "text": "This hearing is open. Did SkillVault exceed Maya Chen’s permission when it distilled CodeReview Pro into its base model? We’ll decide from what the exhibits establish about the scope of permission and SkillVault’s use. If we find a breach, we’ll consider what remedy the evidence supports. Outside references may provide background only.",
+              "why": "The exhibits govern findings about permission, use, and any remedy. Outside references can provide background only."
+            },
+            {
+              "agent": "prosecutor",
+              "decision": "Present the access pattern as evidence of systematic extraction beyond the original licence.",
+              "evidence_ids": [
+                "EX-ACCESS",
+                "EX-LICENSE"
+              ],
+              "kind": "present_evidence",
+              "text": "Your Honor, SkillVault sent 2.1 million prompts in eleven days, systematically varying code-review edge cases. Maya’s licence allowed customers to request reviews for their own projects and required a separate signed amendment for systematic extraction. That pattern supports an inference that SkillVault was extracting the skill’s capabilities. The record contains no signed amendment authorizing that use.",
+              "why": "The volume and deliberate variation support an inference of systematic extraction. The exhibits leave actual training use and damages unresolved."
+            },
+            {
+              "agent": "defense",
+              "decision": "Challenge the inference that SkillVault used the collected outputs to train its base model.",
+              "evidence_ids": [
+                "EX-ACCESS",
+                "EX-AUDIT",
+                "EX-LICENSE"
+              ],
+              "kind": "challenge",
+              "text": "Your Honor, we concede that SkillVault’s account sent 2.1 million prompts and systematically varied the review cases. That pattern supports an extraction inference. But the logs and the audit’s 87 percent match on selected tests leave a crucial question open: did those outputs actually feed base-model training? The original licence required a signed amendment for systematic extraction.",
+              "why": "The access log establishes who made the requests, the audit establishes similarity on selected tests, and the original licence defines the permission required. The link between the collected outputs and base-model training remains unproven."
+            }
+          ],
+          "evidence_packet": {
+            "claims": [
+              {
+                "actor": "prosecutor",
+                "evidence_ids": [
+                  "EX-ACCESS",
+                  "EX-LICENSE"
+                ],
+                "id": "claim-2",
+                "status": "submitted",
+                "text": "Your Honor, SkillVault sent 2.1 million prompts in eleven days, systematically varying code-review edge cases. Maya’s licence allowed customers to request reviews for their own projects and required a separate signed amendment for systematic extraction. That pattern supports an inference that SkillVault was extracting the skill’s capabilities. The record contains no signed amendment authorizing that use."
+              },
+              {
+                "actor": "defense",
+                "evidence_ids": [
+                  "EX-ACCESS",
+                  "EX-AUDIT",
+                  "EX-LICENSE"
+                ],
+                "id": "claim-3",
+                "status": "submitted",
+                "text": "Your Honor, we concede that SkillVault’s account sent 2.1 million prompts and systematically varied the review cases. That pattern supports an extraction inference. But the logs and the audit’s 87 percent match on selected tests leave a crucial question open: did those outputs actually feed base-model training? The original licence required a signed amendment for systematic extraction."
+              }
+            ],
+            "evidence": [
+              {
+                "id": "EX-ACCESS",
+                "quote": "a SkillVault-controlled service account sent 2.1 million prompts to Maya Chen's paid CodeReview Pro Skill",
+                "scope": "case_fact",
+                "source_text": "FICTIONAL STIPULATED EXHIBIT. During an eleven-day period, a SkillVault-controlled service account sent 2.1 million prompts to Maya Chen's paid CodeReview Pro Skill. The requests systematically varied code-review edge cases. These logs establish the requests and their origin; by themselves they do not establish whether Maya authorized model training.",
+                "source_type": "case_exhibit",
+                "source_url": "case://skillvault/access-log",
+                "title": "Stipulated platform access log"
+              },
+              {
+                "id": "EX-LICENSE",
+                "quote": "It prohibited systematic extraction or training a competing general-purpose model without a separate signed amendment.",
+                "scope": "case_fact",
+                "source_text": "FICTIONAL STIPULATED EXHIBIT. Maya's original licence permitted customers to request code reviews for their own projects. It prohibited systematic extraction or training a competing general-purpose model without a separate signed amendment. Both parties agree that this was the original agreement. Whether a later amendment exists must be determined from the exhibits actually submitted.",
+                "source_type": "case_exhibit",
+                "source_url": "case://skillvault/original-licence",
+                "title": "Original limited-use licence"
+              },
+              {
+                "id": "EX-AUDIT",
+                "quote": "The audit did not find copied source code or copied model weights.",
+                "scope": "case_fact",
+                "source_text": "FICTIONAL STIPULATED EXHIBIT. An independent audit reported that 87 percent of a selected test set matched CodeReview Pro's signature review heuristics. The audit did not find copied source code or copied model weights. It did not independently determine consent, causation of lost sales, or the legal status of learning from outputs.",
+                "source_type": "case_exhibit",
+                "source_url": "case://skillvault/similarity-audit",
+                "title": "Similarity audit and its limitations"
+              },
+              {
+                "id": "EX-HARM",
+                "quote": "The parties accept the sales figures but dispute how much of the decline was caused by the distillation.",
+                "scope": "case_fact",
+                "source_text": "FICTIONAL STIPULATED EXHIBIT. Maya reports a 48,000 dollar reduction in CodeReview Pro sales after SkillVault released its updated base model. The parties accept the sales figures but dispute how much of the decline was caused by the distillation. No exhibit establishes a precise damages award.",
+                "source_type": "case_exhibit",
+                "source_url": "case://skillvault/revenue-statement",
+                "title": "Creator's revenue statement"
+              },
+              {
+                "id": "ref-0e3445a6b6",
+                "quote": "When you use model outputs to train or fine-tune other models, you need to ensure you have permission to do so. Using outputs from models that prohibit distillation could violate terms of service agreements and potentially expose you to legal liability. OpenRouter tracks which models allow their outputs to be used for training purposes through the `is_trainable_text` property. Models where the author has explicitly allowed text distillation are marked as distillable.",
+                "scope": "background",
+                "source_text": "## Why Distillation Compliance Matters\n\nWhen you use model outputs to train or fine-tune other models, you need to ensure you have permission to do so. Using outputs from models that prohibit distillation could violate terms of service agreements and potentially expose you to legal liability. OpenRouter tracks which models allow their outputs to be used for training purposes through the `is_trainable_text` property. Models where the author has explicitly allowed text distillation are marked as distillable.\n\n## Finding Distillable Models on the Model Page\n\nThe easiest way to find models that allow distillation is to use the\n\n**Distillable**filter on the\n\n[Models page](https://openrouter.ai/models?distillable=true).\n\n1. Navigate to the [Models page with the distillable filter enabled](https://openrouter.ai/models?distillable=true)\n2. The **Distillable** filter in the filter panel will be set to **Yes**, showing only models that allow distillation\n\n## Using the Routing Parameter\n\nFor programmatic control, you can use the `enforce_distillable_text` parameter in your API requests. When set to `true`, OpenRouter will only route your request to models that allow text distillation. `enforce_distillable_text` is set to `true`, the request will only be routed to models where the author has explicitly enabled text distillation. If no distillable models are available for your request, you’ll receive an error.\n\n### Example: Enforcing Distillable Models\n\n## Use Cases\n\nThe distillable filter is particularly useful for:\n\n- **Building training datasets**: When collecting model outputs to train or fine-tune your own models, ensure you only use outputs from models that permit this use.\n- **Distillation pipelines**: When creating smaller, specialized models from larger teacher models, filt",
+                "source_type": "web_source",
+                "source_url": "https://openrouter.ai/docs/cookbook/evaluate-and-optimize/distillation",
+                "title": "Distillation - Compliance with Provider and Model Creator Policies"
+              },
+              {
+                "id": "ref-55ca969159",
+                "quote": "# NVIDIA Community Model License IMPORTANT NOTICE – PLEASE READ AND AGREE BEFORE USING THE NVIDIA MODELS. \\*\\*Last Modified: January 30, 2025\\*\\* This license agreement (“Agreement”) is a legal agreement between you, whether an individual or entity (“you”) and NVIDIA Corporation (“NVIDIA”) and governs the use of the NVIDIA AI Foundation Models, consisting of models including software, checkpoints, learnt weights, algorithms, parameters, configuration files, datasets and docum",
+                "scope": "background",
+                "source_text": "# NVIDIA Community Model License IMPORTANT NOTICE – PLEASE READ AND AGREE BEFORE USING THE NVIDIA MODELS. \\*\\*Last Modified: January 30, 2025\\*\\* This license agreement (“Agreement”) is a legal agreement between you, whether an individual or entity (“you”) and NVIDIA Corporation (“NVIDIA”) and governs the use of the NVIDIA AI Foundation Models, consisting of models including software, checkpoints, learnt weights, algorithms, parameters, configuration files, datasets and documentation, if and when available (collectively, “NVIDIA Models”). This Agreement can be accepted only by an adult of legal age of majority in the country in which the NVIDIA Models are used. If you do not have the required age or authority to accept this Agreement, or if you do not accept all the terms and conditions of this Agreement, do not use the NVIDIA Models. 1. \\*\\*LICENSE GRANTS.\\*\\* 1. Service Grant. If you receive access to NVIDIA Models as part of an NVIDIA service, subject to the terms of this Agreement, you may access and use such NVIDIA Models with the service. 2. General Downloadable Grant. Except as described in Section 1.3 below, if you receive access to NVIDIA Models for download, subject to the terms of this Agreement, NVIDIA grants you a limited, non-exclusive, revocable, non-transferable, non-sublicensable (except as expressly permitted in this Agreement), license to: (a) install, use and reproduce NVIDIA Models, (b) create Derivative Models (as defined below), and (c) distribute NVIDIA Models and Derivative Models with a copy of this Agreement, except that to exercise these grants in production you must use an NVIDIA Inference Microservice runtime (NVIDIA NIM) available through an NVIDIA AI Enterprise subscription, unless: (i) an NVIDIA Model is designated by NVIDIA for use with",
+                "source_type": "web_source",
+                "source_url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-community-models-license.md",
+                "title": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-community-models-license.md"
+              }
+            ],
+            "issues": [],
+            "judge_allowed": true,
+            "run_id": "3535013d442b",
+            "snapshot_id": "snap-9927a107c0884c31",
+            "status": "passed"
+          },
+          "instruction": "Answer the delegated challenge. Separate the fictional case record from public background sources and say precisely what is still unknown."
+        },
+        "receipts": [
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/me",
+            "method": "GET",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:25.588224+00:00",
+            "latency_ms": 187,
+            "response_sha256": "c8449ef72cba27e36bdb9960cbea5378d57e16b05005ef5be49324aa37ab4dba",
+            "request_id": "6e9d701f8b8d48aa08062fc1aba57629",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/me",
+            "method": "GET",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:25.764148+00:00",
+            "latency_ms": 176,
+            "response_sha256": "afe606de545bf71e9256736938198ed910e1aa1f0a561d0f7d27cbcc057acf91",
+            "request_id": "b1fb32b9573e00298e93cb0e7c96241c",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/chats/60b6c57c-c407-4994-8e09-ef6233e445d8/participants",
+            "method": "GET",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:25.920340+00:00",
+            "latency_ms": 156,
+            "response_sha256": "370b7c8ac04dda8314adf3aff9988fdac120451822e4feaf668ed4c092c9c6d3",
+            "request_id": "8259710256e9b70fead51cd2998f97fc",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/chats/60b6c57c-c407-4994-8e09-ef6233e445d8/messages",
+            "method": "POST",
+            "http_status": 201,
+            "timestamp": "2026-11-24T00:10:26.139680+00:00",
+            "latency_ms": 219,
+            "response_sha256": "825e23b0874d9e5b95e744c8f44fba4294ffd585fc079929500ed8dc75aa8c4f",
+            "request_id": "984767bef7cfdf40db960bb5e3f6eb2f",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/chats/60b6c57c-c407-4994-8e09-ef6233e445d8/messages?status=all&sort_order=desc&limit=100",
+            "method": "GET",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:26.335239+00:00",
+            "latency_ms": 195,
+            "response_sha256": "d7e4f1f031d8ba78c80f7d515c8103e496a5f28dbf44c01bd7807849bc483a68",
+            "request_id": "78163cc641e1aab6822b3144e43949de",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/chats/60b6c57c-c407-4994-8e09-ef6233e445d8/messages/176698c5-77ff-46bf-a2fe-cfa07576bea1/processing",
+            "method": "POST",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:26.499512+00:00",
+            "latency_ms": 164,
+            "response_sha256": "cc55a0168e2bdc9fb6ccf721efd91d217bb11e37e528de14c2043c85736b1a2f",
+            "request_id": "15af84ff1d36582a8450523f7bf033f9",
+            "verified": true
+          }
+        ],
+        "timestamp": "2026-11-24T00:10:26.499534+00:00",
+        "status": "processing"
+      },
+      "duration_ms": 23331,
+      "audio_duration_ms": 22531,
+      "tts_voice": "Karen",
+      "tts_rate_wpm": 175
+    },
+    {
+      "n": 5,
+      "agent": "prosecutor",
+      "kind": "challenge",
+      "text": "Your Honor, I accept the defense’s and Maya’s point that the exhibits leave base-model training and damages causation unresolved. The licence separately restricted systematic extraction. SkillVault’s 2.1 million deliberately varied prompts support that narrower inference, and no signed amendment appears in the record. I ask the court to decide the extraction claim on that evidence.",
+      "decision": "Narrow the claim to systematic extraction under the original licence.",
+      "why": "The access pattern supports an extraction finding, and the original licence required separate signed permission for that activity. Training use and damages causation remain unresolved.",
+      "evidence_ids": [
+        "EX-ACCESS",
+        "EX-LICENSE",
+        "EX-AUDIT",
+        "EX-HARM"
+      ],
+      "round": 1,
+      "band_task_id": "dedd523b-bef4-40e6-bf7b-1e903522e0a6",
+      "created_at": "2026-11-24T00:10:41.942222+00:00",
+      "model_receipt": {
+        "service": "codex_cli",
+        "provider": "codex",
+        "model": "CLI default",
+        "thread_id": "01a20ae3-dce2-7b21-81ee-f321b456e025",
+        "exit_code": 0,
+        "latency_ms": 6980,
+        "response_sha256": "5683f6da90de8c2cb39de52f3baa58d5bf3fd2fe05ed11cd821cb9fc56700975",
+        "usage": {
+          "input_tokens": 29370,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 193,
+          "reasoning_output_tokens": 0
+        },
+        "verified": true,
+        "sandbox": "read-only",
+        "ephemeral": true
+      },
+      "handoff_receipt": {
+        "id": "dedd523b-bef4-40e6-bf7b-1e903522e0a6",
+        "service": "band",
+        "verified": true,
+        "connected": true,
+        "handoff_id": "c0616c92-633d-41f9-83a5-65dd55658be9",
+        "message_id": "dedd523b-bef4-40e6-bf7b-1e903522e0a6",
+        "room_id": "60b6c57c-c407-4994-8e09-ef6233e445d8",
+        "sender_role": "witness",
+        "recipient_role": "prosecutor",
+        "sender_agent_id": "997753a1-d15c-477d-b70f-9571fc9b5a48",
+        "recipient_agent_id": "e85ccfc3-e5b6-4766-b09c-9e8a9382e688",
+        "payload": {
+          "case": {
+            "mode": "fictional",
+            "notice": "All people, companies, usage figures and exhibits in this case are fictional. External web references provide background only and cannot establish facts about this fictional dispute.",
+            "question": "Did SkillVault exceed Maya Chen's permission when it distilled CodeReview Pro into its base model, and what remedy follows from the evidence?",
+            "title": "The Community v. SkillVault, Inc.",
+            "variant": "baseline"
+          },
+          "court_record": [
+            {
+              "agent": "judge",
+              "decision": "Open the hearing and state the evidentiary standard.",
+              "evidence_ids": [],
+              "kind": "procedure",
+              "text": "This hearing is open. Did SkillVault exceed Maya Chen’s permission when it distilled CodeReview Pro into its base model? We’ll decide from what the exhibits establish about the scope of permission and SkillVault’s use. If we find a breach, we’ll consider what remedy the evidence supports. Outside references may provide background only.",
+              "why": "The exhibits govern findings about permission, use, and any remedy. Outside references can provide background only."
+            },
+            {
+              "agent": "prosecutor",
+              "decision": "Present the access pattern as evidence of systematic extraction beyond the original licence.",
+              "evidence_ids": [
+                "EX-ACCESS",
+                "EX-LICENSE"
+              ],
+              "kind": "present_evidence",
+              "text": "Your Honor, SkillVault sent 2.1 million prompts in eleven days, systematically varying code-review edge cases. Maya’s licence allowed customers to request reviews for their own projects and required a separate signed amendment for systematic extraction. That pattern supports an inference that SkillVault was extracting the skill’s capabilities. The record contains no signed amendment authorizing that use.",
+              "why": "The volume and deliberate variation support an inference of systematic extraction. The exhibits leave actual training use and damages unresolved."
+            },
+            {
+              "agent": "defense",
+              "decision": "Challenge the inference that SkillVault used the collected outputs to train its base model.",
+              "evidence_ids": [
+                "EX-ACCESS",
+                "EX-AUDIT",
+                "EX-LICENSE"
+              ],
+              "kind": "challenge",
+              "text": "Your Honor, we concede that SkillVault’s account sent 2.1 million prompts and systematically varied the review cases. That pattern supports an extraction inference. But the logs and the audit’s 87 percent match on selected tests leave a crucial question open: did those outputs actually feed base-model training? The original licence required a signed amendment for systematic extraction.",
+              "why": "The access log establishes who made the requests, the audit establishes similarity on selected tests, and the original licence defines the permission required. The link between the collected outputs and base-model training remains unproven."
+            },
+            {
+              "agent": "witness",
+              "decision": "Concede that the exhibits leave base-model training and damages causation unresolved.",
+              "evidence_ids": [
+                "EX-ACCESS",
+                "EX-LICENSE",
+                "EX-AUDIT",
+                "EX-HARM"
+              ],
+              "kind": "concede",
+              "text": "I agree that the prompt pattern supports an inference of systematic extraction. My original licence required a signed amendment for that use, and none has been submitted. The audit shows similarity on selected tests. Whether SkillVault fed my outputs into base-model training, and how much of the sales decline that training caused, remain open. Public references supply background only.",
+              "why": "The access log records requests, the audit measures similarity, and the sales exhibit records a decline. The original licence required separate written permission, and the submitted exhibits leave the existence of a later amendment unverified."
+            }
+          ],
+          "evidence_packet": {
+            "claims": [
+              {
+                "actor": "prosecutor",
+                "evidence_ids": [
+                  "EX-ACCESS",
+                  "EX-LICENSE"
+                ],
+                "id": "claim-2",
+                "status": "submitted",
+                "text": "Your Honor, SkillVault sent 2.1 million prompts in eleven days, systematically varying code-review edge cases. Maya’s licence allowed customers to request reviews for their own projects and required a separate signed amendment for systematic extraction. That pattern supports an inference that SkillVault was extracting the skill’s capabilities. The record contains no signed amendment authorizing that use."
+              },
+              {
+                "actor": "defense",
+                "evidence_ids": [
+                  "EX-ACCESS",
+                  "EX-AUDIT",
+                  "EX-LICENSE"
+                ],
+                "id": "claim-3",
+                "status": "submitted",
+                "text": "Your Honor, we concede that SkillVault’s account sent 2.1 million prompts and systematically varied the review cases. That pattern supports an extraction inference. But the logs and the audit’s 87 percent match on selected tests leave a crucial question open: did those outputs actually feed base-model training? The original licence required a signed amendment for systematic extraction."
+              }
+            ],
+            "evidence": [
+              {
+                "id": "EX-ACCESS",
+                "quote": "a SkillVault-controlled service account sent 2.1 million prompts to Maya Chen's paid CodeReview Pro Skill",
+                "scope": "case_fact",
+                "source_text": "FICTIONAL STIPULATED EXHIBIT. During an eleven-day period, a SkillVault-controlled service account sent 2.1 million prompts to Maya Chen's paid CodeReview Pro Skill. The requests systematically varied code-review edge cases. These logs establish the requests and their origin; by themselves they do not establish whether Maya authorized model training.",
+                "source_type": "case_exhibit",
+                "source_url": "case://skillvault/access-log",
+                "title": "Stipulated platform access log"
+              },
+              {
+                "id": "EX-LICENSE",
+                "quote": "It prohibited systematic extraction or training a competing general-purpose model without a separate signed amendment.",
+                "scope": "case_fact",
+                "source_text": "FICTIONAL STIPULATED EXHIBIT. Maya's original licence permitted customers to request code reviews for their own projects. It prohibited systematic extraction or training a competing general-purpose model without a separate signed amendment. Both parties agree that this was the original agreement. Whether a later amendment exists must be determined from the exhibits actually submitted.",
+                "source_type": "case_exhibit",
+                "source_url": "case://skillvault/original-licence",
+                "title": "Original limited-use licence"
+              },
+              {
+                "id": "EX-AUDIT",
+                "quote": "The audit did not find copied source code or copied model weights.",
+                "scope": "case_fact",
+                "source_text": "FICTIONAL STIPULATED EXHIBIT. An independent audit reported that 87 percent of a selected test set matched CodeReview Pro's signature review heuristics. The audit did not find copied source code or copied model weights. It did not independently determine consent, causation of lost sales, or the legal status of learning from outputs.",
+                "source_type": "case_exhibit",
+                "source_url": "case://skillvault/similarity-audit",
+                "title": "Similarity audit and its limitations"
+              },
+              {
+                "id": "EX-HARM",
+                "quote": "The parties accept the sales figures but dispute how much of the decline was caused by the distillation.",
+                "scope": "case_fact",
+                "source_text": "FICTIONAL STIPULATED EXHIBIT. Maya reports a 48,000 dollar reduction in CodeReview Pro sales after SkillVault released its updated base model. The parties accept the sales figures but dispute how much of the decline was caused by the distillation. No exhibit establishes a precise damages award.",
+                "source_type": "case_exhibit",
+                "source_url": "case://skillvault/revenue-statement",
+                "title": "Creator's revenue statement"
+              },
+              {
+                "id": "ref-0e3445a6b6",
+                "quote": "When you use model outputs to train or fine-tune other models, you need to ensure you have permission to do so. Using outputs from models that prohibit distillation could violate terms of service agreements and potentially expose you to legal liability. OpenRouter tracks which models allow their outputs to be used for training purposes through the `is_trainable_text` property. Models where the author has explicitly allowed text distillation are marked as distillable.",
+                "scope": "background",
+                "source_text": "## Why Distillation Compliance Matters\n\nWhen you use model outputs to train or fine-tune other models, you need to ensure you have permission to do so. Using outputs from models that prohibit distillation could violate terms of service agreements and potentially expose you to legal liability. OpenRouter tracks which models allow their outputs to be used for training purposes through the `is_trainable_text` property. Models where the author has explicitly allowed text distillation are marked as distillable.\n\n## Finding Distillable Models on the Model Page\n\nThe easiest way to find models that allow distillation is to use the\n\n**Distillable**filter on the\n\n[Models page](https://openrouter.ai/models?distillable=true).\n\n1. Navigate to the [Models page with the distillable filter enabled](https://openrouter.ai/models?distillable=true)\n2. The **Distillable** filter in the filter panel will be set to **Yes**, showing only models that allow distillation\n\n## Using the Routing Parameter\n\nFor programmatic control, you can use the `enforce_distillable_text` parameter in your API requests. When set to `true`, OpenRouter will only route your request to models that allow text distillation. `enforce_distillable_text` is set to `true`, the request will only be routed to models where the author has explicitly enabled text distillation. If no distillable models are available for your request, you’ll receive an error.\n\n### Example: Enforcing Distillable Models\n\n## Use Cases\n\nThe distillable filter is particularly useful for:\n\n- **Building training datasets**: When collecting model outputs to train or fine-tune your own models, ensure you only use outputs from models that permit this use.\n- **Distillation pipelines**: When creating smaller, specialized models from larger teacher models, filt",
+                "source_type": "web_source",
+                "source_url": "https://openrouter.ai/docs/cookbook/evaluate-and-optimize/distillation",
+                "title": "Distillation - Compliance with Provider and Model Creator Policies"
+              },
+              {
+                "id": "ref-55ca969159",
+                "quote": "# NVIDIA Community Model License IMPORTANT NOTICE – PLEASE READ AND AGREE BEFORE USING THE NVIDIA MODELS. \\*\\*Last Modified: January 30, 2025\\*\\* This license agreement (“Agreement”) is a legal agreement between you, whether an individual or entity (“you”) and NVIDIA Corporation (“NVIDIA”) and governs the use of the NVIDIA AI Foundation Models, consisting of models including software, checkpoints, learnt weights, algorithms, parameters, configuration files, datasets and docum",
+                "scope": "background",
+                "source_text": "# NVIDIA Community Model License IMPORTANT NOTICE – PLEASE READ AND AGREE BEFORE USING THE NVIDIA MODELS. \\*\\*Last Modified: January 30, 2025\\*\\* This license agreement (“Agreement”) is a legal agreement between you, whether an individual or entity (“you”) and NVIDIA Corporation (“NVIDIA”) and governs the use of the NVIDIA AI Foundation Models, consisting of models including software, checkpoints, learnt weights, algorithms, parameters, configuration files, datasets and documentation, if and when available (collectively, “NVIDIA Models”). This Agreement can be accepted only by an adult of legal age of majority in the country in which the NVIDIA Models are used. If you do not have the required age or authority to accept this Agreement, or if you do not accept all the terms and conditions of this Agreement, do not use the NVIDIA Models. 1. \\*\\*LICENSE GRANTS.\\*\\* 1. Service Grant. If you receive access to NVIDIA Models as part of an NVIDIA service, subject to the terms of this Agreement, you may access and use such NVIDIA Models with the service. 2. General Downloadable Grant. Except as described in Section 1.3 below, if you receive access to NVIDIA Models for download, subject to the terms of this Agreement, NVIDIA grants you a limited, non-exclusive, revocable, non-transferable, non-sublicensable (except as expressly permitted in this Agreement), license to: (a) install, use and reproduce NVIDIA Models, (b) create Derivative Models (as defined below), and (c) distribute NVIDIA Models and Derivative Models with a copy of this Agreement, except that to exercise these grants in production you must use an NVIDIA Inference Microservice runtime (NVIDIA NIM) available through an NVIDIA AI Enterprise subscription, unless: (i) an NVIDIA Model is designated by NVIDIA for use with",
+                "source_type": "web_source",
+                "source_url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-community-models-license.md",
+                "title": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-community-models-license.md"
+              }
+            ],
+            "issues": [],
+            "judge_allowed": true,
+            "run_id": "3535013d442b",
+            "snapshot_id": "snap-9927a107c0884c31",
+            "status": "passed"
+          },
+          "instruction": "Respond to the challenge and the witness. Narrow, repair or concede your claim where appropriate."
+        },
+        "receipts": [
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/me",
+            "method": "GET",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:34.076684+00:00",
+            "latency_ms": 186,
+            "response_sha256": "afe606de545bf71e9256736938198ed910e1aa1f0a561d0f7d27cbcc057acf91",
+            "request_id": "51ffd0fd21c59347b79c5b1df17b7ebf",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/me",
+            "method": "GET",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:34.247269+00:00",
+            "latency_ms": 171,
+            "response_sha256": "7b9ebdeee7872b24aa92b9aa29c6dca3a4f7db9b2806f32646a31b58816e765b",
+            "request_id": "fde9ea94f9a3d0ee3cd1a134eaa3ac42",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/chats/60b6c57c-c407-4994-8e09-ef6233e445d8/participants",
+            "method": "GET",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:34.432789+00:00",
+            "latency_ms": 185,
+            "response_sha256": "370b7c8ac04dda8314adf3aff9988fdac120451822e4feaf668ed4c092c9c6d3",
+            "request_id": "4c75821d1099b06941330647285d5588",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/chats/60b6c57c-c407-4994-8e09-ef6233e445d8/messages",
+            "method": "POST",
+            "http_status": 201,
+            "timestamp": "2026-11-24T00:10:34.622865+00:00",
+            "latency_ms": 190,
+            "response_sha256": "83d444969653e575b341a5975102cbb0d2dae1d7ad2fe2b513462a4cc48cd7d9",
+            "request_id": "d580415fe0cf2de4543891a04ed8b0ec",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/chats/60b6c57c-c407-4994-8e09-ef6233e445d8/messages?status=all&sort_order=desc&limit=100",
+            "method": "GET",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:34.800686+00:00",
+            "latency_ms": 178,
+            "response_sha256": "6d6ddbc6724b77f7fe86ba16b1bc5f626fc8cdcd93bbbe3345996f001760c889",
+            "request_id": "b01b70b27adf3bf95055acbe9be64bef",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/chats/60b6c57c-c407-4994-8e09-ef6233e445d8/messages/dedd523b-bef4-40e6-bf7b-1e903522e0a6/processing",
+            "method": "POST",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:34.960525+00:00",
+            "latency_ms": 160,
+            "response_sha256": "6d5ac8e987fe9eed9a4dc34987a8335056e12bfc285561bbb34577eac7dfc0b1",
+            "request_id": "7ea9e646a82512a577f7c4c5d9e3de5a",
+            "verified": true
+          }
+        ],
+        "timestamp": "2026-11-24T00:10:34.960562+00:00",
+        "status": "processing"
+      },
+      "duration_ms": 21645,
+      "audio_duration_ms": 20845,
+      "tts_voice": "Samantha",
+      "tts_rate_wpm": 185
+    },
+    {
+      "n": 6,
+      "agent": "defense",
+      "kind": "challenge",
+      "text": "Your Honor, SkillVault’s 2.1 million deliberately varied prompts support an inference of systematic extraction. Maya’s licence allowed customers to request reviews for their own projects and required a signed amendment for systematic extraction. None was submitted. Any finding on that narrower claim should leave base-model training and the cause of the $48,000 sales decline unresolved.",
+      "decision": "Concede the evidence supporting systematic extraction and oppose extending the finding to training or damages.",
+      "why": "The access pattern supports the narrower extraction claim under the original licence. The audit measures similarity on selected tests, and the sales figures establish the decline. Training use and causation remain unresolved.",
+      "evidence_ids": [
+        "EX-ACCESS",
+        "EX-LICENSE",
+        "EX-AUDIT",
+        "EX-HARM"
+      ],
+      "round": 2,
+      "band_task_id": "4e62e3bc-c2b1-49f0-a148-e66981d047a7",
+      "created_at": "2026-11-24T00:10:52.049934+00:00",
+      "model_receipt": {
+        "service": "codex_cli",
+        "provider": "codex",
+        "model": "CLI default",
+        "thread_id": "01a20ae4-00a7-7710-873c-ba0799c99eb2",
+        "exit_code": 0,
+        "latency_ms": 7873,
+        "response_sha256": "d9135a67ced2a1679719a9d0e1b67101b13313ea64e27635688142908777b1fb",
+        "usage": {
+          "input_tokens": 29723,
+          "cached_input_tokens": 23936,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 205,
+          "reasoning_output_tokens": 0
+        },
+        "verified": true,
+        "sandbox": "read-only",
+        "ephemeral": true
+      },
+      "handoff_receipt": {
+        "id": "4e62e3bc-c2b1-49f0-a148-e66981d047a7",
+        "service": "band",
+        "verified": true,
+        "connected": true,
+        "handoff_id": "e0769113-f6ec-485b-863a-6834b3180276",
+        "message_id": "4e62e3bc-c2b1-49f0-a148-e66981d047a7",
+        "room_id": "60b6c57c-c407-4994-8e09-ef6233e445d8",
+        "sender_role": "prosecutor",
+        "recipient_role": "defense",
+        "sender_agent_id": "e85ccfc3-e5b6-4766-b09c-9e8a9382e688",
+        "recipient_agent_id": "df3ef428-7029-45bf-8037-f1f5a59571fa",
+        "payload": {
+          "case": {
+            "mode": "fictional",
+            "notice": "All people, companies, usage figures and exhibits in this case are fictional. External web references provide background only and cannot establish facts about this fictional dispute.",
+            "question": "Did SkillVault exceed Maya Chen's permission when it distilled CodeReview Pro into its base model, and what remedy follows from the evidence?",
+            "title": "The Community v. SkillVault, Inc.",
+            "variant": "baseline"
+          },
+          "court_record": [
+            {
+              "agent": "judge",
+              "decision": "Open the hearing and state the evidentiary standard.",
+              "evidence_ids": [],
+              "kind": "procedure",
+              "text": "This hearing is open. Did SkillVault exceed Maya Chen’s permission when it distilled CodeReview Pro into its base model? We’ll decide from what the exhibits establish about the scope of permission and SkillVault’s use. If we find a breach, we’ll consider what remedy the evidence supports. Outside references may provide background only.",
+              "why": "The exhibits govern findings about permission, use, and any remedy. Outside references can provide background only."
+            },
+            {
+              "agent": "prosecutor",
+              "decision": "Present the access pattern as evidence of systematic extraction beyond the original licence.",
+              "evidence_ids": [
+                "EX-ACCESS",
+                "EX-LICENSE"
+              ],
+              "kind": "present_evidence",
+              "text": "Your Honor, SkillVault sent 2.1 million prompts in eleven days, systematically varying code-review edge cases. Maya’s licence allowed customers to request reviews for their own projects and required a separate signed amendment for systematic extraction. That pattern supports an inference that SkillVault was extracting the skill’s capabilities. The record contains no signed amendment authorizing that use.",
+              "why": "The volume and deliberate variation support an inference of systematic extraction. The exhibits leave actual training use and damages unresolved."
+            },
+            {
+              "agent": "defense",
+              "decision": "Challenge the inference that SkillVault used the collected outputs to train its base model.",
+              "evidence_ids": [
+                "EX-ACCESS",
+                "EX-AUDIT",
+                "EX-LICENSE"
+              ],
+              "kind": "challenge",
+              "text": "Your Honor, we concede that SkillVault’s account sent 2.1 million prompts and systematically varied the review cases. That pattern supports an extraction inference. But the logs and the audit’s 87 percent match on selected tests leave a crucial question open: did those outputs actually feed base-model training? The original licence required a signed amendment for systematic extraction.",
+              "why": "The access log establishes who made the requests, the audit establishes similarity on selected tests, and the original licence defines the permission required. The link between the collected outputs and base-model training remains unproven."
+            },
+            {
+              "agent": "witness",
+              "decision": "Concede that the exhibits leave base-model training and damages causation unresolved.",
+              "evidence_ids": [
+                "EX-ACCESS",
+                "EX-LICENSE",
+                "EX-AUDIT",
+                "EX-HARM"
+              ],
+              "kind": "concede",
+              "text": "I agree that the prompt pattern supports an inference of systematic extraction. My original licence required a signed amendment for that use, and none has been submitted. The audit shows similarity on selected tests. Whether SkillVault fed my outputs into base-model training, and how much of the sales decline that training caused, remain open. Public references supply background only.",
+              "why": "The access log records requests, the audit measures similarity, and the sales exhibit records a decline. The original licence required separate written permission, and the submitted exhibits leave the existence of a later amendment unverified."
+            },
+            {
+              "agent": "prosecutor",
+              "decision": "Narrow the claim to systematic extraction under the original licence.",
+              "evidence_ids": [
+                "EX-ACCESS",
+                "EX-LICENSE",
+                "EX-AUDIT",
+                "EX-HARM"
+              ],
+              "kind": "challenge",
+              "text": "Your Honor, I accept the defense’s and Maya’s point that the exhibits leave base-model training and damages causation unresolved. The licence separately restricted systematic extraction. SkillVault’s 2.1 million deliberately varied prompts support that narrower inference, and no signed amendment appears in the record. I ask the court to decide the extraction claim on that evidence.",
+              "why": "The access pattern supports an extraction finding, and the original licence required separate signed permission for that activity. Training use and damages causation remain unresolved."
+            }
+          ],
+          "evidence_packet": {
+            "claims": [
+              {
+                "actor": "prosecutor",
+                "evidence_ids": [
+                  "EX-ACCESS",
+                  "EX-LICENSE"
+                ],
+                "id": "claim-2",
+                "status": "submitted",
+                "text": "Your Honor, SkillVault sent 2.1 million prompts in eleven days, systematically varying code-review edge cases. Maya’s licence allowed customers to request reviews for their own projects and required a separate signed amendment for systematic extraction. That pattern supports an inference that SkillVault was extracting the skill’s capabilities. The record contains no signed amendment authorizing that use."
+              },
+              {
+                "actor": "defense",
+                "evidence_ids": [
+                  "EX-ACCESS",
+                  "EX-AUDIT",
+                  "EX-LICENSE"
+                ],
+                "id": "claim-3",
+                "status": "submitted",
+                "text": "Your Honor, we concede that SkillVault’s account sent 2.1 million prompts and systematically varied the review cases. That pattern supports an extraction inference. But the logs and the audit’s 87 percent match on selected tests leave a crucial question open: did those outputs actually feed base-model training? The original licence required a signed amendment for systematic extraction."
+              }
+            ],
+            "evidence": [
+              {
+                "id": "EX-ACCESS",
+                "quote": "a SkillVault-controlled service account sent 2.1 million prompts to Maya Chen's paid CodeReview Pro Skill",
+                "scope": "case_fact",
+                "source_text": "FICTIONAL STIPULATED EXHIBIT. During an eleven-day period, a SkillVault-controlled service account sent 2.1 million prompts to Maya Chen's paid CodeReview Pro Skill. The requests systematically varied code-review edge cases. These logs establish the requests and their origin; by themselves they do not establish whether Maya authorized model training.",
+                "source_type": "case_exhibit",
+                "source_url": "case://skillvault/access-log",
+                "title": "Stipulated platform access log"
+              },
+              {
+                "id": "EX-LICENSE",
+                "quote": "It prohibited systematic extraction or training a competing general-purpose model without a separate signed amendment.",
+                "scope": "case_fact",
+                "source_text": "FICTIONAL STIPULATED EXHIBIT. Maya's original licence permitted customers to request code reviews for their own projects. It prohibited systematic extraction or training a competing general-purpose model without a separate signed amendment. Both parties agree that this was the original agreement. Whether a later amendment exists must be determined from the exhibits actually submitted.",
+                "source_type": "case_exhibit",
+                "source_url": "case://skillvault/original-licence",
+                "title": "Original limited-use licence"
+              },
+              {
+                "id": "EX-AUDIT",
+                "quote": "The audit did not find copied source code or copied model weights.",
+                "scope": "case_fact",
+                "source_text": "FICTIONAL STIPULATED EXHIBIT. An independent audit reported that 87 percent of a selected test set matched CodeReview Pro's signature review heuristics. The audit did not find copied source code or copied model weights. It did not independently determine consent, causation of lost sales, or the legal status of learning from outputs.",
+                "source_type": "case_exhibit",
+                "source_url": "case://skillvault/similarity-audit",
+                "title": "Similarity audit and its limitations"
+              },
+              {
+                "id": "EX-HARM",
+                "quote": "The parties accept the sales figures but dispute how much of the decline was caused by the distillation.",
+                "scope": "case_fact",
+                "source_text": "FICTIONAL STIPULATED EXHIBIT. Maya reports a 48,000 dollar reduction in CodeReview Pro sales after SkillVault released its updated base model. The parties accept the sales figures but dispute how much of the decline was caused by the distillation. No exhibit establishes a precise damages award.",
+                "source_type": "case_exhibit",
+                "source_url": "case://skillvault/revenue-statement",
+                "title": "Creator's revenue statement"
+              },
+              {
+                "id": "ref-0e3445a6b6",
+                "quote": "When you use model outputs to train or fine-tune other models, you need to ensure you have permission to do so. Using outputs from models that prohibit distillation could violate terms of service agreements and potentially expose you to legal liability. OpenRouter tracks which models allow their outputs to be used for training purposes through the `is_trainable_text` property. Models where the author has explicitly allowed text distillation are marked as distillable.",
+                "scope": "background",
+                "source_text": "## Why Distillation Compliance Matters\n\nWhen you use model outputs to train or fine-tune other models, you need to ensure you have permission to do so. Using outputs from models that prohibit distillation could violate terms of service agreements and potentially expose you to legal liability. OpenRouter tracks which models allow their outputs to be used for training purposes through the `is_trainable_text` property. Models where the author has explicitly allowed text distillation are marked as distillable.\n\n## Finding Distillable Models on the Model Page\n\nThe easiest way to find models that allow distillation is to use the\n\n**Distillable**filter on the\n\n[Models page](https://openrouter.ai/models?distillable=true).\n\n1. Navigate to the [Models page with the distillable filter enabled](https://openrouter.ai/models?distillable=true)\n2. The **Distillable** filter in the filter panel will be set to **Yes**, showing only models that allow distillation\n\n## Using the Routing Parameter\n\nFor programmatic control, you can use the `enforce_distillable_text` parameter in your API requests. When set to `true`, OpenRouter will only route your request to models that allow text distillation. `enforce_distillable_text` is set to `true`, the request will only be routed to models where the author has explicitly enabled text distillation. If no distillable models are available for your request, you’ll receive an error.\n\n### Example: Enforcing Distillable Models\n\n## Use Cases\n\nThe distillable filter is particularly useful for:\n\n- **Building training datasets**: When collecting model outputs to train or fine-tune your own models, ensure you only use outputs from models that permit this use.\n- **Distillation pipelines**: When creating smaller, specialized models from larger teacher models, filt",
+                "source_type": "web_source",
+                "source_url": "https://openrouter.ai/docs/cookbook/evaluate-and-optimize/distillation",
+                "title": "Distillation - Compliance with Provider and Model Creator Policies"
+              },
+              {
+                "id": "ref-55ca969159",
+                "quote": "# NVIDIA Community Model License IMPORTANT NOTICE – PLEASE READ AND AGREE BEFORE USING THE NVIDIA MODELS. \\*\\*Last Modified: January 30, 2025\\*\\* This license agreement (“Agreement”) is a legal agreement between you, whether an individual or entity (“you”) and NVIDIA Corporation (“NVIDIA”) and governs the use of the NVIDIA AI Foundation Models, consisting of models including software, checkpoints, learnt weights, algorithms, parameters, configuration files, datasets and docum",
+                "scope": "background",
+                "source_text": "# NVIDIA Community Model License IMPORTANT NOTICE – PLEASE READ AND AGREE BEFORE USING THE NVIDIA MODELS. \\*\\*Last Modified: January 30, 2025\\*\\* This license agreement (“Agreement”) is a legal agreement between you, whether an individual or entity (“you”) and NVIDIA Corporation (“NVIDIA”) and governs the use of the NVIDIA AI Foundation Models, consisting of models including software, checkpoints, learnt weights, algorithms, parameters, configuration files, datasets and documentation, if and when available (collectively, “NVIDIA Models”). This Agreement can be accepted only by an adult of legal age of majority in the country in which the NVIDIA Models are used. If you do not have the required age or authority to accept this Agreement, or if you do not accept all the terms and conditions of this Agreement, do not use the NVIDIA Models. 1. \\*\\*LICENSE GRANTS.\\*\\* 1. Service Grant. If you receive access to NVIDIA Models as part of an NVIDIA service, subject to the terms of this Agreement, you may access and use such NVIDIA Models with the service. 2. General Downloadable Grant. Except as described in Section 1.3 below, if you receive access to NVIDIA Models for download, subject to the terms of this Agreement, NVIDIA grants you a limited, non-exclusive, revocable, non-transferable, non-sublicensable (except as expressly permitted in this Agreement), license to: (a) install, use and reproduce NVIDIA Models, (b) create Derivative Models (as defined below), and (c) distribute NVIDIA Models and Derivative Models with a copy of this Agreement, except that to exercise these grants in production you must use an NVIDIA Inference Microservice runtime (NVIDIA NIM) available through an NVIDIA AI Enterprise subscription, unless: (i) an NVIDIA Model is designated by NVIDIA for use with",
+                "source_type": "web_source",
+                "source_url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-community-models-license.md",
+                "title": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-community-models-license.md"
+              }
+            ],
+            "issues": [],
+            "judge_allowed": true,
+            "run_id": "3535013d442b",
+            "snapshot_id": "snap-9927a107c0884c31",
+            "status": "passed"
+          },
+          "instruction": "Give a concise final reply. Address the actual scope of any authorization exhibit, and concede what the evidence establishes."
+        },
+        "receipts": [
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/me",
+            "method": "GET",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:42.583414+00:00",
+            "latency_ms": 345,
+            "response_sha256": "7b9ebdeee7872b24aa92b9aa29c6dca3a4f7db9b2806f32646a31b58816e765b",
+            "request_id": "e7d77f7ae67297e7b8efaa28fd4906ed",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/me",
+            "method": "GET",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:42.795720+00:00",
+            "latency_ms": 212,
+            "response_sha256": "c8449ef72cba27e36bdb9960cbea5378d57e16b05005ef5be49324aa37ab4dba",
+            "request_id": "404aa3a1a6cde361f8b5707687b982e5",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/chats/60b6c57c-c407-4994-8e09-ef6233e445d8/participants",
+            "method": "GET",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:43.132996+00:00",
+            "latency_ms": 337,
+            "response_sha256": "370b7c8ac04dda8314adf3aff9988fdac120451822e4feaf668ed4c092c9c6d3",
+            "request_id": "e7c46a475efa9ccf914655a3b6068f8d",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/chats/60b6c57c-c407-4994-8e09-ef6233e445d8/messages",
+            "method": "POST",
+            "http_status": 201,
+            "timestamp": "2026-11-24T00:10:43.608673+00:00",
+            "latency_ms": 475,
+            "response_sha256": "81763c95d825f9c649bb01ca070bbd8c27d1d66a86b6b8199c04ce189e5b2379",
+            "request_id": "b8724e1ded05812a129b2a8cc1e966f6",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/chats/60b6c57c-c407-4994-8e09-ef6233e445d8/messages?status=all&sort_order=desc&limit=100",
+            "method": "GET",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:43.859658+00:00",
+            "latency_ms": 251,
+            "response_sha256": "3cd420e3251d4a120d943020698f6818320139d519c307fd6a726dda56ab6711",
+            "request_id": "23739c059d5836ed25fcb36b40b71b4e",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/chats/60b6c57c-c407-4994-8e09-ef6233e445d8/messages/4e62e3bc-c2b1-49f0-a148-e66981d047a7/processing",
+            "method": "POST",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:44.175614+00:00",
+            "latency_ms": 316,
+            "response_sha256": "6434af5159b450309cdb289b69c9a66088e6a16ec8cc17c3dcde9350dce9c358",
+            "request_id": "1f2d8fa4e902ad2abf2e546b7657ff79",
+            "verified": true
+          }
+        ],
+        "timestamp": "2026-11-24T00:10:44.175638+00:00",
+        "status": "processing"
+      },
+      "duration_ms": 23141,
+      "audio_duration_ms": 22341,
+      "tts_voice": "Daniel",
+      "tts_rate_wpm": 185
+    },
+    {
+      "n": 7,
+      "agent": "judge",
+      "kind": "rule",
+      "text": "I find SkillVault liable for systematic extraction. Its 2.1 million deliberately varied prompts support that finding, and the record contains no signed amendment authorizing extraction as the licence required. The defense is right that the similarity audit leaves base-model training unproven. I order SkillVault to cease unauthorized extraction and award no damages because the cause of the sales decline remains unresolved.",
+      "decision": "Find SkillVault liable for systematic extraction, order it to cease unauthorized extraction, and award no damages.",
+      "why": "The access log and original licence establish the narrower breach. The audit leaves actual use in training unresolved, and the revenue statement does not establish what portion of the decline SkillVault caused.",
+      "evidence_ids": [
+        "EX-ACCESS",
+        "EX-LICENSE",
+        "EX-AUDIT",
+        "EX-HARM"
+      ],
+      "round": 2,
+      "band_task_id": "09e778eb-a4a6-472a-a37a-e4e764e3380a",
+      "created_at": "2026-11-24T00:11:05.163731+00:00",
+      "model_receipt": {
+        "service": "codex_cli",
+        "provider": "codex",
+        "model": "CLI default",
+        "thread_id": "01a20ae4-270c-7db0-84ac-293a307a2a0a",
+        "exit_code": 0,
+        "latency_ms": 11208,
+        "response_sha256": "9a030a8fff72db663cab564056b61df43c80dc2fd45992abad35d410a09ac1d5",
+        "usage": {
+          "input_tokens": 30013,
+          "cached_input_tokens": 23936,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 214,
+          "reasoning_output_tokens": 0
+        },
+        "verified": true,
+        "sandbox": "read-only",
+        "ephemeral": true
+      },
+      "handoff_receipt": {
+        "id": "09e778eb-a4a6-472a-a37a-e4e764e3380a",
+        "service": "band",
+        "verified": true,
+        "connected": true,
+        "handoff_id": "a9004b3e-37f6-4bc6-b7e9-645b21c737c5",
+        "message_id": "09e778eb-a4a6-472a-a37a-e4e764e3380a",
+        "room_id": "60b6c57c-c407-4994-8e09-ef6233e445d8",
+        "sender_role": "defense",
+        "recipient_role": "judge",
+        "sender_agent_id": "df3ef428-7029-45bf-8037-f1f5a59571fa",
+        "recipient_agent_id": "9f3f32ae-ea2c-42c2-be35-135e906ac165",
+        "payload": {
+          "case": {
+            "mode": "fictional",
+            "notice": "All people, companies, usage figures and exhibits in this case are fictional. External web references provide background only and cannot establish facts about this fictional dispute.",
+            "question": "Did SkillVault exceed Maya Chen's permission when it distilled CodeReview Pro into its base model, and what remedy follows from the evidence?",
+            "title": "The Community v. SkillVault, Inc.",
+            "variant": "baseline"
+          },
+          "court_record": [
+            {
+              "agent": "judge",
+              "decision": "Open the hearing and state the evidentiary standard.",
+              "evidence_ids": [],
+              "kind": "procedure",
+              "text": "This hearing is open. Did SkillVault exceed Maya Chen’s permission when it distilled CodeReview Pro into its base model? We’ll decide from what the exhibits establish about the scope of permission and SkillVault’s use. If we find a breach, we’ll consider what remedy the evidence supports. Outside references may provide background only.",
+              "why": "The exhibits govern findings about permission, use, and any remedy. Outside references can provide background only."
+            },
+            {
+              "agent": "prosecutor",
+              "decision": "Present the access pattern as evidence of systematic extraction beyond the original licence.",
+              "evidence_ids": [
+                "EX-ACCESS",
+                "EX-LICENSE"
+              ],
+              "kind": "present_evidence",
+              "text": "Your Honor, SkillVault sent 2.1 million prompts in eleven days, systematically varying code-review edge cases. Maya’s licence allowed customers to request reviews for their own projects and required a separate signed amendment for systematic extraction. That pattern supports an inference that SkillVault was extracting the skill’s capabilities. The record contains no signed amendment authorizing that use.",
+              "why": "The volume and deliberate variation support an inference of systematic extraction. The exhibits leave actual training use and damages unresolved."
+            },
+            {
+              "agent": "defense",
+              "decision": "Challenge the inference that SkillVault used the collected outputs to train its base model.",
+              "evidence_ids": [
+                "EX-ACCESS",
+                "EX-AUDIT",
+                "EX-LICENSE"
+              ],
+              "kind": "challenge",
+              "text": "Your Honor, we concede that SkillVault’s account sent 2.1 million prompts and systematically varied the review cases. That pattern supports an extraction inference. But the logs and the audit’s 87 percent match on selected tests leave a crucial question open: did those outputs actually feed base-model training? The original licence required a signed amendment for systematic extraction.",
+              "why": "The access log establishes who made the requests, the audit establishes similarity on selected tests, and the original licence defines the permission required. The link between the collected outputs and base-model training remains unproven."
+            },
+            {
+              "agent": "witness",
+              "decision": "Concede that the exhibits leave base-model training and damages causation unresolved.",
+              "evidence_ids": [
+                "EX-ACCESS",
+                "EX-LICENSE",
+                "EX-AUDIT",
+                "EX-HARM"
+              ],
+              "kind": "concede",
+              "text": "I agree that the prompt pattern supports an inference of systematic extraction. My original licence required a signed amendment for that use, and none has been submitted. The audit shows similarity on selected tests. Whether SkillVault fed my outputs into base-model training, and how much of the sales decline that training caused, remain open. Public references supply background only.",
+              "why": "The access log records requests, the audit measures similarity, and the sales exhibit records a decline. The original licence required separate written permission, and the submitted exhibits leave the existence of a later amendment unverified."
+            },
+            {
+              "agent": "prosecutor",
+              "decision": "Narrow the claim to systematic extraction under the original licence.",
+              "evidence_ids": [
+                "EX-ACCESS",
+                "EX-LICENSE",
+                "EX-AUDIT",
+                "EX-HARM"
+              ],
+              "kind": "challenge",
+              "text": "Your Honor, I accept the defense’s and Maya’s point that the exhibits leave base-model training and damages causation unresolved. The licence separately restricted systematic extraction. SkillVault’s 2.1 million deliberately varied prompts support that narrower inference, and no signed amendment appears in the record. I ask the court to decide the extraction claim on that evidence.",
+              "why": "The access pattern supports an extraction finding, and the original licence required separate signed permission for that activity. Training use and damages causation remain unresolved."
+            },
+            {
+              "agent": "defense",
+              "decision": "Concede the evidence supporting systematic extraction and oppose extending the finding to training or damages.",
+              "evidence_ids": [
+                "EX-ACCESS",
+                "EX-LICENSE",
+                "EX-AUDIT",
+                "EX-HARM"
+              ],
+              "kind": "challenge",
+              "text": "Your Honor, SkillVault’s 2.1 million deliberately varied prompts support an inference of systematic extraction. Maya’s licence allowed customers to request reviews for their own projects and required a signed amendment for systematic extraction. None was submitted. Any finding on that narrower claim should leave base-model training and the cause of the $48,000 sales decline unresolved.",
+              "why": "The access pattern supports the narrower extraction claim under the original licence. The audit measures similarity on selected tests, and the sales figures establish the decline. Training use and causation remain unresolved."
+            }
+          ],
+          "evidence_packet": {
+            "claims": [
+              {
+                "actor": "prosecutor",
+                "evidence_ids": [
+                  "EX-ACCESS",
+                  "EX-LICENSE"
+                ],
+                "id": "claim-2",
+                "status": "submitted",
+                "text": "Your Honor, SkillVault sent 2.1 million prompts in eleven days, systematically varying code-review edge cases. Maya’s licence allowed customers to request reviews for their own projects and required a separate signed amendment for systematic extraction. That pattern supports an inference that SkillVault was extracting the skill’s capabilities. The record contains no signed amendment authorizing that use."
+              },
+              {
+                "actor": "defense",
+                "evidence_ids": [
+                  "EX-ACCESS",
+                  "EX-AUDIT",
+                  "EX-LICENSE"
+                ],
+                "id": "claim-3",
+                "status": "submitted",
+                "text": "Your Honor, we concede that SkillVault’s account sent 2.1 million prompts and systematically varied the review cases. That pattern supports an extraction inference. But the logs and the audit’s 87 percent match on selected tests leave a crucial question open: did those outputs actually feed base-model training? The original licence required a signed amendment for systematic extraction."
+              },
+              {
+                "actor": "witness",
+                "evidence_ids": [
+                  "EX-ACCESS",
+                  "EX-LICENSE",
+                  "EX-AUDIT",
+                  "EX-HARM"
+                ],
+                "id": "claim-4",
+                "status": "submitted",
+                "text": "I agree that the prompt pattern supports an inference of systematic extraction. My original licence required a signed amendment for that use, and none has been submitted. The audit shows similarity on selected tests. Whether SkillVault fed my outputs into base-model training, and how much of the sales decline that training caused, remain open. Public references supply background only."
+              },
+              {
+                "actor": "prosecutor",
+                "evidence_ids": [
+                  "EX-ACCESS",
+                  "EX-LICENSE",
+                  "EX-AUDIT",
+                  "EX-HARM"
+                ],
+                "id": "claim-5",
+                "status": "submitted",
+                "text": "Your Honor, I accept the defense’s and Maya’s point that the exhibits leave base-model training and damages causation unresolved. The licence separately restricted systematic extraction. SkillVault’s 2.1 million deliberately varied prompts support that narrower inference, and no signed amendment appears in the record. I ask the court to decide the extraction claim on that evidence."
+              },
+              {
+                "actor": "defense",
+                "evidence_ids": [
+                  "EX-ACCESS",
+                  "EX-LICENSE",
+                  "EX-AUDIT",
+                  "EX-HARM"
+                ],
+                "id": "claim-6",
+                "status": "submitted",
+                "text": "Your Honor, SkillVault’s 2.1 million deliberately varied prompts support an inference of systematic extraction. Maya’s licence allowed customers to request reviews for their own projects and required a signed amendment for systematic extraction. None was submitted. Any finding on that narrower claim should leave base-model training and the cause of the $48,000 sales decline unresolved."
+              }
+            ],
+            "evidence": [
+              {
+                "id": "EX-ACCESS",
+                "quote": "a SkillVault-controlled service account sent 2.1 million prompts to Maya Chen's paid CodeReview Pro Skill",
+                "scope": "case_fact",
+                "source_text": "FICTIONAL STIPULATED EXHIBIT. During an eleven-day period, a SkillVault-controlled service account sent 2.1 million prompts to Maya Chen's paid CodeReview Pro Skill. The requests systematically varied code-review edge cases. These logs establish the requests and their origin; by themselves they do not establish whether Maya authorized model training.",
+                "source_type": "case_exhibit",
+                "source_url": "case://skillvault/access-log",
+                "title": "Stipulated platform access log"
+              },
+              {
+                "id": "EX-LICENSE",
+                "quote": "It prohibited systematic extraction or training a competing general-purpose model without a separate signed amendment.",
+                "scope": "case_fact",
+                "source_text": "FICTIONAL STIPULATED EXHIBIT. Maya's original licence permitted customers to request code reviews for their own projects. It prohibited systematic extraction or training a competing general-purpose model without a separate signed amendment. Both parties agree that this was the original agreement. Whether a later amendment exists must be determined from the exhibits actually submitted.",
+                "source_type": "case_exhibit",
+                "source_url": "case://skillvault/original-licence",
+                "title": "Original limited-use licence"
+              },
+              {
+                "id": "EX-AUDIT",
+                "quote": "The audit did not find copied source code or copied model weights.",
+                "scope": "case_fact",
+                "source_text": "FICTIONAL STIPULATED EXHIBIT. An independent audit reported that 87 percent of a selected test set matched CodeReview Pro's signature review heuristics. The audit did not find copied source code or copied model weights. It did not independently determine consent, causation of lost sales, or the legal status of learning from outputs.",
+                "source_type": "case_exhibit",
+                "source_url": "case://skillvault/similarity-audit",
+                "title": "Similarity audit and its limitations"
+              },
+              {
+                "id": "EX-HARM",
+                "quote": "The parties accept the sales figures but dispute how much of the decline was caused by the distillation.",
+                "scope": "case_fact",
+                "source_text": "FICTIONAL STIPULATED EXHIBIT. Maya reports a 48,000 dollar reduction in CodeReview Pro sales after SkillVault released its updated base model. The parties accept the sales figures but dispute how much of the decline was caused by the distillation. No exhibit establishes a precise damages award.",
+                "source_type": "case_exhibit",
+                "source_url": "case://skillvault/revenue-statement",
+                "title": "Creator's revenue statement"
+              },
+              {
+                "id": "ref-0e3445a6b6",
+                "quote": "When you use model outputs to train or fine-tune other models, you need to ensure you have permission to do so. Using outputs from models that prohibit distillation could violate terms of service agreements and potentially expose you to legal liability. OpenRouter tracks which models allow their outputs to be used for training purposes through the `is_trainable_text` property. Models where the author has explicitly allowed text distillation are marked as distillable.",
+                "scope": "background",
+                "source_text": "## Why Distillation Compliance Matters\n\nWhen you use model outputs to train or fine-tune other models, you need to ensure you have permission to do so. Using outputs from models that prohibit distillation could violate terms of service agreements and potentially expose you to legal liability. OpenRouter tracks which models allow their outputs to be used for training purposes through the `is_trainable_text` property. Models where the author has explicitly allowed text distillation are marked as distillable.\n\n## Finding Distillable Models on the Model Page\n\nThe easiest way to find models that allow distillation is to use the\n\n**Distillable**filter on the\n\n[Models page](https://openrouter.ai/models?distillable=true).\n\n1. Navigate to the [Models page with the distillable filter enabled](https://openrouter.ai/models?distillable=true)\n2. The **Distillable** filter in the filter panel will be set to **Yes**, showing only models that allow distillation\n\n## Using the Routing Parameter\n\nFor programmatic control, you can use the `enforce_distillable_text` parameter in your API requests. When set to `true`, OpenRouter will only route your request to models that allow text distillation. `enforce_distillable_text` is set to `true`, the request will only be routed to models where the author has explicitly enabled text distillation. If no distillable models are available for your request, you’ll receive an error.\n\n### Example: Enforcing Distillable Models\n\n## Use Cases\n\nThe distillable filter is particularly useful for:\n\n- **Building training datasets**: When collecting model outputs to train or fine-tune your own models, ensure you only use outputs from models that permit this use.\n- **Distillation pipelines**: When creating smaller, specialized models from larger teacher models, filt",
+                "source_type": "web_source",
+                "source_url": "https://openrouter.ai/docs/cookbook/evaluate-and-optimize/distillation",
+                "title": "Distillation - Compliance with Provider and Model Creator Policies"
+              },
+              {
+                "id": "ref-55ca969159",
+                "quote": "# NVIDIA Community Model License IMPORTANT NOTICE – PLEASE READ AND AGREE BEFORE USING THE NVIDIA MODELS. \\*\\*Last Modified: January 30, 2025\\*\\* This license agreement (“Agreement”) is a legal agreement between you, whether an individual or entity (“you”) and NVIDIA Corporation (“NVIDIA”) and governs the use of the NVIDIA AI Foundation Models, consisting of models including software, checkpoints, learnt weights, algorithms, parameters, configuration files, datasets and docum",
+                "scope": "background",
+                "source_text": "# NVIDIA Community Model License IMPORTANT NOTICE – PLEASE READ AND AGREE BEFORE USING THE NVIDIA MODELS. \\*\\*Last Modified: January 30, 2025\\*\\* This license agreement (“Agreement”) is a legal agreement between you, whether an individual or entity (“you”) and NVIDIA Corporation (“NVIDIA”) and governs the use of the NVIDIA AI Foundation Models, consisting of models including software, checkpoints, learnt weights, algorithms, parameters, configuration files, datasets and documentation, if and when available (collectively, “NVIDIA Models”). This Agreement can be accepted only by an adult of legal age of majority in the country in which the NVIDIA Models are used. If you do not have the required age or authority to accept this Agreement, or if you do not accept all the terms and conditions of this Agreement, do not use the NVIDIA Models. 1. \\*\\*LICENSE GRANTS.\\*\\* 1. Service Grant. If you receive access to NVIDIA Models as part of an NVIDIA service, subject to the terms of this Agreement, you may access and use such NVIDIA Models with the service. 2. General Downloadable Grant. Except as described in Section 1.3 below, if you receive access to NVIDIA Models for download, subject to the terms of this Agreement, NVIDIA grants you a limited, non-exclusive, revocable, non-transferable, non-sublicensable (except as expressly permitted in this Agreement), license to: (a) install, use and reproduce NVIDIA Models, (b) create Derivative Models (as defined below), and (c) distribute NVIDIA Models and Derivative Models with a copy of this Agreement, except that to exercise these grants in production you must use an NVIDIA Inference Microservice runtime (NVIDIA NIM) available through an NVIDIA AI Enterprise subscription, unless: (i) an NVIDIA Model is designated by NVIDIA for use with",
+                "source_type": "web_source",
+                "source_url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-community-models-license.md",
+                "title": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-community-models-license.md"
+              }
+            ],
+            "issues": [],
+            "judge_allowed": true,
+            "run_id": "3535013d442b",
+            "snapshot_id": "snap-f7db4c1128804eb4",
+            "status": "passed"
+          },
+          "instruction": "Give the final ruling. The evidence packet has passed reference checks; this does not determine truth or legal sufficiency. Explain which evidence controlled your ruling, what the opposing side got right, and any uncertainty. An authorization exhibit may be limited in scope."
+        },
+        "receipts": [
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/me",
+            "method": "GET",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:53.063360+00:00",
+            "latency_ms": 159,
+            "response_sha256": "c8449ef72cba27e36bdb9960cbea5378d57e16b05005ef5be49324aa37ab4dba",
+            "request_id": "6fe829a115204098c3250887eb1db373",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/me",
+            "method": "GET",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:53.245789+00:00",
+            "latency_ms": 182,
+            "response_sha256": "1bc486341caed874ce326880a775a6a13839de84c6c47badc166329695eb585f",
+            "request_id": "0728a8a2c5b12ad775991b49946efa23",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/chats/60b6c57c-c407-4994-8e09-ef6233e445d8/participants",
+            "method": "GET",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:53.423235+00:00",
+            "latency_ms": 177,
+            "response_sha256": "370b7c8ac04dda8314adf3aff9988fdac120451822e4feaf668ed4c092c9c6d3",
+            "request_id": "1c9c559df7a270ba13e02d14fe463801",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/chats/60b6c57c-c407-4994-8e09-ef6233e445d8/messages",
+            "method": "POST",
+            "http_status": 201,
+            "timestamp": "2026-11-24T00:10:53.631485+00:00",
+            "latency_ms": 208,
+            "response_sha256": "ac160d447305770a415aa6e7c2e6c81300e1b23f7cfab958d997c9e1c1574448",
+            "request_id": "b1d9fc2a1382512cb527aeda245025bf",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/chats/60b6c57c-c407-4994-8e09-ef6233e445d8/messages?status=all&sort_order=desc&limit=100",
+            "method": "GET",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:53.791834+00:00",
+            "latency_ms": 160,
+            "response_sha256": "9ff8ad7e7af0881962125b0a163051b31cf336507c0e4c1c7e17c170f6f8009d",
+            "request_id": "7d8cd29149bf374e78b75cc8e0aa7d20",
+            "verified": true
+          },
+          {
+            "service": "band",
+            "endpoint": "https://api.band.ai/api/v1/agent/chats/60b6c57c-c407-4994-8e09-ef6233e445d8/messages/09e778eb-a4a6-472a-a37a-e4e764e3380a/processing",
+            "method": "POST",
+            "http_status": 200,
+            "timestamp": "2026-11-24T00:10:53.954207+00:00",
+            "latency_ms": 162,
+            "response_sha256": "84e81a78d18b0e8ae45043de9f6f61849ad2d4bb7994334b5ca762b75e689cfb",
+            "request_id": "5252085b24521f226522609e58291e9b",
+            "verified": true
+          }
+        ],
+        "timestamp": "2026-11-24T00:10:53.954229+00:00",
+        "status": "processing"
+      },
+      "duration_ms": 27784,
+      "audio_duration_ms": 26984,
+      "tts_voice": "Rishi",
+      "tts_rate_wpm": 175
+    }
+  ],
+  "evidence": [
+    {
+      "id": "EX-ACCESS",
+      "title": "Stipulated platform access log",
+      "source_type": "case_exhibit",
+      "source_url": "case://skillvault/access-log",
+      "source_text": "FICTIONAL STIPULATED EXHIBIT. During an eleven-day period, a SkillVault-controlled service account sent 2.1 million prompts to Maya Chen's paid CodeReview Pro Skill. The requests systematically varied code-review edge cases. These logs establish the requests and their origin; by themselves they do not establish whether Maya authorized model training.",
+      "quote": "a SkillVault-controlled service account sent 2.1 million prompts to Maya Chen's paid CodeReview Pro Skill",
+      "submitted_by": "prosecutor",
+      "scope": "case_fact"
+    },
+    {
+      "id": "EX-LICENSE",
+      "title": "Original limited-use licence",
+      "source_type": "case_exhibit",
+      "source_url": "case://skillvault/original-licence",
+      "source_text": "FICTIONAL STIPULATED EXHIBIT. Maya's original licence permitted customers to request code reviews for their own projects. It prohibited systematic extraction or training a competing general-purpose model without a separate signed amendment. Both parties agree that this was the original agreement. Whether a later amendment exists must be determined from the exhibits actually submitted.",
+      "quote": "It prohibited systematic extraction or training a competing general-purpose model without a separate signed amendment.",
+      "submitted_by": "prosecutor",
+      "scope": "case_fact"
+    },
+    {
+      "id": "EX-AUDIT",
+      "title": "Similarity audit and its limitations",
+      "source_type": "case_exhibit",
+      "source_url": "case://skillvault/similarity-audit",
+      "source_text": "FICTIONAL STIPULATED EXHIBIT. An independent audit reported that 87 percent of a selected test set matched CodeReview Pro's signature review heuristics. The audit did not find copied source code or copied model weights. It did not independently determine consent, causation of lost sales, or the legal status of learning from outputs.",
+      "quote": "The audit did not find copied source code or copied model weights.",
+      "submitted_by": "defense",
+      "scope": "case_fact"
+    },
+    {
+      "id": "EX-HARM",
+      "title": "Creator's revenue statement",
+      "source_type": "case_exhibit",
+      "source_url": "case://skillvault/revenue-statement",
+      "source_text": "FICTIONAL STIPULATED EXHIBIT. Maya reports a 48,000 dollar reduction in CodeReview Pro sales after SkillVault released its updated base model. The parties accept the sales figures but dispute how much of the decline was caused by the distillation. No exhibit establishes a precise damages award.",
+      "quote": "The parties accept the sales figures but dispute how much of the decline was caused by the distillation.",
+      "submitted_by": "witness",
+      "scope": "case_fact"
+    },
+    {
+      "id": "ref-0e3445a6b6",
+      "title": "Distillation - Compliance with Provider and Model Creator Policies",
+      "url": "https://openrouter.ai/docs/cookbook/evaluate-and-optimize/distillation",
+      "text": "## Why Distillation Compliance Matters\n\nWhen you use model outputs to train or fine-tune other models, you need to ensure you have permission to do so. Using outputs from models that prohibit distillation could violate terms of service agreements and potentially expose you to legal liability. OpenRouter tracks which models allow their outputs to be used for training purposes through the `is_trainable_text` property. Models where the author has explicitly allowed text distillation are marked as distillable.\n\n## Finding Distillable Models on the Model Page\n\nThe easiest way to find models that allow distillation is to use the\n\n**Distillable**filter on the\n\n[Models page](https://openrouter.ai/models?distillable=true).\n\n1. Navigate to the [Models page with the distillable filter enabled](https://openrouter.ai/models?distillable=true)\n2. The **Distillable** filter in the filter panel will be set to **Yes**, showing only models that allow distillation\n\n## Using the Routing Parameter\n\nFor programmatic control, you can use the `enforce_distillable_text` parameter in your API requests. When set to `true`, OpenRouter will only route your request to models that allow text distillation. `enforce_distillable_text` is set to `true`, the request will only be routed to models where the author has explicitly enabled text distillation. If no distillable models are available for your request, you’ll receive an error.\n\n### Example: Enforcing Distillable Models\n\n## Use Cases\n\nThe distillable filter is particularly useful for:\n\n- **Building training datasets**: When collecting model outputs to train or fine-tune your own models, ensure you only use outputs from models that permit this use.\n- **Distillation pipelines**: When creating smaller, specialized models from larger teacher models, filter for models that allow their outputs to be used for training.\n- **Compliance workflows**: Organizations with strict compliance requirements can enforce distillation policies programmatically across all API requests.\n\n## Related Documentation\n\n- [Provider Routing](https://openrouter.ai/docs/guides/routing/provider-selection) - Learn more about the `enforce_distillable_text` parameter and other provider routing options\n- [Models](https://openrouter.ai/docs/guides/overview/models) - Browse all available models and their capabilities",
+      "type": "public_reference",
+      "source_type": "web_source",
+      "fictional": false,
+      "label": "Public reference — not proof of fictional events",
+      "receipt": {
+        "service": "telem",
+        "endpoint": "https://router.telem.ai/v1/search",
+        "method": "POST",
+        "http_status": 200,
+        "timestamp": "2026-11-24T00:10:22.866553+00:00",
+        "latency_ms": 1595,
+        "response_sha256": "0b3a4ae8a15f42bf75819980f56a09e92b338dbc30a85ce45c7c05b1adafa743",
+        "request_id": null,
+        "verified": true,
+        "operation": "search",
+        "session_id": "c16dcb56-8061-445d-a05d-768a3114b6f3",
+        "interaction_id": "0edd5cd7-d295-4822-8d24-656b8b351ed7",
+        "status": "succeeded"
+      },
+      "receipts": [
+        {
+          "service": "telem",
+          "endpoint": "https://router.telem.ai/v1/search",
+          "method": "POST",
+          "http_status": 200,
+          "timestamp": "2026-11-24T00:10:22.866553+00:00",
+          "latency_ms": 1595,
+          "response_sha256": "0b3a4ae8a15f42bf75819980f56a09e92b338dbc30a85ce45c7c05b1adafa743",
+          "request_id": null,
+          "verified": true,
+          "operation": "search",
+          "session_id": "c16dcb56-8061-445d-a05d-768a3114b6f3",
+          "interaction_id": "0edd5cd7-d295-4822-8d24-656b8b351ed7",
+          "status": "succeeded"
+        },
+        {
+          "service": "telem",
+          "endpoint": "https://router.telem.ai/v1/fetch",
+          "method": "POST",
+          "http_status": 200,
+          "timestamp": "2026-11-24T00:10:23.433597+00:00",
+          "latency_ms": 567,
+          "response_sha256": "20991bfd03f2082079aecf4fe3fefad3b2c112dfbf463208cffce4cbf9e59c4b",
+          "request_id": null,
+          "verified": true,
+          "operation": "fetch",
+          "session_id": "c16dcb56-8061-445d-a05d-768a3114b6f3",
+          "interaction_id": "a6abbee0-7111-47f3-a09f-6fcdfd362a31",
+          "status": "succeeded",
+          "source_url": "https://openrouter.ai/docs/cookbook/evaluate-and-optimize/distillation",
+          "provider": "tavily",
+          "content_sha256": "df1af59011adc7e0b8a025286a0e1c6923d622ad80bea992d37e42336e2b45d6"
+        }
+      ],
+      "fetched": true,
+      "source_url": "https://openrouter.ai/docs/cookbook/evaluate-and-optimize/distillation",
+      "source_text": "## Why Distillation Compliance Matters\n\nWhen you use model outputs to train or fine-tune other models, you need to ensure you have permission to do so. Using outputs from models that prohibit distillation could violate terms of service agreements and potentially expose you to legal liability. OpenRouter tracks which models allow their outputs to be used for training purposes through the `is_trainable_text` property. Models where the author has explicitly allowed text distillation are marked as distillable.\n\n## Finding Distillable Models on the Model Page\n\nThe easiest way to find models that allow distillation is to use the\n\n**Distillable**filter on the\n\n[Models page](https://openrouter.ai/models?distillable=true).\n\n1. Navigate to the [Models page with the distillable filter enabled](https://openrouter.ai/models?distillable=true)\n2. The **Distillable** filter in the filter panel will be set to **Yes**, showing only models that allow distillation\n\n## Using the Routing Parameter\n\nFor programmatic control, you can use the `enforce_distillable_text` parameter in your API requests. When set to `true`, OpenRouter will only route your request to models that allow text distillation. `enforce_distillable_text` is set to `true`, the request will only be routed to models where the author has explicitly enabled text distillation. If no distillable models are available for your request, you’ll receive an error.\n\n### Example: Enforcing Distillable Models\n\n## Use Cases\n\nThe distillable filter is particularly useful for:\n\n- **Building training datasets**: When collecting model outputs to train or fine-tune your own models, ensure you only use outputs from models that permit this use.\n- **Distillation pipelines**: When creating smaller, specialized models from larger teacher models, filter for models that allow their outputs to be used for training.\n- **Compliance workflows**: Organizations with strict compliance requirements can enforce distillation policies programmatically across all API requests.\n\n## Related Documentation\n\n- [Provider Routing](https://openrouter.ai/docs/guides/routing/provider-selection) - Learn more about the `enforce_distillable_text` parameter and other provider routing options\n- [Models](https://openrouter.ai/docs/guides/overview/models) - Browse all available models and their capabilities",
+      "quote": "When you use model outputs to train or fine-tune other models, you need to ensure you have permission to do so. Using outputs from models that prohibit distillation could violate terms of service agreements and potentially expose you to legal liability. OpenRouter tracks which models allow their outputs to be used for training purposes through the `is_trainable_text` property. Models where the author has explicitly allowed text distillation are marked as distillable.",
+      "scope": "background",
+      "fetch_status": "succeeded",
+      "submitted_by": "witness"
+    },
+    {
+      "id": "ref-55ca969159",
+      "title": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-community-models-license.md",
+      "url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-community-models-license.md",
+      "text": "# NVIDIA Community Model License IMPORTANT NOTICE – PLEASE READ AND AGREE BEFORE USING THE NVIDIA MODELS. \\*\\*Last Modified: January 30, 2025\\*\\* This license agreement (“Agreement”) is a legal agreement between you, whether an individual or entity (“you”) and NVIDIA Corporation (“NVIDIA”) and governs the use of the NVIDIA AI Foundation Models, consisting of models including software, checkpoints, learnt weights, algorithms, parameters, configuration files, datasets and documentation, if and when available (collectively, “NVIDIA Models”). This Agreement can be accepted only by an adult of legal age of majority in the country in which the NVIDIA Models are used. If you do not have the required age or authority to accept this Agreement, or if you do not accept all the terms and conditions of this Agreement, do not use the NVIDIA Models. 1. \\*\\*LICENSE GRANTS.\\*\\* 1. Service Grant. If you receive access to NVIDIA Models as part of an NVIDIA service, subject to the terms of this Agreement, you may access and use such NVIDIA Models with the service. 2. General Downloadable Grant. Except as described in Section 1.3 below, if you receive access to NVIDIA Models for download, subject to the terms of this Agreement, NVIDIA grants you a limited, non-exclusive, revocable, non-transferable, non-sublicensable (except as expressly permitted in this Agreement), license to: (a) install, use and reproduce NVIDIA Models, (b) create Derivative Models (as defined below), and (c) distribute NVIDIA Models and Derivative Models with a copy of this Agreement, except that to exercise these grants in production you must use an NVIDIA Inference Microservice runtime (NVIDIA NIM) available through an NVIDIA AI Enterprise subscription, unless: (i) an NVIDIA Model is designated by NVIDIA for use with NVIDIA RTX or GeForce RTX GPUs if such NVIDIA Model or Derivative Model of such NVIDIA Model is: (a) used on a PC or workstation with NVIDIA RTX or GeForce RTX GPUs and (b) not used in a commercial kiosk, server or similar system used to service multiple users, or (ii) an NVIDIA Model is listed at  if such NVIDIA Model or Derivative Model of such NVIDIA Model is: (a) used locally on an end user device, (b) not used in a commercial kiosk, server or similar system used to service multiple users and (c) integrated with an application. Contact NVIDIA sales for a subscription to NVIDIA AI Enterprise (see ). 3. Product Grant. If you receive access to NVIDIA Models listed at  with an NVIDIA product, subject to the terms of this Agreement, NVIDIA grants you a limited, non-exclusive, revocable, non-transferable, non-sublicensable (except as expressly permitted in this Agreement), license to: (a) install, use and reproduce NVIDIA Models, and (b) create Derivative Models (as defined below), in all cases for use only with the NVIDIA product. 4. “Derivative Models” means (a) all derivatives, modifications, adaptations, extensions or enhancements to the NVIDIA Models, (b) works based on the NVIDIA Models, or (c) any other model that is created or initialized by transfer of patterns of the weights, parameters, activations or output of the NVIDIA Models, to the other model, in order to cause the other model to perform similarly to the NVIDIA Models, including (but not limited to) distillation methods that use intermediate data representations or methods based on the generation of synthetic data by the NVIDIA Models for training the other model. 2. \\*\\*LIMITED USE.\\*\\* The following terms apply to your use of the NVIDIA Models and Derivative Models as authorized in Section 1, and you are responsible for the consequences of non-conformance with these terms. 1. Limitations. You may not: 1. Use the NVIDIA Models and Derivative Models for purposes that are not permitted by this Agreement, inconsistent with the rights of others, or violate any applicable laws or regulations. 2. Use the NVIDIA Models, Derivative Models or any output or results of them to develop or improve any other AI models (excluding NVIDIA Models or Derivative Models), unless approved by NVIDIA in writing (email approval being sufficient). 3. Change or remove copyright or other proprietary notices in the NVIDIA Models or misrepresent the authorship of the NVIDIA Models. 4. Use the NVIDIA Models in any manner that would cause them to become subject to an open source software license; subject to the terms in the “Components Under Other Licenses” section below. 5. Use the NVIDIA Models or Derivative Models in a manner that infringes any third-party rights. 6. Bypass, disable, reduce the efficacy of, or circumvent any technical limitation, safety guardrail or associated safety guardrail hyperparameter, encryption, security, digital rights management, or authentication mechanism contained in the NVIDIA Models or Derivative Models. 2. Requirements. Your use of NVIDIA Models or Derivative Models are subject to the following requirements: 1. You must cause any modified files to carry prominent notices stating that you changed the files such that modifications are not misrepresented as original NVIDIA Models. Except as necessary to give attribution to works as described in this Section, you are not granted any trademark license under this Agreement. 2. You are solely responsible and must have sufficient rights or licenses for content used with NVIDIA Models. 3. You may use certain NVIDIA Models to create a custom text-to-speech application (“TTS Application”) for your personal use and may not distribute or offer TTS Applications as a service to third parties. 4. You agree that due to the nature of machine learning, output of NVIDIA Models may not be unique, could be generated by other licensees using the NVIDIA Models or derivatives thereof, and outputs created by other licensees are not yours. You are responsible for your outputs and their subsequent uses. 5. You will defend, indemnify and hold harmless NVIDIA and its affiliates, and their respective employees, contractors, agents, officers and directors, from and against any and all third-party claims, damages, obligations, losses, liabilities, costs or debt, fines, restitutions and expenses (including but not limited to attorney’s fees and costs incident to establishing the right of indemnification) arising out of: (a) products or services that have been developed or deployed with or use the NVIDIA Models or Derivative Models (including outputs, results or data generated from such use), or claims that they violate laws, or infringe, violate, or misappropriate any third party rights; or (b) a violation of the terms and conditions of this Agreement. 3. \\*\\*YOUR PRIVACY: COLLECTION AND USE OF INFORMATION.\\*\\* 1. Privacy Policy. Please review the NVIDIA Privacy Policy, located at , which explains NVIDIA’s policy for collecting and using data, as well as visit the NVIDIA Privacy Center, located at , to manage your consent and privacy preferences. 2. Collection Purposes. NVIDIA may require certain personal information such as name, email address or entitlement information to provide you access to the NVIDIA Models. 3. Third Party Privacy Practices. The NVIDIA Models may contain links to third party websites and services. NVIDIA encourages you to review the privacy statements on those sites and services that you choose to visit to understand how they may collect, use and share your data. NVIDIA is not responsible for the privacy statements or practices of third-party sites or services. 4. \\*\\*AI ETHICS.\\*\\* Use of the NVIDIA Models under the Agreement must be consistent with NVIDIA’s  Trustworthy AI terms at . 5. \\*\\*COMPONENTS UNDER OTHER LICENSES.\\*\\* The NVIDIA Models may include or be distributed with components provided with separate legal notices or terms that accompany the components, such as an Open Source Software License or other third-party license. The components are subject to the applicable other licenses, including any proprietary notices, disclaimers, requirements and extended use rights; except that this Agreement will prevail regarding the use of third-party Open Source Software License, unless a third-party Open Source Software License requires its license terms to prevail. “Open Source Software License” means any software, data or documentation subject to any license identified as an open source license by the Open Source Initiative (), Free Software Foundation () or other similar open source organization or listed by the Software Package Data Exchange (SPDX) Workgroup under the Linux Foundation (). 6. \\*\\*TERMINATION.\\*\\* This Agreement will automatically terminate without notice from NVIDIA if you fail to comply with any of the terms in this Agreement or if you commence or participate in any legal proceeding against NVIDIA with respect to the NVIDIA Models, Derivative Models or any output or results of them. Upon any termination, you must stop using and destroy all copies of the NVIDIA Models and Derivative Models. Upon written request, you will certify in writing that you have complied with your commitments under this Section 6. All provisions of the Agreement will survive termination, except for the licenses granted to you (Section 1). 7. \\*\\*OWNERSHIP.\\*\\* 1. NVIDIA Ownership. The NVIDIA Models, including all intellectual property rights, are and will remain the sole and exclusive property of NVIDIA or its licensors. Except as expressly granted in this Agreement, (a) NVIDIA reserves all rights, interests and remedies in connection with the NVIDIA Models, and (b) no other license or right is granted to you by implication, estoppel or otherwise. 2. Your Ownership. Subject to the rights of NVIDIA and its suppliers in the NVIDIA Models and to the extent permitted by applicable law, as between you and NVIDIA, you hold all rights, title and interest in and to: (i) Derivative Models that you develop as permitted in this Agreement including their respective intellectual property rights, and (ii) outputs of the NVIDIA Models or Derivative Mod",
+      "type": "public_reference",
+      "source_type": "web_source",
+      "fictional": false,
+      "label": "Public reference — not proof of fictional events",
+      "receipt": {
+        "service": "telem",
+        "endpoint": "https://router.telem.ai/v1/search",
+        "method": "POST",
+        "http_status": 200,
+        "timestamp": "2026-11-24T00:10:22.866553+00:00",
+        "latency_ms": 1595,
+        "response_sha256": "0b3a4ae8a15f42bf75819980f56a09e92b338dbc30a85ce45c7c05b1adafa743",
+        "request_id": null,
+        "verified": true,
+        "operation": "search",
+        "session_id": "c16dcb56-8061-445d-a05d-768a3114b6f3",
+        "interaction_id": "0edd5cd7-d295-4822-8d24-656b8b351ed7",
+        "status": "succeeded"
+      },
+      "receipts": [
+        {
+          "service": "telem",
+          "endpoint": "https://router.telem.ai/v1/search",
+          "method": "POST",
+          "http_status": 200,
+          "timestamp": "2026-11-24T00:10:22.866553+00:00",
+          "latency_ms": 1595,
+          "response_sha256": "0b3a4ae8a15f42bf75819980f56a09e92b338dbc30a85ce45c7c05b1adafa743",
+          "request_id": null,
+          "verified": true,
+          "operation": "search",
+          "session_id": "c16dcb56-8061-445d-a05d-768a3114b6f3",
+          "interaction_id": "0edd5cd7-d295-4822-8d24-656b8b351ed7",
+          "status": "succeeded"
+        },
+        {
+          "service": "telem",
+          "endpoint": "https://router.telem.ai/v1/fetch",
+          "method": "POST",
+          "http_status": 200,
+          "timestamp": "2026-11-24T00:10:23.932892+00:00",
+          "latency_ms": 499,
+          "response_sha256": "529e83e06ebdbb1be349ca875b11fbe826a23e909a06cdee47b35ff5d6ea12fd",
+          "request_id": null,
+          "verified": true,
+          "operation": "fetch",
+          "session_id": "c16dcb56-8061-445d-a05d-768a3114b6f3",
+          "interaction_id": "fe7f7adf-1484-4186-97ee-8fce02ce4681",
+          "status": "succeeded",
+          "source_url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-community-models-license.md",
+          "provider": "tavily",
+          "content_sha256": "84e9810c683e5e43bf8d12a1e6e0f01ddddf7de508922c232fbf377d0d96d04d"
+        }
+      ],
+      "fetched": true,
+      "source_url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-community-models-license.md",
+      "source_text": "# NVIDIA Community Model License IMPORTANT NOTICE – PLEASE READ AND AGREE BEFORE USING THE NVIDIA MODELS. \\*\\*Last Modified: January 30, 2025\\*\\* This license agreement (“Agreement”) is a legal agreement between you, whether an individual or entity (“you”) and NVIDIA Corporation (“NVIDIA”) and governs the use of the NVIDIA AI Foundation Models, consisting of models including software, checkpoints, learnt weights, algorithms, parameters, configuration files, datasets and documentation, if and when available (collectively, “NVIDIA Models”). This Agreement can be accepted only by an adult of legal age of majority in the country in which the NVIDIA Models are used. If you do not have the required age or authority to accept this Agreement, or if you do not accept all the terms and conditions of this Agreement, do not use the NVIDIA Models. 1. \\*\\*LICENSE GRANTS.\\*\\* 1. Service Grant. If you receive access to NVIDIA Models as part of an NVIDIA service, subject to the terms of this Agreement, you may access and use such NVIDIA Models with the service. 2. General Downloadable Grant. Except as described in Section 1.3 below, if you receive access to NVIDIA Models for download, subject to the terms of this Agreement, NVIDIA grants you a limited, non-exclusive, revocable, non-transferable, non-sublicensable (except as expressly permitted in this Agreement), license to: (a) install, use and reproduce NVIDIA Models, (b) create Derivative Models (as defined below), and (c) distribute NVIDIA Models and Derivative Models with a copy of this Agreement, except that to exercise these grants in production you must use an NVIDIA Inference Microservice runtime (NVIDIA NIM) available through an NVIDIA AI Enterprise subscription, unless: (i) an NVIDIA Model is designated by NVIDIA for use with NVIDIA RTX or GeForce RTX GPUs if such NVIDIA Model or Derivative Model of such NVIDIA Model is: (a) used on a PC or workstation with NVIDIA RTX or GeForce RTX GPUs and (b) not used in a commercial kiosk, server or similar system used to service multiple users, or (ii) an NVIDIA Model is listed at  if such NVIDIA Model or Derivative Model of such NVIDIA Model is: (a) used locally on an end user device, (b) not used in a commercial kiosk, server or similar system used to service multiple users and (c) integrated with an application. Contact NVIDIA sales for a subscription to NVIDIA AI Enterprise (see ). 3. Product Grant. If you receive access to NVIDIA Models listed at  with an NVIDIA product, subject to the terms of this Agreement, NVIDIA grants you a limited, non-exclusive, revocable, non-transferable, non-sublicensable (except as expressly permitted in this Agreement), license to: (a) install, use and reproduce NVIDIA Models, and (b) create Derivative Models (as defined below), in all cases for use only with the NVIDIA product. 4. “Derivative Models” means (a) all derivatives, modifications, adaptations, extensions or enhancements to the NVIDIA Models, (b) works based on the NVIDIA Models, or (c) any other model that is created or initialized by transfer of patterns of the weights, parameters, activations or output of the NVIDIA Models, to the other model, in order to cause the other model to perform similarly to the NVIDIA Models, including (but not limited to) distillation methods that use intermediate data representations or methods based on the generation of synthetic data by the NVIDIA Models for training the other model. 2. \\*\\*LIMITED USE.\\*\\* The following terms apply to your use of the NVIDIA Models and Derivative Models as authorized in Section 1, and you are responsible for the consequences of non-conformance with these terms. 1. Limitations. You may not: 1. Use the NVIDIA Models and Derivative Models for purposes that are not permitted by this Agreement, inconsistent with the rights of others, or violate any applicable laws or regulations. 2. Use the NVIDIA Models, Derivative Models or any output or results of them to develop or improve any other AI models (excluding NVIDIA Models or Derivative Models), unless approved by NVIDIA in writing (email approval being sufficient). 3. Change or remove copyright or other proprietary notices in the NVIDIA Models or misrepresent the authorship of the NVIDIA Models. 4. Use the NVIDIA Models in any manner that would cause them to become subject to an open source software license; subject to the terms in the “Components Under Other Licenses” section below. 5. Use the NVIDIA Models or Derivative Models in a manner that infringes any third-party rights. 6. Bypass, disable, reduce the efficacy of, or circumvent any technical limitation, safety guardrail or associated safety guardrail hyperparameter, encryption, security, digital rights management, or authentication mechanism contained in the NVIDIA Models or Derivative Models. 2. Requirements. Your use of NVIDIA Models or Derivative Models are subject to the following requirements: 1. You must cause any modified files to carry prominent notices stating that you changed the files such that modifications are not misrepresented as original NVIDIA Models. Except as necessary to give attribution to works as described in this Section, you are not granted any trademark license under this Agreement. 2. You are solely responsible and must have sufficient rights or licenses for content used with NVIDIA Models. 3. You may use certain NVIDIA Models to create a custom text-to-speech application (“TTS Application”) for your personal use and may not distribute or offer TTS Applications as a service to third parties. 4. You agree that due to the nature of machine learning, output of NVIDIA Models may not be unique, could be generated by other licensees using the NVIDIA Models or derivatives thereof, and outputs created by other licensees are not yours. You are responsible for your outputs and their subsequent uses. 5. You will defend, indemnify and hold harmless NVIDIA and its affiliates, and their respective employees, contractors, agents, officers and directors, from and against any and all third-party claims, damages, obligations, losses, liabilities, costs or debt, fines, restitutions and expenses (including but not limited to attorney’s fees and costs incident to establishing the right of indemnification) arising out of: (a) products or services that have been developed or deployed with or use the NVIDIA Models or Derivative Models (including outputs, results or data generated from such use), or claims that they violate laws, or infringe, violate, or misappropriate any third party rights; or (b) a violation of the terms and conditions of this Agreement. 3. \\*\\*YOUR PRIVACY: COLLECTION AND USE OF INFORMATION.\\*\\* 1. Privacy Policy. Please review the NVIDIA Privacy Policy, located at , which explains NVIDIA’s policy for collecting and using data, as well as visit the NVIDIA Privacy Center, located at , to manage your consent and privacy preferences. 2. Collection Purposes. NVIDIA may require certain personal information such as name, email address or entitlement information to provide you access to the NVIDIA Models. 3. Third Party Privacy Practices. The NVIDIA Models may contain links to third party websites and services. NVIDIA encourages you to review the privacy statements on those sites and services that you choose to visit to understand how they may collect, use and share your data. NVIDIA is not responsible for the privacy statements or practices of third-party sites or services. 4. \\*\\*AI ETHICS.\\*\\* Use of the NVIDIA Models under the Agreement must be consistent with NVIDIA’s  Trustworthy AI terms at . 5. \\*\\*COMPONENTS UNDER OTHER LICENSES.\\*\\* The NVIDIA Models may include or be distributed with components provided with separate legal notices or terms that accompany the components, such as an Open Source Software License or other third-party license. The components are subject to the applicable other licenses, including any proprietary notices, disclaimers, requirements and extended use rights; except that this Agreement will prevail regarding the use of third-party Open Source Software License, unless a third-party Open Source Software License requires its license terms to prevail. “Open Source Software License” means any software, data or documentation subject to any license identified as an open source license by the Open Source Initiative (), Free Software Foundation () or other similar open source organization or listed by the Software Package Data Exchange (SPDX) Workgroup under the Linux Foundation (). 6. \\*\\*TERMINATION.\\*\\* This Agreement will automatically terminate without notice from NVIDIA if you fail to comply with any of the terms in this Agreement or if you commence or participate in any legal proceeding against NVIDIA with respect to the NVIDIA Models, Derivative Models or any output or results of them. Upon any termination, you must stop using and destroy all copies of the NVIDIA Models and Derivative Models. Upon written request, you will certify in writing that you have complied with your commitments under this Section 6. All provisions of the Agreement will survive termination, except for the licenses granted to you (Section 1). 7. \\*\\*OWNERSHIP.\\*\\* 1. NVIDIA Ownership. The NVIDIA Models, including all intellectual property rights, are and will remain the sole and exclusive property of NVIDIA or its licensors. Except as expressly granted in this Agreement, (a) NVIDIA reserves all rights, interests and remedies in connection with the NVIDIA Models, and (b) no other license or right is granted to you by implication, estoppel or otherwise. 2. Your Ownership. Subject to the rights of NVIDIA and its suppliers in the NVIDIA Models and to the extent permitted by applicable law, as between you and NVIDIA, you hold all rights, title and interest in and to: (i) Derivative Models that you develop as permitted in this Agreement including their respective intellectual property rights, and (ii) outputs of the NVIDIA Models or Derivative Mod",
+      "quote": "# NVIDIA Community Model License IMPORTANT NOTICE – PLEASE READ AND AGREE BEFORE USING THE NVIDIA MODELS. \\*\\*Last Modified: January 30, 2025\\*\\* This license agreement (“Agreement”) is a legal agreement between you, whether an individual or entity (“you”) and NVIDIA Corporation (“NVIDIA”) and governs the use of the NVIDIA AI Foundation Models, consisting of models including software, checkpoints, learnt weights, algorithms, parameters, configuration files, datasets and docum",
+      "scope": "background",
+      "fetch_status": "succeeded",
+      "submitted_by": "witness"
+    }
+  ],
+  "pipeline": {
+    "status": "passed",
+    "checks": [
+      {
+        "name": "Python contract diagnostics",
+        "engine": "python",
+        "status": "passed",
+        "issues": []
+      },
+      {
+        "name": "Real Bruin blocking quality checks",
+        "engine": "bruin",
+        "status": "passed"
+      },
+      {
+        "name": "Database snapshot matches current request",
+        "engine": "bruin",
+        "status": "passed"
+      }
+    ],
+    "snapshot_id": "snap-f7db4c1128804eb4",
+    "issues": [],
+    "bruin": {
+      "status": "passed",
+      "engine": "bruin",
+      "receipt_id": "bruin-3bd26ddf52634682",
+      "exit_code": 0,
+      "snapshot_id": "snap-f7db4c1128804eb4",
+      "completed_at": "2026-11-24T00:10:52.836995+00:00"
+    }
+  },
+  "verdict": {
+    "outcome": "LIABLE",
+    "reason": "I find SkillVault liable for systematic extraction. Its 2.1 million deliberately varied prompts support that finding, and the record contains no signed amendment authorizing extraction as the licence required. The defense is right that the similarity audit leaves base-model training unproven. I order SkillVault to cease unauthorized extraction and award no damages because the cause of the sales decline remains unresolved.",
+    "evidence_ids": [
+      "EX-ACCESS",
+      "EX-LICENSE",
+      "EX-AUDIT",
+      "EX-HARM"
+    ],
+    "snapshot_id": "snap-f7db4c1128804eb4"
+  },
+  "error": null,
+  "phase": "The court has reached a ruling",
+  "integrations": {
+    "model_configured": true,
+    "provider": "codex",
+    "model": "",
+    "telem": {
+      "configured": true,
+      "connected": false
+    },
+    "band": {
+      "configured": true,
+      "connected": false,
+      "room_configured": true,
+      "roles": [
+        "judge",
+        "prosecutor",
+        "defense",
+        "witness"
+      ],
+      "message": "Registered agent IDs and their own API keys are required. Identity probes do not establish room handoff."
+    },
+    "bruin": {
+      "available": true
+    },
+    "base_url": "",
+    "band_room_id": "60b6c57c-c407-4994-8e09-ef6233e445d8",
+    "band_agent_ids": {
+      "judge": "9f3f32ae-ea2c-42c2-be35-135e906ac165",
+      "prosecutor": "e85ccfc3-e5b6-4766-b09c-9e8a9382e688",
+      "defense": "df3ef428-7029-45bf-8037-f1f5a59571fa",
+      "witness": "997753a1-d15c-477d-b70f-9571fc9b5a48"
+    },
+    "local_only": true,
+    "runs": 3,
+    "model_verified": true
+  },
+  "coordination": "band",
+  "finalisation": {
+    "run_id": "3535013d442b",
+    "snapshot_id": "snap-f7db4c1128804eb4",
+    "status": "passed",
+    "verdict": {
+      "run_id": "3535013d442b",
+      "snapshot_id": "snap-f7db4c1128804eb4",
+      "id": "V-a3d9cbcc3c5b",
+      "outcome": "LIABLE",
+      "reasons": "I find SkillVault liable for systematic extraction. Its 2.1 million deliberately varied prompts support that finding, and the record contains no signed amendment authorizing extraction as the licence required. The defense is right that the similarity audit leaves base-model training unproven. I order SkillVault to cease unauthorized extraction and award no damages because the cause of the sales decline remains unresolved.",
+      "cited_claim_ids": [],
+      "cited_evidence_ids": [
+        "EX-ACCESS",
+        "EX-LICENSE",
+        "EX-AUDIT",
+        "EX-HARM"
+      ],
+      "bruin_receipt_id": "bruin-3bd26ddf52634682",
+      "created_at": "2026-11-24T00:11:05.348647+00:00"
+    },
+    "bruin": {
+      "status": "passed",
+      "exit_code": 0
+    },
+    "issues": []
+  },
+  "completed_at": "2026-11-24T00:11:05.444309+00:00",
+  "recorded_fixture": true,
+  "recording_notice": "Recorded real Codex CLI decisions, BAND handoffs, Telem research and Bruin checks. Playback makes no model or sponsor API calls."
+}

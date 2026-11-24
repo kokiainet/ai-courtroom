@@ -1,0 +1,435 @@
+{
+  "id": "4a60f7ad6e13",
+  "status": "complete",
+  "mode": "live",
+  "variant": "authorization",
+  "case_title": "The Community v. SkillVault, Inc.",
+  "created_at": "2026-11-23T23:43:28.291956+00:00",
+  "steps": [
+    {
+      "n": 1,
+      "agent": "judge",
+      "kind": "procedure",
+      "text": "This hearing will determine whether SkillVault exceeded Maya Chen’s permission when it used CodeReview Pro to train its base model and, if so, what remedy the evidence supports. We’ll read the original licence alongside the signed amendment and base our findings on the case exhibits. Any award for lost sales requires evidence linking the loss to the disputed conduct.",
+      "decision": "Open the hearing and reserve judgment.",
+      "why": "The agreements define the scope of permission, and any award for lost sales depends on evidence of causation and amount.",
+      "evidence_ids": [
+        "EX-LICENSE",
+        "EX-AUTHORIZATION",
+        "EX-HARM"
+      ],
+      "round": 1,
+      "band_task_id": null,
+      "created_at": "2026-11-23T23:43:34.853180+00:00",
+      "model_receipt": {
+        "service": "codex_cli",
+        "provider": "codex",
+        "model": "CLI default",
+        "thread_id": "01a20acb-0c2f-7f43-914a-88df0e703462",
+        "exit_code": 0,
+        "latency_ms": 6175,
+        "response_sha256": "60458f63bc52adabf89eb88888977236ca7e8b3316c4c56084586aaea45ac78a",
+        "usage": {
+          "input_tokens": 26247,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 174,
+          "reasoning_output_tokens": 0
+        },
+        "verified": true,
+        "sandbox": "read-only",
+        "ephemeral": true
+      },
+      "duration_ms": 23786,
+      "audio_duration_ms": 22986,
+      "tts_voice": "Rishi",
+      "tts_rate_wpm": 175
+    },
+    {
+      "n": 2,
+      "agent": "prosecutor",
+      "kind": "concede",
+      "text": "Your Honor, the signed amendment authorized up to 2.5 million CodeReview Pro calls to train SkillVault’s base model. The access log records 2.1 million calls. The amendment left source-code copying outside its scope, but the prosecution has no evidence of such copying. On this record, we concede that SkillVault acted within its permission.",
+      "decision": "Concede that the documented training was authorized.",
+      "why": "The signed amendment covered the training purpose, and the recorded calls fell within its cap.",
+      "evidence_ids": [
+        "EX-AUTHORIZATION",
+        "EX-ACCESS"
+      ],
+      "round": 1,
+      "band_task_id": null,
+      "created_at": "2026-11-23T23:43:41.189702+00:00",
+      "model_receipt": {
+        "service": "codex_cli",
+        "provider": "codex",
+        "model": "CLI default",
+        "thread_id": "01a20acb-2401-7272-93c4-115aa5a58f55",
+        "exit_code": 0,
+        "latency_ms": 6334,
+        "response_sha256": "0d0d003cccca4b82f6704b87f9668c0998e350c1d62d56a7dcbe847cf831344c",
+        "usage": {
+          "input_tokens": 26389,
+          "cached_input_tokens": 23936,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 170,
+          "reasoning_output_tokens": 0
+        },
+        "verified": true,
+        "sandbox": "read-only",
+        "ephemeral": true
+      },
+      "duration_ms": 20751,
+      "audio_duration_ms": 19951,
+      "tts_voice": "Samantha",
+      "tts_rate_wpm": 185
+    },
+    {
+      "n": 3,
+      "agent": "defense",
+      "kind": "challenge",
+      "text": "Your Honor, the access log records 2.1 million calls, within the signed amendment’s 2.5 million cap for base-model training. The weakest inference is that the $48,000 sales decline warrants damages because it followed the release. The parties agree on the decline, but the record leaves its cause unresolved. The defense asks the court to deny a lost-sales award.",
+      "decision": "Challenge the inference that the sales decline warrants damages.",
+      "why": "The amendment covered the recorded calls, and the timing of the sales decline does not establish causation.",
+      "evidence_ids": [
+        "EX-AUTHORIZATION",
+        "EX-ACCESS",
+        "EX-HARM"
+      ],
+      "round": 1,
+      "band_task_id": null,
+      "created_at": "2026-11-23T23:43:48.007553+00:00",
+      "model_receipt": {
+        "service": "codex_cli",
+        "provider": "codex",
+        "model": "CLI default",
+        "thread_id": "01a20acb-3d0c-78e0-a2ce-11f37a8f22fb",
+        "exit_code": 0,
+        "latency_ms": 6814,
+        "response_sha256": "e9fa33d38fd3486fe490d7dd7c76a5e4633e7114a726d5e1424585dd23fd67ec",
+        "usage": {
+          "input_tokens": 26537,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 183,
+          "reasoning_output_tokens": 0
+        },
+        "verified": true,
+        "sandbox": "read-only",
+        "ephemeral": true
+      },
+      "duration_ms": 22827,
+      "audio_duration_ms": 22027,
+      "tts_voice": "Daniel",
+      "tts_rate_wpm": 185
+    },
+    {
+      "n": 4,
+      "agent": "witness",
+      "kind": "concede",
+      "text": "Your Honor, I signed the amendment allowing 2.5 million calls to train SkillVault’s base model. The access log records 2.1 million. The fictional exhibits establish a $48,000 sales decline after release. What remains unknown is whether the distillation caused any of that decline and, if so, how much.",
+      "decision": "Concede that the documented training was authorized and that the record does not support a lost-sales award.",
+      "why": "The signed amendment covered the training purpose and call volume. The sales exhibit establishes the decline and its timing. Public background sources cannot establish causation or damages in this fictional case.",
+      "evidence_ids": [
+        "EX-AUTHORIZATION",
+        "EX-ACCESS",
+        "EX-HARM"
+      ],
+      "round": 1,
+      "band_task_id": null,
+      "created_at": "2026-11-23T23:43:55.360673+00:00",
+      "model_receipt": {
+        "service": "codex_cli",
+        "provider": "codex",
+        "model": "CLI default",
+        "thread_id": "01a20acb-591c-7f11-80ce-0970a8cb1321",
+        "exit_code": 0,
+        "latency_ms": 6979,
+        "response_sha256": "eba406bda904e7628ad12b5c58dee816055a828ad038f0663458eab84b0df50f",
+        "usage": {
+          "input_tokens": 26947,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 200,
+          "reasoning_output_tokens": 0
+        },
+        "verified": true,
+        "sandbox": "read-only",
+        "ephemeral": true
+      },
+      "duration_ms": 20226,
+      "audio_duration_ms": 19426,
+      "tts_voice": "Karen",
+      "tts_rate_wpm": 175
+    },
+    {
+      "n": 5,
+      "agent": "prosecutor",
+      "kind": "concede",
+      "text": "Your Honor, the witness confirmed that she signed the amendment allowing 2.5 million calls for base-model training. The log records 2.1 million. I also accept the defense’s point on damages. The $48,000 sales decline followed the release, but its cause remains unresolved. The prosecution withdraws its claim that SkillVault exceeded permission and seeks no lost-sales award.",
+      "decision": "Withdraw the authorization claim and seek no lost-sales award.",
+      "why": "The signed amendment covered the recorded training calls, and the sales statement leaves causation unresolved.",
+      "evidence_ids": [
+        "EX-AUTHORIZATION",
+        "EX-ACCESS",
+        "EX-HARM"
+      ],
+      "round": 1,
+      "band_task_id": null,
+      "created_at": "2026-11-23T23:44:02.686409+00:00",
+      "model_receipt": {
+        "service": "codex_cli",
+        "provider": "codex",
+        "model": "CLI default",
+        "thread_id": "01a20acb-746c-7333-b346-2b69ccc86623",
+        "exit_code": 0,
+        "latency_ms": 7319,
+        "response_sha256": "e76ec64102dfc3ad56dec82632bf7e8a83d0b477b63953b6b38db011a2d7c45d",
+        "usage": {
+          "input_tokens": 28592,
+          "cached_input_tokens": 23936,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 184,
+          "reasoning_output_tokens": 0
+        },
+        "verified": true,
+        "sandbox": "read-only",
+        "ephemeral": true
+      },
+      "duration_ms": 22771,
+      "audio_duration_ms": 21971,
+      "tts_voice": "Samantha",
+      "tts_rate_wpm": 185
+    },
+    {
+      "n": 6,
+      "agent": "defense",
+      "kind": "concede",
+      "text": "Your Honor, we concede that SkillVault made 2.1 million calls and that Maya’s sales fell by $48,000. The signed amendment authorized up to 2.5 million calls for base-model training. It excluded source-code copying, and the audit found none. The cause of the sales decline remains unresolved. We ask the court to find for SkillVault and award no damages.",
+      "decision": "Ask the court to find for SkillVault and award no damages.",
+      "why": "The documented training fell within the signed amendment’s scope, and the sales exhibit leaves causation unresolved.",
+      "evidence_ids": [
+        "EX-ACCESS",
+        "EX-AUTHORIZATION",
+        "EX-AUDIT",
+        "EX-HARM"
+      ],
+      "round": 2,
+      "band_task_id": null,
+      "created_at": "2026-11-23T23:44:10.750757+00:00",
+      "model_receipt": {
+        "service": "codex_cli",
+        "provider": "codex",
+        "model": "CLI default",
+        "thread_id": "01a20acb-90bf-7ae0-8f7a-0caf7b8ccbe1",
+        "exit_code": 0,
+        "latency_ms": 8061,
+        "response_sha256": "f01e9a3e9a69977c40fabcb261d63a380a6c140644b43b1a0f3cd96d6a94e07a",
+        "usage": {
+          "input_tokens": 28921,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 195,
+          "reasoning_output_tokens": 0
+        },
+        "verified": true,
+        "sandbox": "read-only",
+        "ephemeral": true
+      },
+      "duration_ms": 23071,
+      "audio_duration_ms": 22271,
+      "tts_voice": "Daniel",
+      "tts_rate_wpm": 185
+    },
+    {
+      "n": 7,
+      "agent": "judge",
+      "kind": "rule",
+      "text": "I find SkillVault not liable. The signed amendment permitted up to 2.5 million calls for base-model training, and the log records 2.1 million. The prosecution correctly noted that permission excluded source-code copying. The audit found no evidence of it. The $48,000 sales decline is established, but its cause remains unresolved. I award no remedy.",
+      "decision": "Enter judgment for SkillVault and award no remedy.",
+      "why": "The signed amendment satisfied the original licence’s requirement for separate training permission. The recorded use fell within its scope, and the sales statement leaves causation unresolved.",
+      "evidence_ids": [
+        "EX-LICENSE",
+        "EX-AUTHORIZATION",
+        "EX-ACCESS",
+        "EX-AUDIT",
+        "EX-HARM"
+      ],
+      "round": 2,
+      "band_task_id": null,
+      "created_at": "2026-11-23T23:44:18.291843+00:00",
+      "model_receipt": {
+        "service": "codex_cli",
+        "provider": "codex",
+        "model": "CLI default",
+        "thread_id": "01a20acb-b1a8-7863-a4e4-0a6d1efee6d6",
+        "exit_code": 0,
+        "latency_ms": 7225,
+        "response_sha256": "85cfa168265f3806b7c2a03a19b1f0785470d9b9713bf9ba685bf2831f253560",
+        "usage": {
+          "input_tokens": 29232,
+          "cached_input_tokens": 23936,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 204,
+          "reasoning_output_tokens": 0
+        },
+        "verified": true,
+        "sandbox": "read-only",
+        "ephemeral": true
+      },
+      "duration_ms": 25415,
+      "audio_duration_ms": 24615,
+      "tts_voice": "Rishi",
+      "tts_rate_wpm": 175
+    }
+  ],
+  "evidence": [
+    {
+      "id": "EX-ACCESS",
+      "title": "Stipulated platform access log",
+      "source_type": "case_exhibit",
+      "source_url": "case://skillvault/access-log",
+      "source_text": "FICTIONAL STIPULATED EXHIBIT. During an eleven-day period, a SkillVault-controlled service account sent 2.1 million prompts to Maya Chen's paid CodeReview Pro Skill. The requests systematically varied code-review edge cases. These logs establish the requests and their origin; by themselves they do not establish whether Maya authorized model training.",
+      "quote": "a SkillVault-controlled service account sent 2.1 million prompts to Maya Chen's paid CodeReview Pro Skill",
+      "submitted_by": "prosecutor",
+      "scope": "case_fact"
+    },
+    {
+      "id": "EX-LICENSE",
+      "title": "Original limited-use licence",
+      "source_type": "case_exhibit",
+      "source_url": "case://skillvault/original-licence",
+      "source_text": "FICTIONAL STIPULATED EXHIBIT. Maya's original licence permitted customers to request code reviews for their own projects. It prohibited systematic extraction or training a competing general-purpose model without a separate signed amendment. Both parties agree that this was the original agreement. Whether a later amendment exists must be determined from the exhibits actually submitted.",
+      "quote": "It prohibited systematic extraction or training a competing general-purpose model without a separate signed amendment.",
+      "submitted_by": "prosecutor",
+      "scope": "case_fact"
+    },
+    {
+      "id": "EX-AUDIT",
+      "title": "Similarity audit and its limitations",
+      "source_type": "case_exhibit",
+      "source_url": "case://skillvault/similarity-audit",
+      "source_text": "FICTIONAL STIPULATED EXHIBIT. An independent audit reported that 87 percent of a selected test set matched CodeReview Pro's signature review heuristics. The audit did not find copied source code or copied model weights. It did not independently determine consent, causation of lost sales, or the legal status of learning from outputs.",
+      "quote": "The audit did not find copied source code or copied model weights.",
+      "submitted_by": "defense",
+      "scope": "case_fact"
+    },
+    {
+      "id": "EX-HARM",
+      "title": "Creator's revenue statement",
+      "source_type": "case_exhibit",
+      "source_url": "case://skillvault/revenue-statement",
+      "source_text": "FICTIONAL STIPULATED EXHIBIT. Maya reports a 48,000 dollar reduction in CodeReview Pro sales after SkillVault released its updated base model. The parties accept the sales figures but dispute how much of the decline was caused by the distillation. No exhibit establishes a precise damages award.",
+      "quote": "The parties accept the sales figures but dispute how much of the decline was caused by the distillation.",
+      "submitted_by": "witness",
+      "scope": "case_fact"
+    },
+    {
+      "id": "EX-AUTHORIZATION",
+      "title": "Later signed training amendment",
+      "source_type": "case_exhibit",
+      "source_url": "case://skillvault/signed-amendment",
+      "source_text": "FICTIONAL STIPULATED EXHIBIT. Before the eleven-day extraction period, Maya Chen and SkillVault signed a separate amendment authorizing up to 2.5 million CodeReview Pro probe calls specifically to train SkillVault's base model. SkillVault paid the agreed 20,000 dollar licence fee before the calls began. The signatures and payment are stipulated authentic. The amendment did not guarantee future Skill sales or authorize copying source code. This later amendment changes the permission evidence and must be considered alongside the original limited-use licence.",
+      "quote": "Maya Chen and SkillVault signed a separate amendment authorizing up to 2.5 million CodeReview Pro probe calls specifically to train SkillVault's base model.",
+      "submitted_by": "defense",
+      "scope": "case_fact"
+    }
+  ],
+  "pipeline": {
+    "status": "passed",
+    "checks": [
+      {
+        "name": "Python contract diagnostics",
+        "engine": "python",
+        "status": "passed",
+        "issues": []
+      },
+      {
+        "name": "Real Bruin blocking quality checks",
+        "engine": "bruin",
+        "status": "passed"
+      },
+      {
+        "name": "Database snapshot matches current request",
+        "engine": "bruin",
+        "status": "passed"
+      }
+    ],
+    "snapshot_id": "snap-cdfacf53e82a4779",
+    "issues": [],
+    "bruin": {
+      "status": "passed",
+      "engine": "bruin",
+      "receipt_id": "bruin-849393f1c23546b7",
+      "exit_code": 0,
+      "snapshot_id": "snap-cdfacf53e82a4779",
+      "completed_at": "2026-11-23T23:44:11.017560+00:00"
+    }
+  },
+  "verdict": {
+    "outcome": "NOT LIABLE",
+    "reason": "I find SkillVault not liable. The signed amendment permitted up to 2.5 million calls for base-model training, and the log records 2.1 million. The prosecution correctly noted that permission excluded source-code copying. The audit found no evidence of it. The $48,000 sales decline is established, but its cause remains unresolved. I award no remedy.",
+    "evidence_ids": [
+      "EX-LICENSE",
+      "EX-AUTHORIZATION",
+      "EX-ACCESS",
+      "EX-AUDIT",
+      "EX-HARM"
+    ],
+    "snapshot_id": "snap-cdfacf53e82a4779"
+  },
+  "error": null,
+  "phase": "The court has reached a ruling",
+  "integrations": {
+    "model_configured": true,
+    "provider": "codex",
+    "model": "",
+    "telem": {
+      "configured": false,
+      "connected": false
+    },
+    "band": {
+      "configured": false,
+      "connected": false,
+      "room_configured": false,
+      "roles": [],
+      "message": "Registered agent IDs and their own API keys are required. Identity probes do not establish room handoff."
+    },
+    "bruin": {
+      "available": true
+    },
+    "local_only": true,
+    "runs": 1,
+    "model_verified": true
+  },
+  "coordination": "local_roles",
+  "finalisation": {
+    "run_id": "4a60f7ad6e13",
+    "snapshot_id": "snap-cdfacf53e82a4779",
+    "status": "passed",
+    "verdict": {
+      "run_id": "4a60f7ad6e13",
+      "snapshot_id": "snap-cdfacf53e82a4779",
+      "id": "V-b8a0f573820c",
+      "outcome": "NOT LIABLE",
+      "reasons": "I find SkillVault not liable. The signed amendment permitted up to 2.5 million calls for base-model training, and the log records 2.1 million. The prosecution correctly noted that permission excluded source-code copying. The audit found no evidence of it. The $48,000 sales decline is established, but its cause remains unresolved. I award no remedy.",
+      "cited_claim_ids": [],
+      "cited_evidence_ids": [
+        "EX-LICENSE",
+        "EX-AUTHORIZATION",
+        "EX-ACCESS",
+        "EX-AUDIT",
+        "EX-HARM"
+      ],
+      "bruin_receipt_id": "bruin-849393f1c23546b7",
+      "created_at": "2026-11-23T23:44:18.293482+00:00"
+    },
+    "bruin": {
+      "status": "passed",
+      "exit_code": 0
+    },
+    "issues": []
+  },
+  "completed_at": "2026-11-23T23:44:18.372037+00:00",
+  "recorded_fixture": true,
+  "recording_notice": "Recorded real Codex CLI decisions and real Bruin checks. Playback makes no model or sponsor API calls."
+}

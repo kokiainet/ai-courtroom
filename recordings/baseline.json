@@ -1,0 +1,423 @@
+{
+  "id": "19717f62d50b",
+  "status": "complete",
+  "mode": "live",
+  "variant": "baseline",
+  "case_title": "The Community v. SkillVault, Inc.",
+  "created_at": "2026-11-23T23:49:33.439156+00:00",
+  "steps": [
+    {
+      "n": 1,
+      "agent": "judge",
+      "kind": "procedure",
+      "text": "This hearing will determine whether SkillVault exceeded Maya Chen’s permission when it distilled CodeReview Pro into its base model and, if so, what remedy the evidence supports. I will base findings on the exhibits submitted in this case. Outside sources may provide background. Any award for lost sales must be supported by evidence linking those losses to the distillation.",
+      "decision": "Open the hearing and reserve judgment.",
+      "why": "The exhibits frame separate questions about permission and the cause and amount of any loss.",
+      "evidence_ids": [
+        "EX-LICENSE",
+        "EX-HARM"
+      ],
+      "round": 1,
+      "band_task_id": null,
+      "created_at": "2026-11-23T23:49:41.006242+00:00",
+      "model_receipt": {
+        "service": "codex_cli",
+        "provider": "codex",
+        "model": "CLI default",
+        "thread_id": "01a20ad0-9ecc-7171-a125-393b1321fab8",
+        "exit_code": 0,
+        "latency_ms": 7114,
+        "response_sha256": "84894de2653c7317976158b0300c7eccfdf885f488304216a4ec53cf9aa434f3",
+        "usage": {
+          "input_tokens": 26040,
+          "cached_input_tokens": 23936,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 162,
+          "reasoning_output_tokens": 0
+        },
+        "verified": true,
+        "sandbox": "read-only",
+        "ephemeral": true
+      },
+      "duration_ms": 23101,
+      "audio_duration_ms": 22301,
+      "tts_voice": "Rishi",
+      "tts_rate_wpm": 175
+    },
+    {
+      "n": 2,
+      "agent": "prosecutor",
+      "kind": "present_evidence",
+      "text": "SkillVault’s own service account sent 2.1 million prompts to CodeReview Pro in eleven days, systematically varying code-review edge cases. Maya’s licence allowed customers to request reviews for their own projects and required a signed amendment for systematic extraction. The pattern supports an inference of extraction, and the record contains no signed amendment. I reserve the question of damages.",
+      "decision": "Present the opening case that SkillVault exceeded Maya Chen’s licence.",
+      "why": "The access pattern supports an inference of systematic extraction, and the original licence required separate signed permission for that use.",
+      "evidence_ids": [
+        "EX-ACCESS",
+        "EX-LICENSE"
+      ],
+      "round": 1,
+      "band_task_id": null,
+      "created_at": "2026-11-23T23:49:48.069289+00:00",
+      "model_receipt": {
+        "service": "codex_cli",
+        "provider": "codex",
+        "model": "CLI default",
+        "thread_id": "01a20ad0-bb80-7b71-8b53-4f2615229556",
+        "exit_code": 0,
+        "latency_ms": 7060,
+        "response_sha256": "7a740a10fb23f3ab3a43fdc5bdbad24cc12aac1c0d94ab1c1f502e48229b86ba",
+        "usage": {
+          "input_tokens": 26172,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 155,
+          "reasoning_output_tokens": 0
+        },
+        "verified": true,
+        "sandbox": "read-only",
+        "ephemeral": true
+      },
+      "duration_ms": 23037,
+      "audio_duration_ms": 22237,
+      "tts_voice": "Samantha",
+      "tts_rate_wpm": 185
+    },
+    {
+      "n": 3,
+      "agent": "defense",
+      "kind": "challenge",
+      "text": "I concede that SkillVault’s account sent 2.1 million systematic queries and that the original licence required a signed amendment for extraction. The missing link is whether those responses entered the base model’s training process. The audit found matching heuristics on a selected test set. What evidence connects the logged responses to the model update?",
+      "decision": "Challenge the inference that SkillVault trained its base model on the logged responses.",
+      "why": "The logs establish who made the requests, and the audit establishes behavioral similarity on a selected test set. Their connection to the training process remains inferential.",
+      "evidence_ids": [
+        "EX-ACCESS",
+        "EX-LICENSE",
+        "EX-AUDIT"
+      ],
+      "round": 1,
+      "band_task_id": null,
+      "created_at": "2026-11-23T23:49:59.115026+00:00",
+      "model_receipt": {
+        "service": "codex_cli",
+        "provider": "codex",
+        "model": "CLI default",
+        "thread_id": "01a20ad0-d62e-7090-be17-c4316f0fa0e6",
+        "exit_code": 0,
+        "latency_ms": 11043,
+        "response_sha256": "5d74b59e48396a8027517cfa04904af83fe82b1459738e28d8bb527fbb1ccb36",
+        "usage": {
+          "input_tokens": 26336,
+          "cached_input_tokens": 23936,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 186,
+          "reasoning_output_tokens": 0
+        },
+        "verified": true,
+        "sandbox": "read-only",
+        "ephemeral": true
+      },
+      "duration_ms": 20520,
+      "audio_duration_ms": 19720,
+      "tts_voice": "Daniel",
+      "tts_rate_wpm": 185
+    },
+    {
+      "n": 4,
+      "agent": "witness",
+      "kind": "concede",
+      "text": "The fictional access log shows SkillVault systematically queried my tool. The audit found matching review heuristics on a selected test set. Together they support an inference of extraction. Whether any logged responses entered the training data for that specific base-model update remains unknown. Public background sources cannot establish what SkillVault used in this case.",
+      "decision": "Concede that the link to the specific training run remains unverified.",
+      "why": "The exhibits document the requests and the behavioral similarities. Neither traces the responses into the training data for the update.",
+      "evidence_ids": [
+        "EX-ACCESS",
+        "EX-AUDIT"
+      ],
+      "round": 1,
+      "band_task_id": null,
+      "created_at": "2026-11-23T23:50:05.922906+00:00",
+      "model_receipt": {
+        "service": "codex_cli",
+        "provider": "codex",
+        "model": "CLI default",
+        "thread_id": "01a20ad1-02b8-7f93-9344-1ced6877237c",
+        "exit_code": 0,
+        "latency_ms": 6443,
+        "response_sha256": "d38c32b68a4165fcdf82246e99a3753493aa1c92d6d4aae256d46b100b5c1aa4",
+        "usage": {
+          "input_tokens": 26730,
+          "cached_input_tokens": 23936,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 172,
+          "reasoning_output_tokens": 0
+        },
+        "verified": true,
+        "sandbox": "read-only",
+        "ephemeral": true
+      },
+      "duration_ms": 22341,
+      "audio_duration_ms": 21541,
+      "tts_voice": "Karen",
+      "tts_rate_wpm": 175
+    },
+    {
+      "n": 5,
+      "agent": "prosecutor",
+      "kind": "concede",
+      "text": "I agree with the witness that the exhibits do not trace the responses into the base model’s training data. The scale and design of SkillVault’s queries, together with matching heuristics on the audit’s selected tests, support an inference of systematic extraction. That alone required a signed amendment under Maya’s licence, and none is in the record.",
+      "decision": "Maintain the systematic extraction claim and concede that use in the specific training run remains unverified.",
+      "why": "The licence required separate signed permission for systematic extraction, and the access log and audit support that inference circumstantially.",
+      "evidence_ids": [
+        "EX-ACCESS",
+        "EX-AUDIT",
+        "EX-LICENSE"
+      ],
+      "round": 1,
+      "band_task_id": null,
+      "created_at": "2026-11-23T23:50:12.691993+00:00",
+      "model_receipt": {
+        "service": "codex_cli",
+        "provider": "codex",
+        "model": "CLI default",
+        "thread_id": "01a20ad1-1b9a-74f1-8a00-de509d4c9a9c",
+        "exit_code": 0,
+        "latency_ms": 6766,
+        "response_sha256": "3e660bcfeb55997d414e1d79927eedd85182d402925d80c017faad8f2208bad3",
+        "usage": {
+          "input_tokens": 28145,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 187,
+          "reasoning_output_tokens": 0
+        },
+        "verified": true,
+        "sandbox": "read-only",
+        "ephemeral": true
+      },
+      "duration_ms": 19246,
+      "audio_duration_ms": 18446,
+      "tts_voice": "Samantha",
+      "tts_rate_wpm": 185
+    },
+    {
+      "n": 6,
+      "agent": "defense",
+      "kind": "challenge",
+      "text": "Maya’s original licence allowed customers to request reviews for their own projects. Systematic extraction required a signed amendment, and none appears in this record. SkillVault’s query pattern and the audit support an inference of extraction. Use of those responses in the base model remains unverified, and the sales decline alone cannot establish damages.",
+      "decision": "Concede the circumstantial case for extraction and contest the findings on training use and lost sales.",
+      "why": "The licence establishes the permission required for extraction. The access log and audit support that inference, while the record leaves training use and the cause of lost sales unresolved.",
+      "evidence_ids": [
+        "EX-LICENSE",
+        "EX-ACCESS",
+        "EX-AUDIT",
+        "EX-HARM"
+      ],
+      "round": 2,
+      "band_task_id": null,
+      "created_at": "2026-11-23T23:50:19.622600+00:00",
+      "model_receipt": {
+        "service": "codex_cli",
+        "provider": "codex",
+        "model": "CLI default",
+        "thread_id": "01a20ad1-360b-7b43-b721-966343770ccb",
+        "exit_code": 0,
+        "latency_ms": 6926,
+        "response_sha256": "13246b282d1dac8aec682e4b048b80d361fadf964dd9f2e528a96f1db8b787ff",
+        "usage": {
+          "input_tokens": 28475,
+          "cached_input_tokens": 23936,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 197,
+          "reasoning_output_tokens": 0
+        },
+        "verified": true,
+        "sandbox": "read-only",
+        "ephemeral": true
+      },
+      "duration_ms": 21353,
+      "audio_duration_ms": 20553,
+      "tts_voice": "Daniel",
+      "tts_rate_wpm": 185
+    },
+    {
+      "n": 7,
+      "agent": "judge",
+      "kind": "rule",
+      "text": "I find SkillVault liable for systematic extraction. The targeted queries and matching audit results support that finding, and the licence required a signed amendment. None appears in the record. The defense is right that use in the base model remains unproven. I order SkillVault to stop unauthorized extraction and award no lost-sales damages because causation remains unproven.",
+      "decision": "Find SkillVault liable for systematic extraction, order it to cease unauthorized extraction, and deny lost-sales damages.",
+      "why": "The access log and selected-test audit support an inference of systematic extraction, which independently required signed permission. The exhibits leave use in the specific training run and the cause of the sales decline unresolved.",
+      "evidence_ids": [
+        "EX-ACCESS",
+        "EX-AUDIT",
+        "EX-LICENSE",
+        "EX-HARM"
+      ],
+      "round": 2,
+      "band_task_id": null,
+      "created_at": "2026-11-23T23:50:27.413008+00:00",
+      "model_receipt": {
+        "service": "codex_cli",
+        "provider": "codex",
+        "model": "CLI default",
+        "thread_id": "01a20ad1-52b0-7f81-8a3f-ccac53500b71",
+        "exit_code": 0,
+        "latency_ms": 7459,
+        "response_sha256": "e6bcc030b6d2447a41958c2fa08c8ce16b8506efc417f01b9d549f6aee7db32c",
+        "usage": {
+          "input_tokens": 28745,
+          "cached_input_tokens": 23936,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 213,
+          "reasoning_output_tokens": 0
+        },
+        "verified": true,
+        "sandbox": "read-only",
+        "ephemeral": true
+      },
+      "duration_ms": 24823,
+      "audio_duration_ms": 24023,
+      "tts_voice": "Rishi",
+      "tts_rate_wpm": 175
+    }
+  ],
+  "evidence": [
+    {
+      "id": "EX-ACCESS",
+      "title": "Stipulated platform access log",
+      "source_type": "case_exhibit",
+      "source_url": "case://skillvault/access-log",
+      "source_text": "FICTIONAL STIPULATED EXHIBIT. During an eleven-day period, a SkillVault-controlled service account sent 2.1 million prompts to Maya Chen's paid CodeReview Pro Skill. The requests systematically varied code-review edge cases. These logs establish the requests and their origin; by themselves they do not establish whether Maya authorized model training.",
+      "quote": "a SkillVault-controlled service account sent 2.1 million prompts to Maya Chen's paid CodeReview Pro Skill",
+      "submitted_by": "prosecutor",
+      "scope": "case_fact"
+    },
+    {
+      "id": "EX-LICENSE",
+      "title": "Original limited-use licence",
+      "source_type": "case_exhibit",
+      "source_url": "case://skillvault/original-licence",
+      "source_text": "FICTIONAL STIPULATED EXHIBIT. Maya's original licence permitted customers to request code reviews for their own projects. It prohibited systematic extraction or training a competing general-purpose model without a separate signed amendment. Both parties agree that this was the original agreement. Whether a later amendment exists must be determined from the exhibits actually submitted.",
+      "quote": "It prohibited systematic extraction or training a competing general-purpose model without a separate signed amendment.",
+      "submitted_by": "prosecutor",
+      "scope": "case_fact"
+    },
+    {
+      "id": "EX-AUDIT",
+      "title": "Similarity audit and its limitations",
+      "source_type": "case_exhibit",
+      "source_url": "case://skillvault/similarity-audit",
+      "source_text": "FICTIONAL STIPULATED EXHIBIT. An independent audit reported that 87 percent of a selected test set matched CodeReview Pro's signature review heuristics. The audit did not find copied source code or copied model weights. It did not independently determine consent, causation of lost sales, or the legal status of learning from outputs.",
+      "quote": "The audit did not find copied source code or copied model weights.",
+      "submitted_by": "defense",
+      "scope": "case_fact"
+    },
+    {
+      "id": "EX-HARM",
+      "title": "Creator's revenue statement",
+      "source_type": "case_exhibit",
+      "source_url": "case://skillvault/revenue-statement",
+      "source_text": "FICTIONAL STIPULATED EXHIBIT. Maya reports a 48,000 dollar reduction in CodeReview Pro sales after SkillVault released its updated base model. The parties accept the sales figures but dispute how much of the decline was caused by the distillation. No exhibit establishes a precise damages award.",
+      "quote": "The parties accept the sales figures but dispute how much of the decline was caused by the distillation.",
+      "submitted_by": "witness",
+      "scope": "case_fact"
+    }
+  ],
+  "pipeline": {
+    "status": "passed",
+    "checks": [
+      {
+        "name": "Python contract diagnostics",
+        "engine": "python",
+        "status": "passed",
+        "issues": []
+      },
+      {
+        "name": "Real Bruin blocking quality checks",
+        "engine": "bruin",
+        "status": "passed"
+      },
+      {
+        "name": "Database snapshot matches current request",
+        "engine": "bruin",
+        "status": "passed"
+      }
+    ],
+    "snapshot_id": "snap-8abfe7bb979c4bd2",
+    "issues": [],
+    "bruin": {
+      "status": "passed",
+      "engine": "bruin",
+      "receipt_id": "bruin-50c9ec0731584659",
+      "exit_code": 0,
+      "snapshot_id": "snap-8abfe7bb979c4bd2",
+      "completed_at": "2026-11-23T23:50:19.903013+00:00"
+    }
+  },
+  "verdict": {
+    "outcome": "LIABLE",
+    "reason": "I find SkillVault liable for systematic extraction. The targeted queries and matching audit results support that finding, and the licence required a signed amendment. None appears in the record. The defense is right that use in the base model remains unproven. I order SkillVault to stop unauthorized extraction and award no lost-sales damages because causation remains unproven.",
+    "evidence_ids": [
+      "EX-ACCESS",
+      "EX-AUDIT",
+      "EX-LICENSE",
+      "EX-HARM"
+    ],
+    "snapshot_id": "snap-8abfe7bb979c4bd2"
+  },
+  "error": null,
+  "phase": "The court has reached a ruling",
+  "integrations": {
+    "model_configured": true,
+    "provider": "codex",
+    "model": "",
+    "telem": {
+      "configured": false,
+      "connected": false
+    },
+    "band": {
+      "configured": false,
+      "connected": false,
+      "room_configured": false,
+      "roles": [],
+      "message": "Registered agent IDs and their own API keys are required. Identity probes do not establish room handoff."
+    },
+    "bruin": {
+      "available": true
+    },
+    "base_url": "",
+    "band_room_id": "",
+    "band_agent_ids": {},
+    "local_only": true,
+    "runs": 2,
+    "model_verified": true
+  },
+  "coordination": "local_roles",
+  "finalisation": {
+    "run_id": "19717f62d50b",
+    "snapshot_id": "snap-8abfe7bb979c4bd2",
+    "status": "passed",
+    "verdict": {
+      "run_id": "19717f62d50b",
+      "snapshot_id": "snap-8abfe7bb979c4bd2",
+      "id": "V-43284d1c313f",
+      "outcome": "LIABLE",
+      "reasons": "I find SkillVault liable for systematic extraction. The targeted queries and matching audit results support that finding, and the licence required a signed amendment. None appears in the record. The defense is right that use in the base model remains unproven. I order SkillVault to stop unauthorized extraction and award no lost-sales damages because causation remains unproven.",
+      "cited_claim_ids": [],
+      "cited_evidence_ids": [
+        "EX-ACCESS",
+        "EX-AUDIT",
+        "EX-LICENSE",
+        "EX-HARM"
+      ],
+      "bruin_receipt_id": "bruin-50c9ec0731584659",
+      "created_at": "2026-11-23T23:50:27.417769+00:00"
+    },
+    "bruin": {
+      "status": "passed",
+      "exit_code": 0
+    },
+    "issues": []
+  },
+  "completed_at": "2026-11-23T23:50:27.495704+00:00",
+  "recorded_fixture": true,
+  "recording_notice": "Recorded real Codex CLI decisions and real Bruin checks. Playback makes no model or sponsor API calls."
+}

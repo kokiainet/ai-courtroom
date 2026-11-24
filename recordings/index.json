@@ -1,0 +1,36 @@
+{
+  "runs": [
+    {
+      "id": "19717f62d50b",
+      "mode": "live",
+      "status": "complete",
+      "variant": "baseline",
+      "case_title": "The Community v. SkillVault, Inc.",
+      "completed_at": "2026-11-23T23:50:27.495704+00:00",
+      "file": "baseline.json",
+      "outcome": "LIABLE"
+    },
+    {
+      "id": "4a60f7ad6e13",
+      "mode": "live",
+      "status": "complete",
+      "variant": "authorization",
+      "case_title": "The Community v. SkillVault, Inc.",
+      "completed_at": "2026-11-23T23:44:18.372037+00:00",
+      "file": "authorization.json",
+      "outcome": "NOT LIABLE"
+    },
+    {
+      "id": "3535013d442b",
+      "mode": "live",
+      "status": "complete",
+      "variant": "baseline",
+      "case_title": "The Community v. SkillVault, Inc.",
+      "completed_at": "2026-11-24T00:11:05.444309+00:00",
+      "file": "connected.json",
+      "label": "Full integration",
+      "recording_key": "connected",
+      "outcome": "LIABLE"
+    }
+  ]
+}
