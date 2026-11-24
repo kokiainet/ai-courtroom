@@ -1,369 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Courtroom — Who Owns What an AI Learns From You?</title>
-<style>
-  :root {
-    --bg: #14100d;
-    --panel: #1f1a16;
-    --panel2: #2a231d;
-    --ink: #f3ead9;
-    --muted: #b8a88f;
-    --gold: #d9a441;
-    --line: #3d332a;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    background: var(--bg);
-    color: var(--ink);
-    font-family: Georgia, "Times New Roman", serif;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  header {
-    text-align: center;
-    padding: 18px 16px 10px;
-    border-bottom: 2px solid var(--gold);
-    background: linear-gradient(180deg, #241b12, var(--bg));
-  }
-  header h1 { font-size: 30px; letter-spacing: 2px; color: var(--gold); }
-  header .case { margin-top: 6px; font-size: 16px; }
-  header .charge { margin-top: 2px; font-size: 13.5px; color: var(--muted); font-style: italic; }
-  main {
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 340px;
-    gap: 14px;
-    padding: 14px;
-    max-width: 1280px;
-    width: 100%;
-    margin: 0 auto;
-  }
-  @media (max-width: 900px) { main { grid-template-columns: 1fr; } }
-
-  /* ---------- stage ---------- */
-  .stage {
-    background:
-      radial-gradient(ellipse at 50% -10%, #3a2b18 0%, transparent 60%),
-      var(--panel);
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 18px 18px 14px;
-    display: flex;
-    flex-direction: column;
-    min-height: 560px;
-  }
-  .bubble {
-    background: #fdf8ec;
-    color: #221a10;
-    border-radius: 14px;
-    padding: 16px 18px;
-    min-height: 118px;
-    font-size: 17.5px;
-    line-height: 1.5;
-    position: relative;
-    box-shadow: 0 6px 24px rgba(0,0,0,.45);
-  }
-  .bubble .who { font-size: 12.5px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
-  .bubble.idle { color: #6d6152; font-style: italic; display: flex; align-items: center; justify-content: center; text-align: center; }
-  .floor {
-    margin-top: auto;
-    padding-top: 26px;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-  }
-  .agent { text-align: center; width: 130px; transition: transform .35s ease, opacity .35s ease; opacity: .55; }
-  .agent .avatar {
-    width: 84px; height: 84px; margin: 0 auto;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 30px; font-weight: bold; color: #fff;
-    border: 3px solid rgba(255,255,255,.25);
-    font-family: Helvetica, Arial, sans-serif;
-  }
-  .agent .name { margin-top: 8px; font-size: 14.5px; }
-  .agent .role { font-size: 11.5px; color: var(--muted); font-family: Helvetica, Arial, sans-serif; }
-  .agent .goal { font-size: 10.5px; color: var(--muted); font-style: italic; margin-top: 3px; line-height: 1.35; }
-  .agent.speaking { opacity: 1; transform: translateY(-14px) scale(1.07); }
-  .agent.speaking .avatar { animation: bob 0.9s ease-in-out infinite; box-shadow: 0 0 0 4px var(--gold), 0 10px 26px rgba(0,0,0,.5); }
-  @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
-  .agent.judge .avatar { border-radius: 14px; }
-
-  /* ---------- score ---------- */
-  .scorewrap { margin-top: 16px; }
-  .scorelabels { display: flex; justify-content: space-between; font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: var(--muted); margin-bottom: 5px; }
-  .scorebar { height: 14px; background: #2e6fe4; border-radius: 7px; overflow: hidden; }
-  .scorebar .pros { height: 100%; background: #e4572e; width: 50%; transition: width .6s ease; }
-
-  /* ---------- controls ---------- */
-  .controls { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; align-items: center; }
-  button {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 14px; font-weight: bold;
-    background: var(--gold); color: #221a10;
-    border: none; border-radius: 8px;
-    padding: 10px 18px; cursor: pointer;
-  }
-  button.secondary { background: var(--panel2); color: var(--ink); border: 1px solid var(--line); }
-  button:disabled { opacity: .45; cursor: default; }
-  select {
-    font-family: Helvetica, Arial, sans-serif; font-size: 14px;
-    background: var(--panel2); color: var(--ink);
-    border: 1px solid var(--line); border-radius: 8px; padding: 9px;
-  }
-  .status { font-family: Helvetica, Arial, sans-serif; font-size: 12.5px; color: var(--muted); }
-
-  /* ---------- ledger ---------- */
-  .ledger {
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 14px;
-    display: flex; flex-direction: column;
-    max-height: 100%;
-  }
-  .ledger h2 { font-size: 15px; letter-spacing: 1.5px; color: var(--gold); margin-bottom: 4px; }
-  .ledger .sub { font-size: 11.5px; color: var(--muted); font-family: Helvetica, Arial, sans-serif; margin-bottom: 10px; line-height: 1.4; }
-  .entries { overflow-y: auto; display: flex; flex-direction: column; gap: 9px; padding-right: 4px; }
-  .entry {
-    background: var(--panel2);
-    border-left: 4px solid var(--muted);
-    border-radius: 6px;
-    padding: 8px 10px;
-    font-family: Helvetica, Arial, sans-serif;
-    animation: slidein .3s ease;
-  }
-  @keyframes slidein { from { opacity: 0; transform: translateX(12px); } to { opacity: 1; transform: none; } }
-  .entry .d { font-size: 13px; font-weight: bold; }
-  .entry .w { font-size: 11.5px; color: var(--muted); margin-top: 2px; line-height: 1.4; }
-  .entry .k { font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); }
-
-  /* ---------- verdict ---------- */
-  .verdict {
-    display: none;
-    margin-top: 16px;
-    border: 2px solid var(--gold);
-    border-radius: 12px;
-    padding: 18px;
-    text-align: center;
-    background: #241b12;
-  }
-  .verdict.show { display: block; animation: slidein .4s ease; }
-  .verdict .stamp {
-    display: inline-block;
-    font-size: 26px; font-weight: bold; letter-spacing: 3px;
-    color: var(--gold);
-    border: 3px solid var(--gold); border-radius: 8px;
-    padding: 6px 18px; transform: rotate(-2deg);
-    margin-bottom: 10px;
-  }
-  .verdict p { font-size: 15px; line-height: 1.55; text-align: left; }
-  footer {
-    text-align: center; padding: 10px 16px 16px;
-    font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: var(--muted); line-height: 1.6;
-  }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#10100f">
+  <title>AI Courtroom — The price of learning</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
-<header>
-  <h1>AI COURTROOM</h1>
-  <div class="case" id="caseTitle"></div>
-  <div class="charge" id="caseCharge"></div>
-</header>
-
-<main>
-  <section class="stage">
-    <div class="bubble idle" id="bubble">Press “Begin the trial”. Four agents will argue the case live. Nothing is scripted: each agent reads the room, picks its move, and logs why. The verdict follows what happens.</div>
-    <div class="floor" id="floor"></div>
-    <div class="scorewrap">
-      <div class="scorelabels">
-        <span>PROSECUTION <b id="prosScore">0</b></span>
-        <span>weight of the case</span>
-        <span>DEFENSE <b id="defScore">0</b></span>
+  <div class="app-shell">
+    <header class="masthead">
+      <a class="brand" href="/" aria-label="AI Courtroom home"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="m18 3 13 6v11c0 6-5 10-13 14C10 30 5 26 5 20V9Z"/><path d="M11 25h14M14 22h8M18 11v10M10 13h16M12 13l-3 6h6ZM24 13l-3 6h6Z"/></svg><span>AI <strong>COURTROOM</strong><small>A MULTI-AGENT COURTROOM DRAMA</small></span></a>
+      <nav class="header-actions" aria-label="Project navigation"><span class="connection-state" id="connectionState"><i></i>Checking connection</span><a href="/assets/holo.html" target="_blank" rel="noopener noreferrer" class="quiet-link">3D courtroom</a><a href="/setup.html" class="quiet-link">Connections</a><a href="https://github.com/kokiainet/ai-courtroom" target="_blank" rel="noopener noreferrer" class="quiet-link github-link">Source</a></nav>
+    </header>
+    <main>
+      <div class="case-heading"><div><p class="eyebrow">CASE NO. 026 — INTELLIGENCE & OWNERSHIP</p><h1>The price of learning<span>.</span></h1><p class="case-deck">One expert. Two million calls. Four agents. An ending earned in court.</p></div><button class="record-toggle" id="recordToggle" aria-expanded="true" aria-controls="trialRecord"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 3h10v14H5zM8 7h4M8 10h4M8 13h2"/></svg><span>Trial record</span><span class="record-count" id="recordCount">0</span></button></div>
+      <div class="experience" id="experience">
+        <section class="screen-column" aria-label="Courtroom theater">
+          <div class="cinema" id="cinema" data-camera="wide" data-pose="idle">
+            <div class="courtroom-background" aria-hidden="true"></div><div class="light-beam beam-one" aria-hidden="true"></div><div class="light-beam beam-two" aria-hidden="true"></div><div class="vignette" aria-hidden="true"></div>
+            <div class="screen-topline"><span class="session-label"><i></i>THE COMMUNITY v. SKILLVAULT, INC.</span><span class="mode-badge" id="modeBadge">AWAITING SESSION</span></div>
+            <div class="opening-copy" id="openingCopy"><p>THE QUESTION BEFORE THE COURT</p><h2>A skill was learned.<br>Was it <em>taken?</em></h2><span>Enter a courtroom where every claim needs evidence.</span></div>
+            <div class="court-seal" aria-hidden="true"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50"/><circle cx="60" cy="60" r="44"/><path d="M60 28v58M34 84h52M43 91h34M29 43h62M36 43 24 66h24ZM84 43 72 66h24Z"/><path d="m60 20 3 5-3 5-3-5Z"/></svg></div>
+            <div class="cast" id="cast" aria-hidden="true"></div>
+            <div class="witness-stand" aria-hidden="true"><span></span></div><div class="judge-bench" aria-hidden="true"></div><div class="foreground-benches" aria-hidden="true"><span></span><span></span></div>
+            <aside class="projection" id="projection" aria-label="Exhibit on screen" hidden><div class="projection-top"><span>EXHIBIT <b id="exhibitNumber">01</b></span><span id="exhibitType">CASE MATERIAL</span></div><div class="exhibit-symbol" id="exhibitSymbol" aria-hidden="true">⌁</div><h3 id="exhibitTitle"></h3><p id="exhibitQuote"></p><span class="exhibit-status" id="exhibitStatus"></span></aside>
+            <div class="dramatic-cue" id="dramaticCue" aria-hidden="true"></div>
+            <div class="dialogue" id="dialogue" hidden><div class="speaker-strip"><span class="speaker-role" id="speakerRole"></span><span class="speaker-name" id="speakerName"></span><span class="statement-kind" id="statementKind"></span></div><p id="dialogueText"></p><div class="dialogue-bottom"><span id="statementCounter"></span><span id="captionCounter" aria-label="Caption segment"></span><span class="dialogue-indicator" aria-hidden="true">◆</span></div></div>
+            <div class="verdict-overlay" id="verdictOverlay" hidden><p class="eyebrow">THE COURT HAS REACHED A DECISION</p><h2 id="verdictOutcome"></h2><p id="verdictReason"></p><span id="verdictEvidence"></span><button id="verdictClose" class="verdict-dismiss">Return to courtroom</button></div>
+            <div class="rehearsal-label" id="rehearsalLabel" hidden>SCRIPTED VISUAL REHEARSAL · NO MODEL DECISIONS</div>
+          </div>
+          <div class="playback-bar"><div class="playback-main"><button class="play-control" id="playPause" disabled aria-label="Pause playback"><svg id="pauseIcon" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 4h3v12H6zM12 4h3v12h-3z"/></svg><svg id="playIcon" viewBox="0 0 20 20" aria-hidden="true" hidden><path d="m7 4 9 6-9 6Z"/></svg></button><div class="playback-status"><strong id="playbackTitle">The court is ready.</strong><span id="playbackSubtitle">Choose how you want to enter the case.</span></div></div><div class="playback-options"><button id="voiceToggle" class="option-button" aria-pressed="false"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 8h4l5-4v12l-5-4H3ZM15 6c3 2 3 6 0 8"/></svg><span>Voices off</span></button><label class="speed-label"><span class="sr-only">Playback speed</span><select id="speed"><option value="1">1× speed</option><option value="1.4">1.4× speed</option><option value="2">2× speed</option></select></label><button id="replayButton" class="option-button replay-button" disabled title="Replay the statements from this run"><span aria-hidden="true">↺</span> Replay</button></div></div>
+          <div class="progress-track" role="progressbar" id="progressTrack" aria-label="Trial playback progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="progressFill"></span></div>
+          <section class="session-controls" aria-label="Start a trial"><div class="variant-selector"><p class="eyebrow">CHANGE THE EVIDENCE</p><div class="variant-buttons" role="group" aria-label="Case evidence variant"><button data-variant="baseline" class="active" aria-pressed="true">Original filing</button><button data-variant="authorization" aria-pressed="false">A signed license</button></div><p id="variantDescription">The platform's probe traffic is in evidence. Consent is disputed.</p></div><div class="start-actions"><button class="button primary" id="liveButton"><span class="button-dot"></span>Live trial</button><button class="button secondary" id="previewButton">Rehearsal</button><button class="button secondary" id="recordedButton">Recorded runs</button><p id="startHelp">A live trial requires a connected model.</p></div></section>
+          <p class="voice-report" id="voiceReport"></p>
+        </section>
+        <aside class="trial-record" id="trialRecord" aria-label="Trial record"><div class="record-heading"><span class="eyebrow">ON THE RECORD</span><button id="recordClose" aria-label="Close trial record">×</button></div><div class="record-tabs" role="tablist" aria-label="Record sections"><button role="tab" id="tab-decisions" aria-controls="panel-decisions" aria-selected="true" data-tab="decisions">Decisions</button><button role="tab" id="tab-evidence" aria-controls="panel-evidence" aria-selected="false" data-tab="evidence">Exhibits <span id="evidenceCount">0</span></button><button role="tab" id="tab-checks" aria-controls="panel-checks" aria-selected="false" data-tab="checks">Data checks</button></div><div class="record-panel" role="tabpanel" id="panel-decisions" aria-labelledby="tab-decisions"><div class="empty-record" id="emptyRecord"><svg viewBox="0 0 60 76" aria-hidden="true"><path d="M12 4h27l13 13v55H12ZM39 4v14h13M21 32h22M21 42h22M21 52h15"/></svg><h3>Every move leaves a trace.</h3><p>Agent decisions and their stated rationale appear here as the trial unfolds.</p><span>NOTHING ENTERED YET</span></div><ol class="decision-list" id="decisionList"></ol></div><div class="record-panel" role="tabpanel" id="panel-evidence" aria-labelledby="tab-evidence" hidden><p class="record-explainer">Claims are separate from verified sources. Select an exhibit to project it in court.</p><div id="evidenceList" class="evidence-list"></div></div><div class="record-panel" role="tabpanel" id="panel-checks" aria-labelledby="tab-checks" hidden><p class="record-explainer">Bruin validates the recorded decisions before a run is treated as a checked snapshot.</p><div class="pipeline-state" id="pipelineState">No pipeline run yet.</div><ul class="check-list" id="checkList"></ul><p class="snapshot-id" id="snapshotId"></p><section class="integrity-test"><p class="eyebrow">INJECTED CITATION TEST</p><p>Deliberately submit an unknown exhibit ID, then validate its correction.</p><button id="integrityButton">Test a broken citation</button><div id="integrityResults" role="status" aria-live="polite"></div></section></div><div class="record-foot"><span id="recordFootText">No active session</span><button id="downloadButton" disabled title="Download this run as JSON">Export <span aria-hidden="true">↓</span></button></div></aside>
       </div>
-      <div class="scorebar"><div class="pros" id="prosBar"></div></div>
-    </div>
-    <div class="controls">
-      <button id="startBtn">Begin the trial</button>
-      <button id="pauseBtn" class="secondary" disabled>Pause</button>
-      <select id="speed">
-        <option value="3800">Speed 1x</option>
-        <option value="2200">Speed 1.7x</option>
-        <option value="1200">Speed 3x</option>
-      </select>
-      <button id="exportBtn" class="secondary" disabled>Export decision ledger (JSON)</button>
-      <span class="status" id="status"></span>
-    </div>
-    <div class="verdict" id="verdictBox">
-      <div class="stamp" id="verdictStamp"></div>
-      <p id="verdictText"></p>
-    </div>
-  </section>
-
-  <aside class="ledger">
-    <h2>DECISION LEDGER</h2>
-    <div class="sub">Every move an agent makes, and why. This ledger is the project's data trail: it is exported as JSON and materialized through a Bruin pipeline (see the repo's bruin-pipeline folder).</div>
-    <div class="entries" id="entries"></div>
-  </aside>
-</main>
-
-<footer>
-  Multiplayer AI Hackathon (Thanksgiving Special), Track 1: Agent Animated Film.
-  Agents: prosecutor, defense, witness and judge, each with its own goal, memory and strategy.
-  Mandatory sponsor tool: Bruin powers the decision-ledger data pipeline. Demo video cut in AdaL.
-</footer>
-
-<script src="engine.js"></script>
-<script>
-  const AGENT_META = {
-    judge:      { initials: "JR", color: "#8e44ad", label: "Judge Rao, presiding" },
-    prosecutor: { initials: "AV", color: "#e4572e", label: "Ada Voss, Prosecutor" },
-    defense:    { initials: "VH", color: "#2e6fe4", label: "Victor Hale, Defense" },
-    witness:    { initials: "MC", color: "#17a06b", label: "Maya Chen, Witness" },
-  };
-  const ORDER = ["prosecutor", "witness", "defense", "judge"];
-
-  const floor = document.getElementById("floor");
-  const bubble = document.getElementById("bubble");
-  const entries = document.getElementById("entries");
-  const startBtn = document.getElementById("startBtn");
-  const pauseBtn = document.getElementById("pauseBtn");
-  const exportBtn = document.getElementById("exportBtn");
-  const speedSel = document.getElementById("speed");
-  const statusEl = document.getElementById("status");
-  const verdictBox = document.getElementById("verdictBox");
-
-  let trial = null, idx = 0, timer = null, paused = false;
-
-  // Build the cast once from a probe run (agent metadata is static).
-  const probe = window.CourtEngine.runTrial(1);
-  document.getElementById("caseTitle").textContent = probe.caseTitle;
-  document.getElementById("caseCharge").textContent =
-    "Charge: a platform distilled a paid expert Skill into its base model. No consent. No payment.";
-  for (const id of ORDER) {
-    const a = probe.agents.find((x) => x.id === id);
-    const meta = AGENT_META[id];
-    const div = document.createElement("div");
-    div.className = "agent" + (id === "judge" ? " judge" : "");
-    div.id = "agent-" + id;
-    div.innerHTML =
-      '<div class="avatar" style="background:' + meta.color + '">' + meta.initials + "</div>" +
-      '<div class="name">' + a.name + "</div>" +
-      '<div class="role">' + a.role + "</div>" +
-      '<div class="goal">' + a.goal + "</div>";
-    floor.appendChild(div);
-  }
-
-  function setScore(pros, def) {
-    document.getElementById("prosScore").textContent = pros;
-    document.getElementById("defScore").textContent = def;
-    const total = pros + def;
-    document.getElementById("prosBar").style.width =
-      (total === 0 ? 50 : Math.round((pros / total) * 100)) + "%";
-  }
-
-  function playStep() {
-    if (!trial || idx >= trial.steps.length) { finish(); return; }
-    const s = trial.steps[idx];
-    const meta = AGENT_META[s.agent];
-    document.querySelectorAll(".agent").forEach((el) => el.classList.remove("speaking"));
-    document.getElementById("agent-" + s.agent).classList.add("speaking");
-    bubble.classList.remove("idle");
-    bubble.innerHTML = "";
-    const who = document.createElement("div");
-    who.className = "who";
-    who.style.color = meta.color;
-    who.textContent = meta.label + " · " + s.kind;
-    const txt = document.createElement("div");
-    txt.textContent = s.text;
-    bubble.appendChild(who);
-    bubble.appendChild(txt);
-
-    const e = document.createElement("div");
-    e.className = "entry";
-    e.style.borderLeftColor = meta.color;
-    e.innerHTML =
-      '<div class="k">' + s.agent + " · " + s.kind + "</div>" +
-      '<div class="d"></div><div class="w"></div>';
-    e.querySelector(".d").textContent = "Decision: " + s.decision;
-    e.querySelector(".w").textContent = "Why: " + s.why;
-    entries.appendChild(e);
-    entries.scrollTop = entries.scrollHeight;
-
-    setScore(s.pros, s.def);
-    idx += 1;
-    statusEl.textContent = "Step " + idx + " of " + trial.steps.length;
-    timer = setTimeout(playStep, parseInt(speedSel.value, 10));
-  }
-
-  function finish() {
-    clearTimeout(timer);
-    document.querySelectorAll(".agent").forEach((el) => el.classList.remove("speaking"));
-    document.getElementById("agent-judge").classList.add("speaking");
-    const last = trial.steps[trial.steps.length - 1];
-    document.getElementById("verdictStamp").textContent = trial.verdict;
-    document.getElementById("verdictText").textContent = last.text;
-    verdictBox.classList.add("show");
-    startBtn.disabled = false;
-    startBtn.textContent = "Run it again (new deliberation)";
-    pauseBtn.disabled = true;
-    exportBtn.disabled = false;
-    statusEl.textContent = "Verdict reached. Run it again: the same setup can end differently.";
-  }
-
-  startBtn.addEventListener("click", () => {
-    clearTimeout(timer);
-    const seed = Math.floor(Math.random() * 100000) + 1;
-    trial = window.CourtEngine.runTrial(seed);
-    idx = 0; paused = false;
-    entries.innerHTML = "";
-    verdictBox.classList.remove("show");
-    setScore(0, 0);
-    startBtn.disabled = true;
-    pauseBtn.disabled = false;
-    pauseBtn.textContent = "Pause";
-    exportBtn.disabled = true;
-    statusEl.textContent = "Trial in session, seed " + seed;
-    playStep();
-  });
-
-  pauseBtn.addEventListener("click", () => {
-    if (!trial) return;
-    if (paused) {
-      paused = false;
-      pauseBtn.textContent = "Pause";
-      timer = setTimeout(playStep, 600);
-    } else {
-      paused = true;
-      pauseBtn.textContent = "Resume";
-      clearTimeout(timer);
-    }
-  });
-
-  exportBtn.addEventListener("click", () => {
-    if (!trial) return;
-    const payload = {
-      case: trial.caseTitle,
-      seed: trial.seed,
-      verdict: trial.verdict,
-      margin: trial.margin,
-      decisions: trial.steps.map((s) => ({
-        step: s.n, agent: s.agent, kind: s.kind,
-        decision: s.decision, why: s.why,
-        pros_score: s.pros, def_score: s.def,
-      })),
-    };
-    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = "decisions.json";
-    a.click();
-    URL.revokeObjectURL(a.href);
-  });
-</script>
+      <footer class="footer"><div class="system-statuses" aria-label="Connected tools"><span id="modelStatus"><i></i>Model <b>Checking</b></span><span id="bruinStatus"><i></i>Bruin <b>Checking</b></span><span id="bandStatus"><i></i>BAND <b>Checking</b></span><span id="telemStatus"><i></i>Telem <b>Checking</b></span></div><p>FICTIONAL CASE. REAL QUESTIONS.<span>Built for Multiplayer AI Hackathon.</span></p></footer>
+    </main>
+    <section id="filmControls" class="film-controls" aria-label="Film capture controls" hidden><button id="filmStart" disabled>Start film</button><button id="filmPrevious" disabled>Previous statement</button><button id="filmNext" disabled>Next statement</button><span id="filmNote" role="status">Loading the saved recording…</span></section>
+    <div class="toast" id="toast" role="status" hidden></div>
+    <dialog class="runs-dialog" id="runsDialog" aria-labelledby="runsTitle"><div class="runs-heading"><div><p class="eyebrow">THE COURT ARCHIVE</p><h2 id="runsTitle">Recorded trials</h2></div><button id="runsClose" aria-label="Close recorded trials">×</button></div><p class="runs-intro">Watch a saved session without making a new model call. Each entry shows its original mode.</p><div id="runsList" class="runs-list" role="status">Loading recorded trials…</div></dialog>
+  </div>
 </body>
 </html>

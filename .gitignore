@@ -1,1 +1,16 @@
 *.db
+
+.bruin.yml
+logs/runs
+logs/*.log
+__pycache__/
+*.py[cod]
+logs/queries
+.local/
+.tools/
+.vendor/
+runtime/
+__pycache__/
+*.pyc
+.env
+.env.*

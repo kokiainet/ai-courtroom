@@ -1,0 +1,68 @@
+{
+  "title": "The Community v. SkillVault, Inc.",
+  "question": "Did SkillVault exceed Maya Chen's permission when it distilled CodeReview Pro into its base model, and what remedy follows from the evidence?",
+  "mode": "fictional",
+  "notice": "All people, companies, usage figures and exhibits in this case are fictional. External web references provide background only and cannot establish facts about this fictional dispute.",
+  "roles": [
+    {"id": "prosecutor", "name": "Ada Voss", "role": "Prosecutor", "goal": "Prove unauthorized extraction, distinguish access from permission, and request a proportionate remedy."},
+    {"id": "defense", "name": "Victor Hale", "role": "Defense counsel", "goal": "Test the scope of consent and challenge unsupported inferences. Change your argument when new evidence warrants it."},
+    {"id": "witness", "name": "Maya Chen", "role": "Expert witness and creator", "goal": "Explain the agreement and the cost to your work accurately. Do not invent facts outside the exhibits."},
+    {"id": "judge", "name": "Judge Rao", "role": "Presiding judge", "goal": "Use only the current Bruin-approved evidence packet, address both sides, and state uncertainty or insufficient evidence when appropriate."}
+  ],
+  "exhibits": [
+    {
+      "id": "EX-ACCESS",
+      "title": "Stipulated platform access log",
+      "source_type": "case_exhibit",
+      "source_url": "case://skillvault/access-log",
+      "source_text": "FICTIONAL STIPULATED EXHIBIT. During an eleven-day period, a SkillVault-controlled service account sent 2.1 million prompts to Maya Chen's paid CodeReview Pro Skill. The requests systematically varied code-review edge cases. These logs establish the requests and their origin; by themselves they do not establish whether Maya authorized model training.",
+      "quote": "a SkillVault-controlled service account sent 2.1 million prompts to Maya Chen's paid CodeReview Pro Skill",
+      "submitted_by": "prosecutor",
+      "scope": "case_fact"
+    },
+    {
+      "id": "EX-LICENSE",
+      "title": "Original limited-use licence",
+      "source_type": "case_exhibit",
+      "source_url": "case://skillvault/original-licence",
+      "source_text": "FICTIONAL STIPULATED EXHIBIT. Maya's original licence permitted customers to request code reviews for their own projects. It prohibited systematic extraction or training a competing general-purpose model without a separate signed amendment. Both parties agree that this was the original agreement. Whether a later amendment exists must be determined from the exhibits actually submitted.",
+      "quote": "It prohibited systematic extraction or training a competing general-purpose model without a separate signed amendment.",
+      "submitted_by": "prosecutor",
+      "scope": "case_fact"
+    },
+    {
+      "id": "EX-AUDIT",
+      "title": "Similarity audit and its limitations",
+      "source_type": "case_exhibit",
+      "source_url": "case://skillvault/similarity-audit",
+      "source_text": "FICTIONAL STIPULATED EXHIBIT. An independent audit reported that 87 percent of a selected test set matched CodeReview Pro's signature review heuristics. The audit did not find copied source code or copied model weights. It did not independently determine consent, causation of lost sales, or the legal status of learning from outputs.",
+      "quote": "The audit did not find copied source code or copied model weights.",
+      "submitted_by": "defense",
+      "scope": "case_fact"
+    },
+    {
+      "id": "EX-HARM",
+      "title": "Creator's revenue statement",
+      "source_type": "case_exhibit",
+      "source_url": "case://skillvault/revenue-statement",
+      "source_text": "FICTIONAL STIPULATED EXHIBIT. Maya reports a 48,000 dollar reduction in CodeReview Pro sales after SkillVault released its updated base model. The parties accept the sales figures but dispute how much of the decline was caused by the distillation. No exhibit establishes a precise damages award.",
+      "quote": "The parties accept the sales figures but dispute how much of the decline was caused by the distillation.",
+      "submitted_by": "witness",
+      "scope": "case_fact"
+    }
+  ],
+  "authorization_exhibit": {
+    "id": "EX-AUTHORIZATION",
+    "title": "Later signed training amendment",
+    "source_type": "case_exhibit",
+    "source_url": "case://skillvault/signed-amendment",
+    "source_text": "FICTIONAL STIPULATED EXHIBIT. Before the eleven-day extraction period, Maya Chen and SkillVault signed a separate amendment authorizing up to 2.5 million CodeReview Pro probe calls specifically to train SkillVault's base model. SkillVault paid the agreed 20,000 dollar licence fee before the calls began. The signatures and payment are stipulated authentic. The amendment did not guarantee future Skill sales or authorize copying source code. This later amendment changes the permission evidence and must be considered alongside the original limited-use licence.",
+    "quote": "Maya Chen and SkillVault signed a separate amendment authorizing up to 2.5 million CodeReview Pro probe calls specifically to train SkillVault's base model.",
+    "submitted_by": "defense",
+    "scope": "case_fact"
+  },
+  "references": [
+    {"id": "REF-USCO-AI", "title": "U.S. Copyright Office: Copyright and Artificial Intelligence", "source_type": "web_source", "source_url": "https://www.copyright.gov/ai/", "scope": "background", "notice": "Background research target, not a fetched or verified exhibit and not proof of the fictional facts."},
+    {"id": "REF-BRUIN-QUALITY", "title": "Bruin data quality documentation", "source_type": "web_source", "source_url": "https://getbruin.com/docs/bruin/quality/overview.html", "scope": "background", "notice": "Technical documentation about the application, not case evidence."}
+  ]
+}
