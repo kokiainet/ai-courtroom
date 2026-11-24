@@ -38,7 +38,7 @@ Real samples [connected.json](recordings/connected.json), [baseline.json](record
 
 The optional [full 3D courtroom](http://localhost:8766/assets/holo.html) uses vendored Three.js 0.180.0: ivory walls, warm wood and gold, multiple virtual camera angles, and cyan evidence projections. It replays the connected recording without new inference. Native recording of this view targets 30 fps through `captureStream(30)` and MediaRecorder; that capture is video-only.
 
-**Completed local film:** `ai-courtroom-midwide.mp4`, 164.566667 seconds, 1280×720 H.264 at 30 fps with AAC audio. It uses the original 2D dialogue throughout, except for a brief matching-time warm 3D courtroom wide view at 92.0–93.5 seconds. The opening stays 2D; dialogue returns to 2D at 93.5 seconds. Original audio stays continuous, with no opening/closing cards or added duration. The full 3D view remains optional in the app, and earlier local film versions are preserved. This latest cut has been reviewed locally; it has not been published or submitted.
+**Completed film:** `ai-courtroom-midwide.mp4`, 164.566667 seconds, 1280×720 H.264 at 30 fps with AAC audio. It uses the original 2D dialogue throughout, except for a brief matching-time warm 3D courtroom wide view at 92.0–93.5 seconds. The opening stays 2D; dialogue returns to 2D at 93.5 seconds. Original audio stays continuous, with no opening/closing cards or added duration. The full 3D view remains optional in the app, and earlier local film versions are preserved. [Watch the submitted film on YouTube](https://youtu.be/i_SPwyqDuGM) (unlisted). Submitted to the Multiplayer AI Hackathon, Agent Animated Film track.
 
 ## Integration status
 
